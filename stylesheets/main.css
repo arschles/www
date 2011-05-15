@@ -1,0 +1,34 @@
+ul.posts_list li.post
+{
+  list-style-type:none;
+  margin-bottom:1em;
+}
+
+ul.posts_list li.post span.posted_on
+{
+  margin-left:1em;
+  color:#999999;
+  font-size:90%;
+  font-weight:900;
+}
+
+a, a.visited, a:hover, a:active
+{
+  color:#4183c4;
+  text-decoration:none;
+}
+
+a:hover
+{
+  text-decoration:underline;
+}
+
+div.page_title
+{
+  font-size:200%;
+}
+
+h1.header_text
+{
+  text-align:right;
+}

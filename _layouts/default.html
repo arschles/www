@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% endif %}
+        Aaron Schlesinger
+    </title>
+</head>
+
+<body>
+    <h1 class="header_text"><a href="/">Aaron Schlesinger</a></h1>
+    
+    {% if page.title %}
+        <div class="page_title">{{page.title}}</div>
+    {% endif %}
+    
+    <div class="content">
+        {{ content }}
+    </div>
+    
+</body>
+</html>
