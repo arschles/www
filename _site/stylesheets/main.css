@@ -39,3 +39,8 @@ h1.header_text
 {
   text-align:right;
 }
+
+div.top_space
+{
+  margin-top:2em;
+}

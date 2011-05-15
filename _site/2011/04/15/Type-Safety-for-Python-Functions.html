@@ -3,6 +3,7 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
     <title>
         
             Type Safety for Python Functions
@@ -26,52 +27,55 @@
         
 <div id="post">
   <p>Have you ever written something like this Python code?</p>
-
-<pre><code>def myFunction(a, b):
-  if type(a) != str and type(b) != int:
-    raise &quot;a must be a string or b must be an int&quot;
-  #do some more stuff</code></pre>
-
+<div class='highlight'><pre>    <span class='k'>def</span> <span class='nf'>myFunction</span><span class='p'>(</span><span class='n'>a</span><span class='p'>,</span> <span class='n'>b</span><span class='p'>):</span>
+      <span class='k'>if</span> <span class='nb'>type</span><span class='p'>(</span><span class='n'>a</span><span class='p'>)</span> <span class='o'>!=</span> <span class='nb'>str</span> <span class='ow'>and</span> <span class='nb'>type</span><span class='p'>(</span><span class='n'>b</span><span class='p'>)</span> <span class='o'>!=</span> <span class='nb'>int</span><span class='p'>:</span>
+        <span class='k'>raise</span> <span class='s'>&quot;a must be a string or b must be an int&quot;</span>
+      <span class='c'>#do some more stuff</span>
+    
+</pre>
+</div>
 <p>I find myself writing that all the time. I want the type flexibility of Python a lot of the time, but I also want to enforce types when I need to. Writing that if statement over and over at the top of all of your functions is not very DRY, and it&#8217;s error prone and annoying. I solved that problem with a decorator.</p>
 
 <p>Function Decorators FTW Python decorators are functions that you tell Python to call &amp; pass another function into it. Python will replace the passed function with whatever your decorator function returns. Here&#8217;s a concrete example:</p>
-
-<pre><code>def log(func):
-  def inner(*argv):
-    print &quot;calling %s:&quot;%(func.__name__)
-    func(*argv)
-    print &quot;done calling %s&quot;%(func.__name__)
-  return inner
-
-@log
-def myFunction():
-  print &quot;this is my function&quot;</code></pre>
-
+<div class='highlight'><pre>    <span class='k'>def</span> <span class='nf'>log</span><span class='p'>(</span><span class='n'>func</span><span class='p'>):</span>
+      <span class='k'>def</span> <span class='nf'>inner</span><span class='p'>(</span><span class='o'>*</span><span class='n'>argv</span><span class='p'>):</span>
+        <span class='k'>print</span> <span class='s'>&quot;calling </span><span class='si'>%s</span><span class='s'>:&quot;</span><span class='o'>%</span><span class='p'>(</span><span class='n'>func</span><span class='o'>.</span><span class='n'>__name__</span><span class='p'>)</span>
+        <span class='n'>func</span><span class='p'>(</span><span class='o'>*</span><span class='n'>argv</span><span class='p'>)</span>
+        <span class='k'>print</span> <span class='s'>&quot;done calling </span><span class='si'>%s</span><span class='s'>&quot;</span><span class='o'>%</span><span class='p'>(</span><span class='n'>func</span><span class='o'>.</span><span class='n'>__name__</span><span class='p'>)</span>
+      <span class='k'>return</span> <span class='n'>inner</span>
+  
+    <span class='nd'>@log</span>
+    <span class='k'>def</span> <span class='nf'>myFunction</span><span class='p'>():</span>
+      <span class='k'>print</span> <span class='s'>&quot;this is my function&quot;</span>
+    
+</pre>
+</div>
 <p>Python calls the log function only once before I call myFunction for the first time. When it calls log, it passes it myFunction. When log returns, Python replaces myFunction with its return value, so that whenever I write code to call myFunction, I&#8217;m actually calling whatever log returned.</p>
 
 <p>Every decorator has to return an object that&#8217;s callable (ie: a function or an object with the <strong>call</strong> method implemented) in order for this whole thing to work. Here, I&#8217;ve got log returning a function that takes in any number of arguments, prints some stuff, calls the original function with the arguments that were passed to it, and then prints some more stuff. Simple but powerful. You can now hijack any function without the caller knowing.</p>
 
 <p>Checking Types The decorator for checking types is a bit more complex, but follows the same rules as the simpler one above. Here it is:</p>
+<div class='highlight'><pre>    <span class='k'>def</span> <span class='nf'>typesrequired</span><span class='p'>(</span><span class='o'>*</span><span class='n'>types</span><span class='p'>):</span>
+      <span class='k'>def</span> <span class='nf'>outer</span><span class='p'>(</span><span class='n'>func</span><span class='p'>):</span>
+        <span class='k'>def</span> <span class='nf'>inner</span><span class='p'>(</span><span class='o'>*</span><span class='n'>args</span><span class='p'>):</span>
+          <span class='k'>if</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>args</span><span class='p'>)</span> <span class='o'>!=</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>types</span><span class='p'>):</span>
+            <span class='k'>raise</span> <span class='ne'>Exception</span><span class='p'>(</span><span class='s'>&quot;function </span><span class='si'>%s</span><span class='s'> must be called with </span><span class='si'>%i</span><span class='s'> arguments&quot;</span><span class='o'>%</span><span class='p'>(</span><span class='n'>func</span><span class='o'>.</span><span class='n'>__name__</span><span class='p'>,</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>types</span><span class='p'>)))</span>
+      
+          <span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span>
+          <span class='k'>while</span> <span class='n'>i</span> <span class='o'>&lt;</span> <span class='nb'>len</span><span class='p'>(</span><span class='n'>types</span><span class='p'>):</span>
+            <span class='k'>if</span> <span class='nb'>type</span><span class='p'>(</span><span class='n'>args</span><span class='p'>[</span><span class='n'>i</span><span class='p'>])</span> <span class='o'>!=</span> <span class='n'>types</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]:</span>
+              <span class='k'>raise</span> <span class='ne'>Exception</span><span class='p'>(</span><span class='s'>&quot;argument </span><span class='si'>%i</span><span class='s'> must be of type </span><span class='si'>%s</span><span class='s'>&quot;</span><span class='o'>%</span><span class='p'>(</span><span class='n'>i</span><span class='p'>,</span> <span class='n'>types</span><span class='p'>[</span><span class='n'>i</span><span class='p'>]</span><span class='o'>.</span><span class='n'>__name__</span><span class='p'>))</span>
+            <span class='n'>i</span> <span class='o'>+=</span> <span class='mi'>1</span>
+          <span class='n'>func</span><span class='p'>(</span><span class='o'>*</span><span class='n'>args</span><span class='p'>)</span>
+        <span class='k'>return</span> <span class='n'>inner</span>
+      <span class='k'>return</span> <span class='n'>outer</span>
 
-<pre><code>def typesrequired(*types):
-  def outer(func):
-    def inner(*args):
-      if len(args) != len(types):
-        raise Exception(&quot;function %s must be called with %i arguments&quot;%(func.__name__, len(types)))
-  
-      i = 0
-      while i &lt; len(types):
-        if type(args[i]) != types[i]:
-          raise Exception(&quot;argument %i must be of type %s&quot;%(i, types[i].__name__))
-        i += 1
-      func(*args)
-    return inner
-  return outer
-
-@typesrequired(str, int, int)
-def printCoords(name, x, y):
-  print &quot;%s: (%i, %i)&quot;%(name, x, y)</code></pre>
-
+    <span class='nd'>@typesrequired</span><span class='p'>(</span><span class='nb'>str</span><span class='p'>,</span> <span class='nb'>int</span><span class='p'>,</span> <span class='nb'>int</span><span class='p'>)</span>
+    <span class='k'>def</span> <span class='nf'>printCoords</span><span class='p'>(</span><span class='n'>name</span><span class='p'>,</span> <span class='n'>x</span><span class='p'>,</span> <span class='n'>y</span><span class='p'>):</span>
+      <span class='k'>print</span> <span class='s'>&quot;</span><span class='si'>%s</span><span class='s'>: (</span><span class='si'>%i</span><span class='s'>, </span><span class='si'>%i</span><span class='s'>)&quot;</span><span class='o'>%</span><span class='p'>(</span><span class='n'>name</span><span class='p'>,</span> <span class='n'>x</span><span class='p'>,</span> <span class='n'>y</span><span class='p'>)</span>
+    
+</pre>
+</div>
 <p>This decorator is more code because it takes in the expected types (in an argument list), and then must return another function that itself takes in printCoords. That second function has to return the function that will replace printCoords. The type checking happens inside of the innermost function (creatively called inner).</p>
 
 <p>Using this decorator introduces a performance hit because it has to check the types of each argument every time printCoords is called (such is life with an interpreted, dynamically typed language), so if you don&#8217;t like that, turn this decorator on in debugging environments only. In all other environments, it can just pass directly through and return the original function.</p>
@@ -80,6 +84,11 @@ def printCoords(name, x, y):
 
 <p>For now, check out the Python Decorator Library (which includes a more complete implementation of this type checking decorator): http://wiki.python.org/moin/PythonDecoratorLibrary</p>
 </div>
+
+<div class="top_space"></div>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<fb:comments href="arschles.github.com" num_posts="20" width="500"></fb:comments>
     </div>
     
 </body>
