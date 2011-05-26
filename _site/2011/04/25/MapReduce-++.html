@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
+    <title>
+        
+            Ripeline
+        
+        Aaron Schlesinger
+    </title>
+</head>
+
+<body>
+    <a href="http://github.com/arschles">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" />
+    </a>
+    
+    <h1 class="header_text"><a href="/">Aaron Schlesinger</a></h1>
+    
+    
+        <div class="page_title">Ripeline</div>
+    
+    
+    <div class="content">
+        
+<div id="post">
+  <p>I went to MongoSF 2011 and attended a talk called "MongoDB's New Aggregation Features - A Sneak Peek" by Chris Westin. As of writing, I don't believe that slides are posted, but they will be soon.</p>
+
+<p>In the talk, Chris said that they're working on pipeline-based aggregation for Mongo, as well as a rich set of pre-built operators that can be applied in any order in that pipeline. This is a distributed pipeline system. Step 1: define your data (a Mongo collection), step 2: write your data pipeline, step 3: profit.</p>
+
+<p>In functional terms, this is the same as applying multiple mappers to a list (ruby's version: <a href="http://www.ruby-doc.org/core/classes/Array.html#M000249">http://www.ruby-doc.org/core/classes/Array.html#M000249</a>), and streaming results from each mapper to the next.</p>
+
+<p>Lots of people write this ad-hoc for large amounts of data, or they use Hadoop. Hadoop is overkill much of the time, and it has its own drawbacks, and writing an pipeline ad-hoc is hard to get right in a distributed environment (just like MapReduce is hard to get right in a distributed environment). Off the top of my head, you have to build answers to these questions:</p>
+
+<ul>
+<li>what happens if a mapper fails?</li>
+<li>how many mappers should you run?</li>
+<li>how do mappers stream data to each other?</li>
+</ul>
+
+
+<p>Turns out someone wrote a <a href="http://code.google.com/p/appengine-pipeline/">pipeline for appengine</a>, and solved these problems on top of GAE's infrastructure.</p>
+
+<p>I wanted to do it on any infrastructure, so I started implementing the pipeline semantics using Redis for communication, and Ruby for the rest. I called it ripeline (ruby + pipeline), and I put it up at <a href="http://github.com/arschles/ripeline">http://github.com/arschles/ripeline</a>. My ideal is to be able to write mappers in ruby once and then tell ripeline the order in which to run them, and it takes care of the rest: monitoring, communication, streaming, failure detection, etc...</p>
+
+<p>On top of that, I'd love to build futures on top of the pipeline so that, for pipelines that will complete in a reasonable amount of time, you can start a pipeline and then hold a future for that pipeline's result.</p>
+
+<p>I think Hadoop is great, but I also think a pipeline system like this can fit into many architectures as well.</p>
+
+</div>
+
+<div class="top_space"></div>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+<fb:comments href="arschles.github.com" num_posts="20" width="500"></fb:comments>
+    </div>
+    
+</body>
+</html>
