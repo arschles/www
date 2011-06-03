@@ -28,7 +28,7 @@
 <div id="post">
   <p>Have you ever written something like this Python code?</p>
 
-<pre><code>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -f html -l python
+<pre><code>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l python -f html
 </code></pre>
 
 <p>I find myself writing that all the time. I want the type flexibility of Python a lot of the time, but I also want to enforce types when I need to. Writing that if statement over and over at the top of all of your functions is not very DRY, and it's error prone and annoying. I solved that problem with a decorator.</p>
@@ -37,7 +37,7 @@
 
 <p>Python decorators are functions that you tell Python to call &amp; pass another function into it. Python will replace the passed function with whatever your decorator function returns. Here's a concrete example:</p>
 
-<pre><code>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -f html -l python
+<pre><code>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l python -f html
 </code></pre>
 
 <p>Python calls the log function only once before I call myFunction for the first time. When it calls log, it passes it myFunction. When log returns, Python replaces myFunction with its return value, so that whenever I write code to call myFunction, I'm actually calling whatever log returned.</p>
@@ -48,7 +48,7 @@
 
 <p>The decorator for checking types is a bit more complex, but follows the same rules as the simpler one above. Here it is:</p>
 
-<p>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -f html -l python
+<p>Liquid error: No such file or directory - pygmentize -O encoding=utf-8 -l python -f html
 This decorator is more code because it takes in the expected types (in an argument list), and then must return another function that itself takes in printCoords. That second function has to return the function that will replace printCoords. The type checking happens inside of the innermost function (creatively called inner).</p>
 
 <p>Using this decorator introduces a performance hit because it has to check the types of each argument every time printCoords is called (such is life with an interpreted, dynamically typed language), so if you don't like that, turn this decorator on in debugging environments only. In all other environments, it can just pass directly through and return the original function.</p>
