@@ -6,24 +6,24 @@ summary: Naming groups of related functionality
 
 I find myself using the Function Map pattern a lot in my Scala code. Generally, when I need to group a set of related functions together, I use one of these.
 My favorite example is in actors. When passed a label that identifies an action, the actor looks up the action in the function map and then executes is. Here's the code:
-    
+
     ...
     case class BaseMessage(s:String)
     case class MessageOne(s:String) extends BaseMessage(s)
     case class MessageTwo(s:String) extends BaseMessage(s)
     case class MessageThree(s:String) extends BaseMessage(s)
-    
+
     val FunctionMap = Map(
         MessageOne -> ((a:String) => println(a)),
         MessageTwo -> ((a:String) => doSomethingWithString(a)),
         MessageThree -> ((a:String) => doSomethingElseWithString(a))
     )
-    
+
     val MessageProcessor = actor {
         loop{
             react {
                 case b:BaseMessage => {
-                    MessageProcessor.get(e) match {
+                    MessageProcessor.get(b) match {
                         case Some(f:((a:String) => Unit)) => f(b.s)
                         case None => throw new Exception("unrecognized BaseMessage " + b)
                     }

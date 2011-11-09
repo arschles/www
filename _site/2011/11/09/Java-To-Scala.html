@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
+    <title>
+        
+            Going from Java to Scala - Aaron Schlesinger
+        
+    </title>
+</head>
+
+<body>
+    <a href="http://github.com/arschles">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" />
+    </a>
+    
+    <h1 class="header_text"><a href="/">Aaron Schlesinger</a></h1>
+    
+    
+        <div class="page_title">Going from Java to Scala</div>
+    
+    
+    <div class="content">
+        
+<div id="post">
+  <p>Scala, in my opinion, is a wonderful language. I have refrained from saying that publicly until after the "honeymoon period" was over between me and it. Now that it is, I feel comfortable with that statement.</p>
+
+<p>Perhaps the greatest feature of Scala is that it can work "seamlessly" with Java. But, that whole "seamlessly" assertion comes with plenty of caveats, because as some know, sometimes not even Java can work seamlessly with Java. But it is possible to ship production quality, stable code that is mixed Java &amp; Scala. And although I think Scala is great, I won't spend time in this post defending that opinion, so if you disagree or otherwise don't want to use Scala stop reading now. Otherwise, read on!</p>
+
+<h1>Why you'll need to tangle with Java</h1>
+
+<p>Java is everywhere. If you have never written a line of Java and you're staring fresh with Scala, welcome to <a href="http://en.wikipedia.org/wiki/Java_Virtual_Machine">the JVM</a>. Yes, it is an open virtual machine on which almost anything can run (yay Scala, Clojure, JRuby, Jython, etc...), but <strong>Java is king on this platform</strong>. Well, actually <a href="http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html">Java is king everywhere right now</a>.</p>
+
+<p>Also, as you go, don't forget that Java is still an excellent language regardless of how much Scala may outshine it in certain areas. It <em>might</em> be a better fit sometimes for what you're trying to do (I haven't found any places where it is yet, though).</p>
+
+<h1>Lesson of the First: Java Conversions</h1>
+
+<p><a href="http://download.oracle.com/javase/6/docs/technotes/guides/collections/index.html">Java's Collections Framework</a> and <a href="http://www.scala-lang.org/api/current/index.html#scala.collection.package">Scala's Collections Framework</a> are very different in practice. They don't even pretend to work together. Instead, Scala provides <code>scala.collection.JavaConversions</code> to convert between them.</p>
+
+<p>JavaConversions is good at converting Scala mutable collections to their Java counterparts and back, and can do so pretty efficiently, but for immutable data structures, you're on your own. That's significant because immutable data structures give you saner and more thread safe code most of the time. My rule of thumb for deciding whether to use an immutable data structure: if you can't do it much better with mutable data structures, use immutable.</p>
+
+<p>If you do, write a set of implicits that you keep around for when you need to use them for some Java API. Here's what I start with:</p>
+
+<pre><code>package com.my.app.implicits.collection
+
+import java.util.{Map =&gt; JMap, HashMap =&gt; JHashMap, List =&gt; JList, Set =&gt; JSet}
+import scala.collection.JavaConversions._
+
+object JavaConversions {  
+  implicit def JListToImmutable[T](l:JList[T]): List[T] = asScalaBuffer(l).toList
+  implicit def JMapToImmutable[T, U](m:JMap[T, U]): Map[T, U] = mapAsScalaMap(m).toMap
+  implicit def jSetToScalaImmutableSet[T](s:JSet[T]) = asScalaSet(s).toSet
+}
+</code></pre>
+
+<p>Pretty straightforward functions. They have 2 major features: (1) to convert Java collections into their Scala immutable counterparts, and (2) they take advantage of Scala-native JavaConversions functions to get decent performance.</p>
+
+<p>So, in your code, you can <code>import collection.JavaCoversions._</code> and <code>import com.my.app.implicits.collection.JavaConversions._</code> and you'll have a much easier time going between Java and Scala immutable collections.</p>
+
+<h1>Lesson of the Second: DSLs for a More Functional World</h1>
+
+<p>This is a portion of Java code from a real codebase, with names modified:</p>
+
+<pre><code>//...
+AtomicInteger requestCounter = new AtomicInteger(0);
+//...
+Map&lt;String, String&gt; requestMap = new HashMap&lt;String, String&gt;();
+requestMap.put("objectID", "ff3300");
+requestMap.put("objectType", "red");
+String body = JSONLibrary.encode(requestMap);
+Request req = new Request(counter, HttpRequestMethod.POST, "http://some.domain.com/doMethod", body);
+Map&lt;String, String&gt; cookies = new HashMap&lt;String, String&gt;();
+cookies.put("SessionID", "sdfasdfaskgasgmnaasgsgsdfgsdf24q23krjqbwjeb12jb");
+req.setCookies(cookies);
+Map&lt;String, String&gt; headers = new HashMap&lt;String, String&gt;();
+headers.put("Content-Type", "application/json");
+req.setHeaders(headers);
+Response resp = executeRequest(req);
+//...
+</code></pre>
+
+<p>After a small addition of a Scala wrapper to build a DSL around the Request class, that code became the following. Again, names are modified. No Java was harmed in the making of this example:</p>
+
+<pre><code>val req = request(HttpRequestMethod.POST) withURL("http://some.domain.com/doMethod") withHeader("Content-Type", "application/json") withJsonBody(Map("objectID" -&gt; "ff3300", "objectType" -&gt; "red"))
+val resp = executeRequest(req)
+</code></pre>
+
+<p>I don't need to say anything about these examples here. Scala &amp; some basic functional techniques made this more readable, and way shorter. The way to do this is to implement a <a href="http://en.wikipedia.org/wiki/Domain-specific_language">DSL</a> that wraps the Request object and transforms it from a procedural API into a functional one.</p>
+
+<p>Once you understand Scala implicits, and how they enable the <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=179766">"Pimp my library" pattern</a>, you're ready to shred all your Java container classes and the Builder classes that help wrap them. This is a common pattern that I fondly call the DSL pattern in Scala.</p>
+
+<p>We'll call everything <code>RequestDSL</code>, so we can <code>import my.app.RequestDSL._</code> in our code and start building <code>Request</code>s. Here's what the code looks like:</p>
+
+<pre><code>package my.app
+
+import java.util.concurrent.atomic.AtomicInteger
+import collection.JavaConversions._
+
+object RequestDSL {
+  private val c = new AtomicInteger(0)
+
+  def request(method:HttpRequestMethod, url:String, qString:Map[String, String], body:String): Request =
+    new Request(c.getAndIncrement.toString,
+        method,
+        url,
+        qString.toList.flatMap {tup:(String, String) =&gt; List[String](tup._1 + "=" + tup._2)}.mkString("&amp;"),
+        body)
+
+  def request(method:HttpRequestMethod, url:String, qString:Map[String, String]): String =&gt; Request =
+    Request(verb, url, qString, _:String)
+
+  def request(method:HttpRequestMethod, url:String): (Map[String, String], String) =&gt; Request =
+    Request(verb, url, _:Map[String, String], _:String)
+
+  def request(method:HttpRequestMethod):(String, Map[String, String], String) =&gt; Request =
+    Request(verb, _:String, _:Map[String, String], _:String)
+
+  class F1Container(fn:String =&gt; Request) {
+    def withBody(body:String): Request = fn(body)
+    def withoutBody(): Request = withBody("")
+  }
+
+  class F2Container(fn:(Map[String, String], String) =&gt; Request) {
+    def withQueryParams(params:Map[String, String]):(String =&gt; Request) = fn(params, _:String)
+    def withoutQueryParams(): String =&gt; Request = withQueryParams(Map[String, String]())
+  }
+
+  class F3Container(fn:(String, Map[String, String], String) =&gt; Request) {
+    def withURL(url:String): (Map[String, String], String) =&gt; Request = fn(url, _:Map[String, String], _:String)
+  }
+
+  implicit def f1ToContainer(f:String =&gt; Request) = new Function1Holder(f)
+  implicit def f2ToContainer(f:(Map[String, String], String) =&gt; Request) = new Function2Holder(f)
+  implicit def f3ToContainer(f:(String, Map[String, String], String) =&gt; Request) = new Function3Holder(f)
+  implicit def RequestToWrapper(req:Request) = new RequestWrapper(req)
+
+  class RequestWrapper(req:Request) {
+    val oldHeaders:Map[String, String] = req.getHeaders
+
+    def withHeader(key:String, value:String) = {
+      req.setHeaders(oldHeaders + ((key, value)))
+      req
+    }
+
+    def withHeaders(additionalHeaders:Map[String, String]) = {
+      req.setHeaders(oldHeaders ++ additionalHeaders)
+      req
+    }
+
+    def withCookie(key:String, value:String) = {
+      req.setCookies(Map(key -&gt; value))
+      req
+    }
+  }
+}
+</code></pre>
+
+<p>Let me briefly describe what's going on here:</p>
+
+<ol>
+<li>Each of the <code>request(...)</code> methods allows you to build up the request, starting with the <code>HttpRequestMethod</code>, and going on from there.</li>
+<li>The intermediate request methods are the ones that return a function that takes in some arguments and returns a Request. Each intermediate partially applies the final request builder in order to return a partially applied function, which is a really nice way in Scala to implement <a href="http://en.wikipedia.org/wiki/Currying">curring</a>.</li>
+<li>We've added some pimps (container classes &amp; implicit conversions to those containers) for the functions that the intermediate request methods return so that you don't have to do the conversions yourself. The containers are called <code>F*Container</code> and the implicit conversions are called <code>f*ToContainer</code>.</li>
+<li>We've added a pimp for Request so that you can chain methods together to operate on the Request. The container is called RequestWrapper and the implicit conversion is RequestToWrapper.</li>
+</ol>
+
+
+<p>First, the bad news about the DSL code: if you haven't noticed, we've traded 11 total lines of Java for 64 total lines of Scala. That will be common with DSLs. You have to do a decent amount of work to wrap a procedural Java API, so it's not worth it unless you use that API a lot. Probably goes without saying.</p>
+
+<p>But there's more good news than bad:</p>
+
+<ol>
+<li>Scala implicits, partial function application, &amp; immutable data structure initializers let us build <code>Request</code>s in <strong>one line</strong> of code (or, if the line gets too long, 2 or 3 lines of code) like we saw above. Fuck yea</li>
+<li>Although the Scala code is longer, it is extremely extensible (you can easily add complex operations on Request objects to your DSL) and does not use any "exotic" features or patterns of the Scala language. In fact, <a href="http://docs.scala-lang.org/sips/pending/implicit-classes.html">pimp my library</a> may even become part of the core Scala language.</li>
+<li>Code that uses this DSL reads closer to English, and therefore is more self-documenting.</li>
+</ol>
+
+
+<h1>Continuing on</h1>
+
+<p>The community is always developing better &amp; easier ways to achieve Scala - Java interoperability. As Scala gets more popular this area will be explored more, so someday soon, the code and approaches here will become outdated. I encourage you to start with these and add your own.</p>
+
+</div>
+
+<div class="top_space"></div>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    </div>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25255506-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+</body>
+</html>

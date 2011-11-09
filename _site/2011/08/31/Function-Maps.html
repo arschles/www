@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
+    <title>
+        
+            Function Maps in Scala - Aaron Schlesinger
+        
+    </title>
+</head>
+
+<body>
+    <a href="http://github.com/arschles">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" />
+    </a>
+    
+    <h1 class="header_text"><a href="/">Aaron Schlesinger</a></h1>
+    
+    
+        <div class="page_title">Function Maps in Scala</div>
+    
+    
+    <div class="content">
+        
+<div id="post">
+  <p>I find myself using the Function Map pattern a lot in my Scala code. Generally, when I need to group a set of related functions together, I use one of these.
+My favorite example is in actors. When passed a label that identifies an action, the actor looks up the action in the function map and then executes is. Here's the code:</p>
+
+<pre><code>...
+case class BaseMessage(s:String)
+case class MessageOne(s:String) extends BaseMessage(s)
+case class MessageTwo(s:String) extends BaseMessage(s)
+case class MessageThree(s:String) extends BaseMessage(s)
+
+val FunctionMap = Map(
+    MessageOne -&gt; ((a:String) =&gt; println(a)),
+    MessageTwo -&gt; ((a:String) =&gt; doSomethingWithString(a)),
+    MessageThree -&gt; ((a:String) =&gt; doSomethingElseWithString(a))
+)
+
+val MessageProcessor = actor {
+    loop{
+        react {
+            case b:BaseMessage =&gt; {
+                MessageProcessor.get(b) match {
+                    case Some(f:((a:String) =&gt; Unit)) =&gt; f(b.s)
+                    case None =&gt; throw new Exception("unrecognized BaseMessage " + b)
+                }
+            }
+            case a =&gt; throw new Exception("unrecognized message " + a)
+        }
+    }
+}
+...
+</code></pre>
+
+<p>If I'm trying to send a message to the MessageProcessor actor, I can look up what the actor does in the FunctionMap variable first, and then
+decide if I want to call the actor.</p>
+
+<p>FunctionMaps can be used in a bunch of other ways also. Try using one next time you want to group a set of related functions.</p>
+
+</div>
+
+<div class="top_space"></div>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    </div>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25255506-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+</body>
+</html>
