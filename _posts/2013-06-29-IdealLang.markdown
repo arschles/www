@@ -19,8 +19,7 @@ There's plenty of research discussing the theories that spoken languages shape c
 * packaging code
 * running code
 * testing and debugging code
-* type safety
-* polymorphism
+* strong typing and polymorphism
 * missing values (see [the billion dollar mistake](http://qconlondon.com/london-2009/presentation/Null+References:+The+Billion+Dollar+Mistake))
 * error handling and recovery
 * memory management
@@ -86,6 +85,6 @@ Ideal has a test harness built in. The test harness pre-builds a `main` function
 ...
 ```
 
-# Type Safety
+# Strong Typing and Polymorphism
 
-Since Ideal is a compiled and strongly typed language, there's a good foundation for type safety.
+To be continued in part 2
