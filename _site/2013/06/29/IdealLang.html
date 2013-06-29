@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="/stylesheets/main.css" type="text/css" />
+    <link rel="stylesheet" href="/stylesheets/syntax.css" type="text/css" />
+    <title>
+        
+            My Ideal Programming Language, Part 1 - Aaron Schlesinger
+        
+    </title>
+</head>
+
+<body>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=356721397759981";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	
+    <a href="http://github.com/arschles">
+        <img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" />
+    </a>
+    
+    <h1 class="header_text"><a href="/">Aaron Schlesinger</a></h1>
+    
+    
+        <div class="page_title">My Ideal Programming Language, Part 1</div>
+    
+    
+    <div class="content">
+        
+<div id="post">
+  <p>I'm shifting in this post from writing about my life, health, etc... to writing about software again.</p>
+
+<p>Among the many things Bjarne Stroustrup has said that someone has published on the internet, my favorite is this: "There are only two kinds of languages: the ones people complain about and the ones nobody uses."</p>
+
+<p>As of this writing, I've been writing code as my full time job, as well as for some open source projects, for a few days over 5 years. Before that, I majored in computer science, where I wrote lots of code, and I worked for the <a href="http://www.engin.umich.edu/caen/">UM Computer Aided Engineering Network</a>, where I wrote lots of code. Before college, I wrote code for fun.</p>
+
+<p>Most of the work I've done in my adult life has been writing code, so I've worked with a wide variety of programming languages. I'm writing here what my ideal programming language would look like. I'm writing this post as a time capsule. In 5 more years, I want to compare my then-ideal language with my now-ideal language. I think the difference will effectively show me what I've learned and how my thinking has changed.</p>
+
+<p>I am neither a language designer nor expert. I have never written a compiler or designed a programming language more complicated than a stripped down version of MIPS assembly. This design is based entirely on judgements made from my experience in the world.</p>
+
+<h1>Language Shapes Your View on the World</h1>
+
+<p>There's plenty of research discussing the theories that spoken languages shape cultures and thinking. I believe the same is true for programming languages. The effect of a language on thinking and culture is especially apparent in these areas:</p>
+
+<ul>
+<li>packaging code</li>
+<li>running code</li>
+<li>testing and debugging code</li>
+<li>strong typing and polymorphism</li>
+<li>missing values (see <a href="http://qconlondon.com/london-2009/presentation/Null+References:+The+Billion+Dollar+Mistake">the billion dollar mistake</a>)</li>
+<li>error handling and recovery</li>
+<li>memory management</li>
+<li>concurrent programming</li>
+<li>distributed programming</li>
+<li>I/O</li>
+<li>native extension</li>
+</ul>
+
+
+<p>Every existing language has a library or built in feature to address each of the areas in that list, so my ideal will too.</p>
+
+<p>To start, Ideal is a compiled, strongly typed language. The Ideal compiler builds your code into a native executable, which can be immediately run on the system for which it was compiled. There is no VM.</p>
+
+<h1>Packaging code</h1>
+
+<p>The Ideal compiler recognizes a group of code files in a directory as a module which has the same name as the directory. Any code file not in the same module can use the <code>import</code> function to pull in module top-level names to the namespace of the file.</p>
+
+<p>When you compile your code, you can compile it as a library or a a runnable.</p>
+
+<h2>Runnables</h2>
+
+<p>If you compile your code as a runnable, you build an executable that starts by running the <code>main</code> function. If there's no main function, compilation fails.</p>
+
+<h2>Libraries</h2>
+
+<p>If you compile your code as a library, the compiler builds up a package that looks like a module to other programs. The module's name is specified in a special <code>library</code> file that must be in the top level directory. If the file isn't there, the compilation will fail.</p>
+
+<p>If your code (library or runnable) wants to use other libraries, you put them into a <code>dependencies</code> file. On each line, you specify the name of the module, where to get it from, and the version. Ideal has a central module repository, and others can exist. The module repository looks like a simple REST API, with no authentication. For example, to get the "aaron" module version 2, from the (fictional) ideal repository, the format is GET http://repo.ideal-lang.org/aaron/2</p>
+
+<p>In the <code>dependencies</code> file, you can rename incoming modules to avoid name conflicts, and Ideal isolates all transitive dependencies, so if module A depends on modules B and C, and both of those depend on different versions of module D, no error occurs. Internally, the packager/linker/whatever stores modules by their name and version, so the right code is used in the right place. Circular dependencies are not allowed and error at compile time.</p>
+
+<p>There's no enforced versioning scheme. The packager caches dependencies locally, and uses <a href="http://en.wikipedia.org/wiki/HTTP_ETag">ETags</a> for local cache invalidation. A dependency should fail if it is not etag enabled.</p>
+
+<h1>Running code</h1>
+
+<p>All code is compiled into intermediate bytecode. Libraries contain only a metadata header (which contains at least the name and a hash of its original code) and the intermediate bytecode that results in combining all dependencies' bytecode, similar to static linking. Runnables are compiled into similar intermediate bytecode with a header, with all dependencies similarly compiled inline.</p>
+
+<p>Dependencies are always deduplicated by the hash of their code. This de-duplication scheme means that two different libraries of the same name and version may not be deduplicated because they're actually different, and libraries of different names and versions may be deduplicated because they're actually the same code. The result is that naming and versioning are irrelevant to the compiler. The hash of the code (not bytecode) determines duplication.</p>
+
+<p>Runnables come packaged in an tar file that contains a native executable (for the target host) that translates, caches and executes the native code that resulted from translation. The structure of the tarball looks like this:</p>
+
+<p><code>
+metadata
+runner
+bytecode
+</code></p>
+
+<h1>Testing and Debugging code</h1>
+
+<p>Any library or runnable can have tests in it. They must all be in the same root directory, and you tell the compiler where they are in a <code>tests</code> file, at the top level of your project.</p>
+
+<h2>Running and Debugging Tests</h2>
+
+<p>Ideal has test runner and debugger, which loads your project into a <a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a> that has all of your project's dependencies in the namespace. You can run all of your tests by typing <code>test</code>, all of the tests in a set of subdirectories by typing <code>test subdir1 subdir1</code>, or a single test by typing <code>test subdir1/filename/testname</code>.</p>
+
+<p>Debugging is done in the test runner as well. Type <code>debug-linenum dir/file linenum</code> to set a breakpoint on a line, or <code>debug-function dir/file funcname</code> to set a breakpoint when a function is invoked. Watchpoints and other features are be supported too.</p>
+
+<h2>Writing tests</h2>
+
+<p>Ideal has a test harness built in. The test harness pre-builds a <code>main</code> function for any group of tests that you decide to run, so you never have to write one. A source file has 1 or more tests in it, and each has a name (description of the behavior that it's testing). Since names need not be unique, typing <code>test subdir1/filename/testname</code> might execute more than one test. Test syntax should be like <a href="http://etorreborre.github.io/specs2/">specs2</a> or other frameworks from which it was inspired:</p>
+
+<p><code>
+"myFunction should fail when you pass a negative number" ! myFuncFailsWithNegative
+...
+</code></p>
+
+<h1>Strong Typing and Polymorphism</h1>
+
+<p>To be continued in part 2</p>
+
+</div>
+<div class="fb-comments" data-href="http://arschles.github.com/2013/06/29/IdealLang.html" data-width="500" data-num-posts="50"></div>
+
+<div class="top_space"></div>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    </div>
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-25255506-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+</body>
+</html>
