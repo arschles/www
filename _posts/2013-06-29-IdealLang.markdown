@@ -20,7 +20,7 @@ There's plenty of research discussing the theories that spoken languages shape c
 * running code
 * testing and debugging code
 * type safety
-* polymorhpism
+* polymorphism
 * missing values (see [the billion dollar mistake](http://qconlondon.com/london-2009/presentation/Null+References:+The+Billion+Dollar+Mistake))
 * error handling and recovery
 * memory management
