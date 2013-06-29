@@ -4,6 +4,8 @@ title: My Ideal Programming Language, Part 1
 summary: The most important things I'd most like to see in a programming language
 ---
 
+I'm shifting in this post from writing about my life, health, etc... to writing about software again.
+
 Among the many things Bjarne Stroustrup has said that someone has published on the internet, my favorite is this: "There are only two kinds of languages: the ones people complain about and the ones nobody uses."
 
 As of this writing, I've been writing code as my full time job, as well as for some open source projects, for a few days over 5 years. Before that, I majored in computer science, where I wrote lots of code, and I worked for the [UM Computer Aided Engineering Network](http://www.engin.umich.edu/caen/), where I wrote lots of code. Before college, I wrote code for fun.
