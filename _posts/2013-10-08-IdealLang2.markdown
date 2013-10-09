@@ -1,0 +1,125 @@
+---
+layout: post
+title: My Ideal Programming Language, Part 2
+summary: More important things I'd most like to see in a programming language
+---
+
+This post of a continuation of [My Ideal Programming Language, Part 1](/2013/06/29/IdealLang.html).
+
+I already talked about packaging, running, testing and debugging code in Ideal. Now I'm going to shift to details about the Ideal language's design.
+
+# Basic Syntax and Details
+
+I wanted to talk first about the Type system, but I need to talk 
+
+This section describes Ideal's type system, and by necessity its syntax and much of its memory model. The basics:
+
+* I've based much of Ideal's type system and syntax on [Scala](http://http://scala-lang.org/)'s
+* The basic units of Ideal are `value`, `function`, `type` and `struct`
+* `value` is heap allocated and garbage collected by default
+* `function` takes in 0 or more values and returns 1 or more value
+* `struct` is a logical grouping of at least one `value` and at least one `function`
+* `type` contains a group of functionality (not implemented), similar to a type class. any `struct` can be a member of a `typeclass`
+
+A sample of Ideal's syntax is below.
+
+`
+//this is a single line comment
+/*this is a multi
+line comment*/
+
+//this is a value. it must start with a lowercase letter
+val a = 1 
+
+//this is a function. if it starts with a lowercase letter, it is module-private. if it starts with uppercase, it's exported
+def a(b: Int, c: Int): Int = {
+	b + c
+}
+
+//this is a struct. it has similar rules for casing/module export
+//all values of the struct go in its constructor, and its functions go in the body
+struct MyStruct(a: Int, b: String) {
+	//casing of the first character of a function determines private/public exposure inside a struct
+	def addOne(i: Int): Int = i + 1
+	
+	//this is a public function, notice the function literal
+	def NewStruct(fn: (Int, String) => MyStruct): MyStruct = {
+		//calling the function literal is exactly the same as calling any other function
+		fn(a, b)
+	}
+}
+
+//creating a MyStruct is syntactically equivalent to calling a function
+val myStruct = MyStruct(1, "one")
+
+//passing a function literal looks like the function literal itself.
+//the function literal automatically closes over all values it uses
+val newStruct = myStruct.NewStruct { (i, s) =>
+	MyStruct(i + 1, s)
+}
+
+//here's a type class
+type ToString[T] {
+	def toString(t: T): String
+}
+
+//here's the code that makes MyClass a member of ToString.
+//notice:
+//- it's a nullary function, so it follows the same module export rules (in this case it's exported)
+//- creating a new type class instance always starts with a { and ends with a } character
+//- you can have multiple implementations for the same type. Ideal takes the closest one to the call site
+def MyClassToString = ToString[MyClass] {
+	//notice the format string. anything inside a ${} is evaluated as code. if you want to include "${}" as part of the string, write ${"${}"}
+	//all functions inside a type class must start with a lowercase character
+	def toString(t: MyClass) = "${t.a}: ${t.b}"
+}
+
+//here's where we use the type class. notice:
+//- the type class membership is enforced at compile time with the : ToString
+//- to enforce multiple type classes, use : ToString, TypeClassA, TypeClassB
+//- since toString starts with a lowercase, Ideal looks for it only in the ToString type class. remember that type class functions only start with lowercase
+def describe[T: ToString](t: T) = {
+	//Ideal makes this look like a method call in an OOP language.
+	//if there is a name conflict in type classes, compile error
+	t.toString
+}
+`
+
+As seen in the code, Ideal has local type inference. When I learn more details about Hindley-Milner, I can discuss is intelligently. For now, the local type inference makes it look pretty close to a scripting language. The type class mechanism provides polymorphism and a form of statically checked [duck typing](http://en.wikipedia.org/wiki/Duck_typing), and we have a very small number of language identifiers.
+
+## Lazy Evaluation
+
+All values in Ideal are lazily evaluated. That means `val a = 1` introduces the name `a` into scope but implementation doesn't bind the value `1` to it until it's used. This concept is useful for expensive operations. Additionally, Ideal has a built in type class to indicate that a struct will perform side effects. These two concepts are powerful when combined:
+
+`
+struct NetworkPinger(a: String) {
+	//notice the use of Future. this is a value that will be available later
+	def SendOverNetwork: Future[String]
+}
+
+def NetworkPingerSideEffecter
+`
+
+Similarly, all collections are lazily evaluated. There is no way to tell the compiler to force evaluation on the entire collection by default. Inserted elements, however, can be forced individually
+
+## Static, Strong, Compiler Checked
+
+In my experience (and also most of my current colleagues), statically checked types are helpful. Here are a few of the benefits over dynamically typed languages:
+
+* the compiler already ensures that your function receives and returns values of the given type. no additional tests are needed
+* type information reveals a lot with no extra work. it's easy, for example, to guess what the `split` function does if it takes in a `String` and returns a `List` of `String`s
+* related to the previous point, documentation tools can parse type information and generate readable documentation
+* no need for duck typing. you don't have to write code to check if a value has certain defined methods or data because the compiler has already done the work
+
+The benefits come at a cost, of course. Developers generally must write more code and have less flexibility (ie: heterogeneous collections or duck typing) compared to dynamic languages.
+
+Ideal is a statically typed language with local type inference (similar to [Scala](http://www.scala-lang.org/)). I'm interested in a  [Hindley-Milner](http://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system) type system, but I don't know enough right now to talk meaningfully about it. Even local type inference simplifies code, and therefore makes it easier to read.
+
+I'm most recently familiar with Scala, so I've used similar syntax:
+
+* `val a = 22` assigns the value `22` to `a`. `a` is an `int`. All values are immutable, so the compiler decides where `a` is stored
+* `def a(a: int, b: string): string = { function body }` creates a function that takes an `int` and `string` and returns a `string`. Similarly, 
+
+## Strong Types
+
+Because the compiler checks types, Ideal has a 
