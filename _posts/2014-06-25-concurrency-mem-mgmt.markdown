@@ -21,14 +21,15 @@ etc...
 The bottom line is that our programs are deployed onto multiple nodes as a
 process on each, and each process communicates with all the others.
 
-The process model is still powerful but it has changed on the server side, but
-now every process communicates with N other identical ones, making a *cluster*,
-which is a fancy word I'm using here for distributed system. The cluster might
-get upgraded, N might change, and so on.
+The process model is still powerful but it has changed on the server side. Now
+every process communicates with N other identical ones, making a *cluster*.
 
-When we build a cluster, we're forced into a world of hard concurrency and
-networking problems. We need to address them or they'll crash the cluster, and
-cripple our app.
+Cluster is just a fancy word for distributed systems, so they come with the
+same pitfalls. Most notably we're forced into a world of hard concurrency and
+networking problems when we build a cluster.
+
+We need to address them or the thing will crash. Most likely late at night
+on a weekend, 5 months from now after you've moved on to the next project.
 
 # Yesterday's State of the Art
 
