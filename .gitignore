@@ -1,1 +1,4 @@
 .DS_STORE
+.vagrant
+Gemfile.lock
+_site/*
