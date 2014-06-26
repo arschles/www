@@ -1,0 +1,9 @@
+---
+layout: post
+title: My Ideal Programming Language, Part 3
+summary: Concurrency
+---
+
+I'm dedicating an entire post to concurrency. As I've commented in
+[my post about distributed systems](http://arschles.github.io/2014/06/25/concurrency-mem-mgmt.html),
+concurrency is really important. Ideal should be managing our concurrency for us.
