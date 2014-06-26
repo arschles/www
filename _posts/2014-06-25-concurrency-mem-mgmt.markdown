@@ -48,7 +48,7 @@ are these languages ignored now.
 
 # Building Clusters
 
-Languages like [Go](http://golang.org), [Akka](http://akka.io) and
+Languages and frameworks like [Go](http://golang.org), [Akka](http://akka.io) and
 [Erlang](http://erlang.org) have come up now because they help solve the
 hard networking and concurrency problems that we need to build clusters.
 
