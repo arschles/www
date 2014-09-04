@@ -1,0 +1,8 @@
+I feel compelled to share this [excerpt of an Alan Kay interview](http://en.wikiquote.org/wiki/Alan_Kay#A_Conversation_with_Alan_Kay.2C_2004-05):
+
+```
+Computing spread out much, much faster than educating unsophisticated people can happen. In the last 25 years or so, we actually got something like a pop culture, similar to what happened when television came on the scene and some of its inventors thought it would be a way of getting Shakespeare to the masses. But they forgot that you have to be more sophisticated and have more perspective to understand Shakespeare. What television was able to do was to capture people as they were. So I think the lack of a real computer science today, and the lack of real software engineering today, is partly due to this pop culture.
+```
+
+From where I'm sitting, he's right about these facts. I know of a variety of different cliques that fight each other by default, to prove that their technology is the best.
+
