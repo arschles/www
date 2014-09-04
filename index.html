@@ -1,22 +1,196 @@
----
-layout: default
----
+<!DOCTYPE HTML>
+<!--
+	Miniport by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Aaron Schlesinger</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body>
 
-<div style="text-align:center">
-    This is my weblog. Other stuff: 
-    <div>
-        <a href="http://github.com/arschles">github.com/arschles</a> | 
-        <a href="http://twitter.com/arschles">twitter.com/arschles</a> |  
-        <a href="http://www.linkedin.com/in/aaronschlesinger">linkedin.com/in/aaronschlesinger</a>
-    </div>
-</div>
+		<!-- Nav -->
+			<nav id="nav">
+				<ul class="container">
+					<li><a href="#top">Top</a></li>
+					<li><a href="https://arschles.svbtle.com">Blog</a></li>
+					<li><a href="https://github.com/arschles">Github</a></li>
+					<li><a href="https://twitter.com/arschles">Twitter</a></li>
+					<li><a href="https://www.linkedin.com/in/aaronschlesinger">LinkedIn</a></li>
+					<li><a href="mailto:arschles+speaking@gmail.com">Speaking</a></li>
+					<li><a href="mailto:arschles+site@gmail.com">Contact</a></li>
+				</ul>
+			</nav>
 
-<ul class="posts_list">
-{% for post in site.posts %}
-<li class="post">
-    <span class="post_link"><a href="{{ post.url }}">{{ post.title }}</a></span>
-    <span class="posted_on">{{ post.date | date_to_long_string }}</span>
-    <div class="post_summary">{{ post.summary }}</div>
-</li>
-{% endfor %}
-</ul>
+		<!-- Home -->
+			<div class="wrapper style1 first">
+				<article class="container" id="top">
+					<div class="row">
+						<div class="4u">
+							<span class="image fit"><img src="images/profile_pic.jpg" alt="" /></span>
+						</div>
+						<div class="8u">
+							<header>
+								<h1>Hi, I'm <strong>Aaron Schlesinger</strong>.</h1>
+							</header>
+							<p>
+								I'm a Software Engineer, Speaker, Blogger, Teacher, and Soccer Fanatic.
+							</p>
+							<a href="#work" class="button big scrolly">Learn about what I do</a>
+						</div>
+					</div>
+				</article>
+			</div>
+
+		<!-- Work -->
+			<div class="wrapper style2">
+				<article id="work">
+					<header>
+						<h2>What I Do</h2>
+						<!--<p>Odio turpis amet sed consequat eget posuere consequat.</p>-->
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<section class="box style1">
+									<span class="icon featured fa-building-o"></span>
+									<h3>Sr. Member of the Technical Staff, PayPal</h3>
+									<p>
+										I build backend software that powers PayPal's
+										millions of transactions every day. I also
+										teach and speak about technology and software engineering
+										practices.
+									</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section class="box style1">
+									<span class="icon featured fa-comments-o"></span>
+									<h3>Speaker</h3>
+									<p>
+										I speak on several topics that I'm
+										passionate about, including backend systems,
+										concurrency, DevOps technologies, and changing
+										software teams.
+										<a href="mailto:arschles+speaking@gmail.com">
+											Get in touch with me
+										</a> if you're interested in having me speak.
+									</p>
+								</section>
+							</div>
+							<div class="4u">
+								<section class="box style1">
+									<span class="icon featured fa-github-square"></span>
+									<h3>Open Source Developer</h3>
+									<p>
+										I believe the best software is made in the open.
+										I've open sourced software inside small and large companies,
+										individually, and contributed to existing projects.
+										I'm currently particularly interested in distributed database and
+										cluster scheduling technologies. And I love writing anything in
+										<a href="http://golang.org/">Go</a>.
+									</p>
+								</section>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<p>
+							I'm always looking for challenges, in software and elswhere.
+						</p>
+						<a href="#portfolio" class="button big scrolly">See some of my recent work</a>
+					</footer>
+				</article>
+			</div>
+
+		<!-- Portfolio -->
+			<div class="wrapper style3">
+				<article id="portfolio">
+					<header>
+						<h2>Recent Projects</h2>
+						<p>
+							Here are a few projects I've been working on.
+							<a href="https://github.com/arschles">See my GitHub page</a>
+							for more.
+						</p>
+					</header>
+					<div class="container">
+						<div class="row">
+							<div class="4u">
+								<article class="box style2">
+									<h3><a href="https://github.com/stackmob/newman">Newman</a></h3>
+									<p>A powerful REST client for Scala and Java.</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box style2">
+									<h3><a href="https://github.com/paypal/cascade">Cascade</a></h3>
+									<p>Common Scala libraries and patterns we use at PayPal.</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box style2">
+									<h3><a href="https://github.com/paypal/horizon">Horizon</a></h3>
+									<p>Our custom SBT plugin for PayPal Scala projects.</p>
+								</article>
+							</div>
+						</div>
+						<div class="row">
+							<div class="4u">
+								<article class="box style2">
+									<h3><a href="https://github.com/arschles/gogenerate">gogenerate</a></h3>
+									<p>A QuickCheck testing library for Go.</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box style2">
+									<h3><a href="https://github.com/arschles/serf-proxy">serf-proxy</a></h3>
+									<p>A proxy server for <a href="http://serfdom.io">Serf</a> agents.</p>
+								</article>
+							</div>
+							<div class="4u">
+								<article class="box style2">
+									<h3><a href="https://github.com/arschles/gohttpbin">gohttpbin</a></h3>
+									<p>A high performance replacement for <a href="http://httpbin.org">httpbin</a>.</p>
+								</article>
+							</div>
+						</div>
+					</div>
+					<footer>
+						<p>
+							I'm always interested in hearing about new projects.
+							Click the big button below to show me something new.
+						</p>
+						<a href="mailto:arschles+getintouch@gmail.com" class="button big scrolly">Get in touch with me</a>
+					</footer>
+				</article>
+			</div>
+
+		<div class="wrapper style4">
+			<article class="container small">
+				<footer>
+					<ul id="copyright">
+						<li>&copy; Aaron Schlesinger. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
+			</article>
+		</div>
+
+	</body>
+</html>
