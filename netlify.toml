@@ -5,4 +5,6 @@ ID = "arschles-www"
 
 base = "/"
 publish = "public/"
-command = "yarn install && ./netlify-cmd.sh"
+command = "./netlify-cmd.sh"
+
+
