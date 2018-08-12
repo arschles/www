@@ -18,7 +18,7 @@ And there was Monocular
 
 Bitnami and Microsoft got together
 
-![rad!](/images/2018-02-21-helm-summit/rad.png)
+![rad!](images/2018-02-21-helm-summit/rad.png)
 
 ---
 
@@ -26,11 +26,11 @@ Bitnami and Microsoft got together
 
 ---
 
-![the result!](/images/2018-02-21-helm-summit/the-result.png)
+![the result!](images/2018-02-21-helm-summit/the-result.png)
 
 ---
 
-![monocular screenshot](/images/2018-02-21-helm-summit/monocular.png)
+![monocular screenshot](images/2018-02-21-helm-summit/monocular.png)
 
 ---
 
@@ -41,7 +41,7 @@ Bitnami and Microsoft got together
 
 ## The Why
 
-![homer](/images/2018-02-21-helm-summit/homer.jpg)
+![homer](images/2018-02-21-helm-summit/homer.jpg)
 
 ---
 
@@ -53,24 +53,29 @@ Bitnami and Microsoft got together
 - Provision
 - Bind
 
---- 
+---
 
-## ![kubeapps logo](/images/2018-02-21-helm-summit/kubeapps-logo.jpg) Kubeapps
-## The Easiest Way to Deploy Applications to Your Kubernetes Cluster
+## Kubeapps
 
---- 
+<img src="images/2018-02-21-helm-summit/kubeapps-logo.jpg" width="100" />
 
-## Web-based Kubernetes App Community
-Browse, Rate and Review the Kubernetes Community Charts - [hub.kubeapps.com](https://hub.kubeapps.com)
+The Easiest Way to Deploy Applications to Your Kubernetes Cluster
 
-![kubeapps hub](/images/2018-02-21-helm-summit/kubeapps-hub.jpg)
+---
 
---- 
+##### Web-based Kubernetes App Community
+
+Browse, Rate and Review the Kubernetes Community Charts
+[hub.kubeapps.com](https://hub.kubeapps.com)
+
+<img src="images/2018-02-21-helm-summit/kubeapps-hub.jpg" height="450" />
+
+---
 
 ### Kubeapps Combines our
 ### Kubenetes application packaging expertise
 
-![kubeapps hub and spoke](/images/2018-02-21-helm-summit/kubeapps-hub-and-spoke.jpg)
+<img src="images/2018-02-21-helm-summit/kubeapps-hub-and-spoke.jpg" height="450" />
 
 --- 
 
@@ -84,11 +89,11 @@ Browse, Rate and Review the Kubernetes Community Charts - [hub.kubeapps.com](htt
 
 ---
 
-![kubeapps up screenshot](/images/2018-02-21-helm-summit/kubeapps-up-screenshot.jpg)
+![kubeapps up screenshot](images/2018-02-21-helm-summit/kubeapps-up-screenshot.jpg)
 
 ---
 
-![kubeapps screenshot](/images/2018-02-21-helm-summit/kubeapps-screenshot.jpg)
+![kubeapps screenshot](images/2018-02-21-helm-summit/kubeapps-screenshot.jpg)
 
 ---
 

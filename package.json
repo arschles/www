@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "reveal-md": "^2.1.0",
+    "reveal.js": "^3.5.0"
+  },
+  "license": "MIT"
+}
