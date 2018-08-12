@@ -1,8 +1,12 @@
+---
+title: "I Can Haz Services?"
+revealOptions:
+    transition: 'fade'
+---
+
 # I Can Haz Services?
 
 ### Kubeapps, OSB, Service Catalog, Oh my!
-
-<!-- .slide: data-transition="zoom" -->
 
 ---
 
