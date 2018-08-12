@@ -72,10 +72,9 @@ Browse, Rate and Review the Kubernetes Community Charts
 
 ---
 
-### Kubeapps Combines our
-### Kubenetes application packaging expertise
+Kubeapps Combines our Kubenetes application packaging expertise
 
-<img src="images/2018-02-21-helm-summit/kubeapps-hub-and-spoke.jpg" height="450" />
+<img src="images/2018-02-21-helm-summit/kubeapps-hub-and-spoke.png" height="400" />
 
 --- 
 
