@@ -5,4 +5,4 @@ ID = "arschles-www"
 
 base = "/"
 publish = "public/"
-command = "yarn install && node_modules/.bin/reveal-md talks/* --static public/talks"
+command = "yarn install && ./netlify-cmd.sh"
