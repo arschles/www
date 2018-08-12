@@ -3,6 +3,7 @@ title = "I Can Haz Services?"
 description = "Talk given at Helm Summit 2018"
 outputs = ["Reveal"]
 slug = "I-Can-Haz-Services"
+type = "talk"
 [reveal_hugo]
 margin = "0.2"
 highlight_theme = "color-brewer"
