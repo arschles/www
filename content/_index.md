@@ -2,7 +2,6 @@
 title = "Aaron Schlesinger"
 +++
 
-<h3>Aaron Schlesinger</h3>
 <p>
 I'm a 
 <a href="https://developer.microsoft.com/en-us/advocates/index.html">
