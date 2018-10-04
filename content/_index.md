@@ -2,42 +2,108 @@
 title = "Aaron Schlesinger"
 +++
 
-<p>
-I'm a 
-<a href="https://developer.microsoft.com/en-us/advocates/index.html">
-    Cloud Developer Advocate
-</a> at <a href="https://azure.microsoft.com">Microsoft Azure</a>.
-</p>
-
-<h3>Projects</h3>
-<ul>
-    <li><a href="https://github.com/arschles/goprox">Goprox</a> - a proxy cache for Go packages</li>
-    <li><a href="https://www.goin5minutes.com">Go In 5 Minutes</a> - a weekly screencast on all things Go</li>
-    <li><a href="https://github.com/arschles/badhttp">badhttp</a> - HTTP server that you can configure to fail</li>
-    <li><a href="https://github.com/arschles/go-bindata-html-template">go-bindata-html-template</a> - (sort of) drop-in replacement for <a href="http://godoc.org/html/template">html/template</a> for <a href="https://github.com/jteeuwen/go-bindata">go-bindata</li>
-    <li><a href="https://github.com/arschles/jsonast">jsonast</a> - parse JSON into an AST in Go (work in progress)</li>
-    <li><a href="https://github.com/arschles/assert">assert</a> - simple assertions for Go tests</li>
-    <li><a href="https://github.com/arschles/gogenerate">gogenerate</a> - work in progress</li>
-    <li><a href="https://github.com/arschles/serf-proxy">serf-proxy</a> - HTTP proxy for the <a href="https://serfdom.io/">Serf</a> API</li>
-    <li><a href="https://github.com/arschles/gohttpbin">gohttpbin</a> - replacement for <a href="http://httpbin.org">httpbin</a></li>
-    <li><a href="https://gumroad.com/l/amazonjourney"><i>Our Journey to Amazon Best Seller</i> - a book I wrote with my finacee about our experience starting a business on Amazon</a></li>
-</ul>
-
-<h3>Past projects</h3>
-<ul>
-    <li><a href="https://github.com/arschles/gotp">gotp</a></li>
-    <li><a href="https://github.com/arschles/monotonic">monotonically increasing datastructures in scala</a></li>
-    <li><a href="https://github.com/stackmob/newman">Newman</a></li>
-    <li><a href="https://github.com/paypal/scala-style-guide">A scala style guide</a></li>
-</ul>
-
-<h3>Other places</h3>
-<ul>
-    <li><a href="https://twitter.com/arschles">twitter.com/arschles</a></li>
-    <li><a href="https://arschles.svbtle.com">svbtle blog</a></li>
-    <li><a href="https://github.com/arschles">code on GitHub</a></li>
-    <li><a href="http://www.slideshare.net/arschles">slides from various talks</a></li>
-</ul>
-
-<h3>Contact</h3>
-<a href="mailto:arschles+site@gmail.com">arschles+site@gmail.com</a>
+<div class="container" style="text-align:center">
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h1 class="card-title">Aaron Schlesinger</h1>
+                    <h6 class="card-subtitle mb-2 text-muted"><b>C</b>loud <b>D</b>eveloper <b>A</b>dvocate</h6>
+                    <p class="card-text">
+                        <a href="https://golang.org">Go</a>,
+                        <a href="https://kubernetes.io">Kubernetes</a>,
+                        Containers
+                        and Emerging Languages.
+                    </p>
+                    <a href="https://developer.microsoft.com/en-us/advocates/aaron-schlesinger" class="card-link">CDA Profile</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Technologies</h5>
+                    <p class="card-text">
+                        <p>
+                            I work primarily with Go and Container technologies.
+                        </p>
+                        <p>
+                            I'm deeply interested in applying modern distributed systems theory and DevOps practices to Go applications.
+                        </P>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Projects</h5>
+                    <p class="card-text">
+                        <p>
+                            A few projects I'm working on these days:
+                            <ul class="">
+                                <li class="list-group-item">
+                                    Core maintainer of <a href="https://gomods.io">The Athens Project</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a href="https://github.com/go-study-group/agenda-api">The Go Study Group Agenda API</a>
+                                </li>
+                            </ul>
+                            See
+                            <a href="/projects">projects</a> for more information.
+                        </p>
+                        <!-- <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                I created and produce the <a href="https://goin5minutes.com">Go in 5 Minutes</a> screencast series.
+                            </li>
+                            <li class="list-group-item">
+                                I created the <a href="https://gophersource.com/study-group/">Go study Groups and
+                                run the North America chapter.
+                            </li>
+                            <li class="list-group-item">
+                                I am an emeritus chair of the Kubernetes 
+                                <a href="https://svc-cat.io/">Service Catalog</a> Special Interset Group
+                            </li>
+                        </ul> -->
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Community</h5>
+                    <p class="card-text">
+                        <p>
+                            I work with several communities
+                        </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 offset-sm-3">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Around the Web</h5>
+                    <p class="card-text">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="https://twitter.com/arschles">twitter.com/arschles</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="https://medium.com/@arschles">Blog</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="https://github.com/arschles">GitHub</a>
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
