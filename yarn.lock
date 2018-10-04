@@ -1569,32 +1569,6 @@ responselike@1.0.2:
   dependencies:
     lowercase-keys "^1.0.0"
 
-reveal-md@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/reveal-md/-/reveal-md-2.1.0.tgz#230fc4625951e635afbb8ed0a5ac00dfa09c9e3f"
-  dependencies:
-    bluebird "3.5.1"
-    commander "2.17.1"
-    express "4.16.3"
-    fs-extra "5.0.0"
-    glob "7.1.2"
-    got "8.3.2"
-    highlight.js "9.12.0"
-    image-data-uri "1.1.1"
-    livereload "0.7.0"
-    lodash "4.17.10"
-    mustache "2.3.1"
-    opn "5.3.0"
-    reveal.js "3.7.0"
-    serve-favicon "2.5.0"
-    yaml-front-matter "4.0.0"
-  optionalDependencies:
-    puppeteer "1.3.0"
-
-reveal.js@3.7.0, reveal.js@^3.5.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/reveal.js/-/reveal.js-3.7.0.tgz#7afaf72fd963000381289d58f3aa54c0c46b150c"
-
 rimraf@^2.2.8, rimraf@^2.6.1:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"

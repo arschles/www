@@ -2,9 +2,3 @@ baseURL = "https://arschles.com/"
 languageCode = "en-us"
 title = "Aaron Schlesinger"
 
-theme = "reveal-hugo"
-
-[outputFormats.Reveal]
-baseName = "index"
-mediaType = "text/html"
-isHTML = true
