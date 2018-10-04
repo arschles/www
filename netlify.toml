@@ -8,3 +8,5 @@ publish = "public/"
 command = "./netlify-cmd.sh"
 
 
+[build.environment]
+    HUGO_VERSION="0.49"
