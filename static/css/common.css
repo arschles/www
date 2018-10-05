@@ -1,3 +1,7 @@
-body {
-    width: 50%;
+.card {
+    border: 0;
+}
+
+.sm-margin-top {
+    margin-top: 1em;
 }

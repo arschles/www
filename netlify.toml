@@ -5,6 +5,8 @@ ID = "arschles-www"
 
 base = "/"
 publish = "public/"
-command = "./netlify-cmd.sh"
+command = "hugo"
 
 
+[build.environment]
+    HUGO_VERSION="0.49"
