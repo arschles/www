@@ -19,7 +19,7 @@ Here's what I'm up to these days:
 - I'm an emeritus chair of the Kubernetes 
 [SIG-Service-Catalog](https://svc-cat.io/)
 
-In addition to my blog on this site, I also write at [The Athens Project Blog](https://medium.com/project-athens), the [Go in 5 Minutes blog](https://medium.com/go-in-5-minutes), and the nascent [Go Study Groups Blog](https://medium.com/gostudygroup).
+In addition to my blog here, I also write at [my medium blog](https://medium.com/@arschles), [The Athens Project Blog](https://medium.com/project-athens), the [Go in 5 Minutes blog](https://medium.com/go-in-5-minutes), and the nascent [Go Study Groups Blog](https://medium.com/gostudygroup).
 
 ### My History
 

@@ -63,5 +63,5 @@ He has almost 15 years of software engineering experience and discovered Go arou
 
 I'm [@arschles](https://twitter.com/arschles) on Twitter and my username is [arschles](https://github.com/arschles) on GitHub.
 
-I blog at [medium.com/@arschles](https://medium.com/@arschles), [medium.com/go-in-5-minutes](https://medium.com/go-in-5-minutes) and [medium.com/project-athens](https://medium.com/project-athens)
+I blog at here, [medium.com/@arschles](https://medium.com/@arschles), [medium.com/go-in-5-minutes](https://medium.com/go-in-5-minutes) and [medium.com/project-athens](https://medium.com/project-athens)
 
