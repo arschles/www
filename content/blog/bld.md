@@ -1,7 +1,7 @@
 ---
 author: "Aaron Schlesinger"
 date: 2018-10-08T16:19:36-07:00
-title: 'Build Docker Images Locally or in the Cloud'
+title: 'az acr build or docker build?'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
