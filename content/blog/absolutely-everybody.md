@@ -2,9 +2,7 @@
 author: "Aaron Schlesinger"
 date: 2018-10-23T13:53:21-07:00
 title: 'Absolutely Everybody is Welcome'
-
-# For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-# meta_img = "/images/image.jpg"
+meta_img: "/images/avg-joes.png"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 # hacker_news_id = ""
