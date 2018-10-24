@@ -1,7 +1,7 @@
 baseurl = "https://arschles.com/"
 theme = "cocoa-eh"
 builddrafts = false
-canonifyurls = true
+canonifyurls = false
 contentdir = "content"
 languageCode = "en-US"
 layoutdir = "layouts"
