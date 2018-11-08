@@ -30,3 +30,9 @@ In my 15+ years in software engineering, I've worked in lots of different roles.
 - I wrote [Newman](https://github.com/stackmob/newman), which was the first REST client library for Scala. It takes prior art from [Scalaz](https://github.com/scalaz/scalaz) and other "hardcore" functional programming concepts and presents them as a slick API. I wrote about it [here](https://www.paypal-engineering.com/2014/02/13/hello-newman-a-rest-client-for-scala/)
 - I helped build a "third party code execution platform" on top of the JVM. It was essentially containers as a service, but just for JVM languages. We used the JVM to constrain resources and provide jails.
 
+# Around the Web
+
+I'm [@arschles](https://twitter.com/arschles) on Twitter and my username is [arschles](https://github.com/arschles) on GitHub.
+
+I blog at here, [medium.com/@arschles](https://medium.com/@arschles), [medium.com/go-in-5-minutes](https://medium.com/go-in-5-minutes) and [medium.com/project-athens](https://medium.com/project-athens)
+

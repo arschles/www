@@ -19,7 +19,20 @@ I currently speak about Go, DevOps, and Kubernetes. I've spoken at industry lead
 - GopherCon
 - CodeMotion
 
-I've also spoken on Scala / Java, Javascript, C++ design patterns, and technology transformation in large organizations.
+I've also spoken on Scala / Java, Javascript, C++ design patterns, and technology transformation in large organizations. Some of my previous speaking engagements:
+
+- [Bring Sanity to your Dependencies with Go Modules and Athens](https://www.youtube.com/watch?v=z_ki4_1gxgQ) - GopherPalooza, October 12, 2018
+- [Athens: The Module Proxy for Go](https://www.youtube.com/watch?v=u9TYC06abAc) - a lightning talk at GopherCon North America, August 30, 2018
+- [I Can Haz Services?](https://www.youtube.com/watch?v=YJNcelV2v0Y) - Helm Summit, February 23, 2018
+- [The Elements of Kubernetes](https://www.youtube.com/watch?v=S9l2MWhIBhc) at KubeCon North America, December 7, 2017
+- [Connecting Brokers to Kubernetes Clusters with the Kubernetes Service Catalog and the Open Service Broker API](https://sched.co/BxJU) - Open Source Summit EU, October 25, 2017 (no video recorded)
+- [Functional Programming in Go](https://www.youtube.com/watch?v=c8Fwb4KbVJM), at GopherCon North America, July 14, 2017
+- [Programming Kubernetes with the Go SDK](https://www.youtube.com/watch?v=qiB4RxCDC8o) at KubeCon EU, April 10, 2017
+- [Programming Pearls of Go](https://voicerepublic.com/talks/programming-pearls-of-go) (audio only) at CodeMotion Berlin, October 25, 2016 ([teaser video](https://www.youtube.com/watch?v=egi36FEaSv4))
+- [Go in 5 Minutes and Design Patterns](https://changelog.com/gotime/18) on the GoTime FM podcast, September 22, 2016
+- [The Past, Present and Future of Go](https://www.youtube.com/watch?v=XGDXR6JpOnU) on the Hello Tech Pros podcast, July 7, 2016
+- [Concurrency Conventions in Go](https://www.youtube.com/watch?v=0xpv7SFQ0T4&t=568s) at GopherFest, June 3, 2015
+
 
 # Bio and Headshot
 
@@ -53,15 +66,10 @@ Aaron Schlesinger is a recognized public speaker and speaks primarily about Go, 
 
 In the past, he's spoken on Scala, Java and technology transformation in large companies.
 
+
+
 # Bio
 
 Aaron is a developer advocate at Microsoft Azure and a core maintainer of the Athens Project. Before Athens, he was a core maintainer and chair of the Kubernetes SIG-Service-Catalog and a contributor to various other projects in the Kubernetes community.
 
 He has almost 15 years of software engineering experience and discovered Go around 2013 and hasn’t looked back. He lives in San Mateo, CA where he and his wife love to run up and down mountains together.
-
-# Around the Web
-
-I'm [@arschles](https://twitter.com/arschles) on Twitter and my username is [arschles](https://github.com/arschles) on GitHub.
-
-I blog at here, [medium.com/@arschles](https://medium.com/@arschles), [medium.com/go-in-5-minutes](https://medium.com/go-in-5-minutes) and [medium.com/project-athens](https://medium.com/project-athens)
-
