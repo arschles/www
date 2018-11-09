@@ -22,6 +22,7 @@ I currently speak about Go, DevOps, and Kubernetes. I've spoken at industry lead
 I've also spoken on Scala / Java, Javascript, C++ design patterns, and technology transformation in large organizations. Some of my previous speaking engagements:
 
 - [Bring Sanity to your Dependencies with Go Modules and Athens](https://www.youtube.com/watch?v=z_ki4_1gxgQ) - GopherPalooza, October 12, 2018
+- [Kubernetes and Containers for Developers](https://vslive.com/Events/Chicago-2018/Sessions/Thursday/TH05-Kubernetes-and-Containers-for-Developers.aspx) - VSLive Chicago, September 20, 2018
 - [Athens: The Module Proxy for Go](https://www.youtube.com/watch?v=u9TYC06abAc) - a lightning talk at GopherCon North America, August 30, 2018
 - [I Can Haz Services?](https://www.youtube.com/watch?v=YJNcelV2v0Y) - Helm Summit, February 23, 2018
 - [The Elements of Kubernetes](https://www.youtube.com/watch?v=S9l2MWhIBhc) at KubeCon North America, December 7, 2017
