@@ -29,7 +29,9 @@ KubeCon North America, December 12, 2018
 
 [Slides](https://docs.google.com/presentation/d/1QVfVTg6EnVGZeg_6tvyMT1ZIemyzwPE8GlARUxyfUNw/edit?usp=sharing)
 
-### Women Who Go San Francisco - Athens and Go Modules Workshop
+### [Athens and Go Modules Workshop](https://www.meetup.com/Women-Who-Go/events/256070393/)
+
+Women Who Go San Francisco
 
 [Slides](https://docs.google.com/presentation/d/1QVfVTg6EnVGZeg_6tvyMT1ZIemyzwPE8GlARUxyfUNw/edit?usp=sharing)
 
