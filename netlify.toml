@@ -8,3 +8,8 @@ command = "hugo"
 
 [build.environment]
     HUGO_VERSION="0.49"
+
+[[redirects]]
+  from = "/talks/kubecon2018"
+  to = "https://docs.google.com/presentation/d/1lueiUvMiMIguwvvRb3qDmuzBBeS1i8vWuIy2DA6lpk8/edit?usp=sharing"
+  status = 303
