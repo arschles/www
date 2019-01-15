@@ -23,7 +23,7 @@ I've also spoken on Scala / Java, Javascript, C++ design patterns, and technolog
 
 ## Previous and Upcoming Speaking Engagements
 
-### [Kubernetes is Still Hard for App Developers, Let's Fix That!](https://sched.co/GrTQ) 
+### [Kubernetes is Still Hard for App Developers, Let's Fix That!](https://www.youtube.com/watch?v=YKNisFkO2Ww) 
 
 KubeCon North America, December 12, 2018
 

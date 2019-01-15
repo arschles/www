@@ -1,0 +1,86 @@
+---
+author: "Aaron Schlesinger"
+date: 2019-01-10T14:23:56-08:00
+title: 'GopherCon 2019 CFP OMG!'
+
+# For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
+# meta_img = "/images/image.jpg"
+
+# For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
+# hacker_news_id = ""
+# lobsters_id = ""
+---
+
+Hey Gophers!
+
+I want you to [submit a proposal](https://www.papercall.io/gophercon-2019) to talk at GopherCon 2019
+
+... and I want you to start now because the Call for Proposals is only open until January 31st!
+
+Submit a proposal, you say? Let's talk a little bit about that.
+
+# But I Could _Never_ Speak At GopherCon!
+
+Yes, you could. All those "superstars" you see up on the stage? They submitted talks through the [same form](https://www.papercall.io/gophercon-2019) as you do. You can submit, and you can get accepted.
+
+In fact, we love new speakers. All things being equal, we tend to prefer new-to-GopherCon speakers over speakers who have already spoken.
+
+# But I Might Not Get Accepted :(
+
+That's true, you could get rejected. We get many more proposals than spaces available in the program, so we unfortunately have to turn down some awesome proposals. Not all is lost if you don't get accepted though!
+
+A proposal isn't a one-and-done, and if it's not accepted to GopherCon 2019, it's far from wasted. It's absolutely fine to submit it to other conferences. There are tons of others [just for Go](https://github.com/golang/go/wiki/Conferences) alone.
+
+# Ok, How Can I Make My Proposal Better?
+
+There's lots written about that. [@carolynvs](https://twitter.com/carolynvs) - who's also on this year's program committee - gave some great tips tailored for this year's conference in [her post](https://carolynvanslyck.com/blog/2018/12/talk-at-gophercon/).
+
+There are also tons of other posts on how to [write](https://medium.com/@fox/how-to-write-a-successful-conference-proposal-4461509d3e32) [great](https://dave.cheney.net/2017/02/12/how-to-write-a-successful-conference-proposal) [proposals](http://russolsen.com/articles/2012/06/21/acing-the-technical-talk-getting-your-proposal-through-the-door.html).
+
+There's no single foolproof formula for writing the "perfect" proposal, but the selection criteria on the [CFP page](https://www.papercall.io/gophercon-2019) lay out generally what we're looking for.
+
+I'll add a little bit of detail for each item.
+
+## Relevance
+
+We look for talks that are related to _Go_. People come to GopherCon to learn about new stuff in the Go ecosystem, pick up new skills, and generally learn about Go and the community.
+
+If you're writing a proposal that you couldn't write about any other language, technology or community, you're on the right track. Other the other hand, if you're writing a proposal where you could swap out Go for another language, it probably won't be accepted.
+
+## Clarity
+
+Show us you've thought through exactly what you want to say in your talk. We want to see it in clear and detailed writing. I mean it - write down **everything** you're going to talk about.
+
+As long as it's clear, we want to read it. I personally love it if folks write down in the proposal notes a rough outline of what they plan to talk about.
+
+As it says in [the CFP page](https://www.papercall.io/gophercon-2019), no proposal has ever been rejected because it was too long.
+
+## Correctness
+
+In order for us to accept your proposal, we have to know that _you_ know what you're talking about. So tell us why!
+
+It's easy to talk yourself out of submitting because you don't feel like you're an expert. Impostor syndrome is a thing!
+
+But we're not looking for experts. **We're looking for experience in your topic**. Experience can mean a lot of things. For example "writing a scalable system to handle 1,000,000 requests per second at a large company" is just as valuable as "how I learned Go as a Javascript developer"
+
+So tell us - clearly - what your experience is and how it applies to your talk. Sometimes your experience will be a part of the talk description, but if it doesn't fit there, make sure to tell us about it in the notes and/or bio.
+
+## Achievability
+
+Sometimes I want to talk about _everything_. I get so excited about some technology that I want to go into 3 or 4 big things in one talk. Don't be like me!
+
+I said above that we're looking for clarity and detail, and that means your proposal needs to be focused on a specific topic so you have time to go into that detail. The elevator pitch section on the CFP requires that you tell us what you're going to talk about in 300 characters or less, so if you can't clearly summarize in that space, the talk is too long.
+
+That's a great opportunity to split your proposal up into 2 different talks!
+
+## Impact
+
+This is the absolute most important part for me. **Tell us what the audience will get out of your talk**. A good proposal will usually have something like the following at the end of the description: "the audience will walk away knowing ..."
+
+Also, remember that you're not just telling us what the audience will get, you're telling the audience why they should spend time listening to your talk. This part is your way to sell the talk to both the reviewers and the audience too!
+
+# That's It!
+
+If you feel like you have something to talk about, I really hope you [submit a proposal](https://www.papercall.io/gophercon-2019). If you're not sure about your proposal, I often ask folks in the [Gophers Slack](https://invite.slack.golangbridge.org/) for help, but you can ask anyone, though. A good proposal is about a good topic and conveying it clearly and in detail.
+
+**Good luck!!**
