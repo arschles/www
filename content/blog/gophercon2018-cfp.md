@@ -13,7 +13,7 @@ title: 'GopherCon 2019 CFP OMG!'
 
 Hey Gophers!
 
-I want you to [submit a proposal](https://www.papercall.io/gophercon-2019) to talk at GopherCon 2019
+I want you to [submit a proposal](https://www.papercall.io/gophercon-2019) to talk at [GopherCon 2019](https://www.gophercon.com/home).
 
 ... and I want you to start now because the Call for Proposals is only open until January 31st!
 
