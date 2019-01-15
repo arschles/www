@@ -43,7 +43,7 @@ There are also tons of other posts on how to [write](https://medium.com/@fox/how
 
 There's no single foolproof formula for writing the "perfect" proposal, but the selection criteria on the [CFP page](https://www.papercall.io/gophercon-2019) lay out generally what we're looking for. I'll add a little bit of detail for each item.
 
-## Relevance
+## "Relevance"
 
 We look for talks that are related to _Go_. People come to GopherCon to learn about new stuff in the Go ecosystem, pick up new skills, and generally learn about Go and the community.
 
@@ -51,7 +51,7 @@ If you're writing a proposal that you couldn't write about any other language, t
 
 Other the other hand, if you're writing a proposal where you could swap out Go for another language, it probably won't be accepted. If you're writing a proposal that's not related to programming or technology, it almost certainly won't be accepted.
 
-## Clarity
+## "Clarity"
 
 Show us you've thought through what you want to say in your talk. We want to see it in clear, detailed writing. I want to really stress this part. **Write down everything you plan to talk about**.
 
@@ -59,7 +59,7 @@ As long as it's clear writing, we want to read it. I personally love it when fol
 
 As it says in [the CFP page](https://www.papercall.io/gophercon-2019), _no proposal has ever been rejected because it was too long_.
 
-## Correctness
+## "Correctness"
 
 In order for us to accept your proposal, we have to know that _you_ know what you're talking about. So tell us why!
 
@@ -74,7 +74,7 @@ Here's what helps me get over that feeling every time:
 
 So tell us _clearly_ what your experience is and how it applies to your talk. Sometimes your experience will be easy to write about in your talk description, but if it doesn't fit there, make sure to tell us about it in the notes and/or bio section of the CFP.
 
-## Achievability
+## "Achievability"
 
 Sometimes I want to talk about _everything_ in my talk. I get so excited about some technology that I want to go into 3 or 4 big things in one talk. But those proposals never get accepted.
 
@@ -82,7 +82,7 @@ I said above that we're looking for clarity and detail, and that means **your pr
 
 If your proposal is too broad, it's great opportunity to split it up into multiple different talks!
 
-## Impact
+## "Impact"
 
 This is the absolute most important part for me. **Tell us what the audience will get out of your talk**. A good proposal will usually have something like the following at the end of the description: "the audience will walk away knowing ..."
 
