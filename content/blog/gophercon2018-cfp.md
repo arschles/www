@@ -4,7 +4,7 @@ date: 2019-01-10T14:23:56-08:00
 title: 'GopherCon 2019 CFP OMG!'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-# meta_img = "/images/image.jpg"
+meta_img: "/images/gopher-san-diego.png"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 # hacker_news_id = ""
