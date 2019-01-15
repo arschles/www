@@ -27,19 +27,21 @@ In fact, we love new speakers. All things being equal, we tend to prefer new-to-
 
 # But I Might Not Get Accepted :(
 
-That's true, you could get rejected. We get many more proposals than spaces available in the program, so we unfortunately have to turn down some awesome proposals. Not all is lost if you don't get accepted though!
+That's true, you could get rejected. We want to see your proposal, but we get many more proposals than spaces available in the program, so we unfortunately have to turn down some awesome proposals. Not all is lost if you don't get accepted to this conference, though!
 
-A proposal isn't a one-and-done, and if it's not accepted to GopherCon 2019, it's far from wasted. It's absolutely fine to submit it to other conferences. There are tons of others [just for Go](https://github.com/golang/go/wiki/Conferences) alone.
+A proposal isn't a one-and-done, and if it's not accepted to GopherCon 2019, it's far from wasted. I would encourage you to use it as inspiration for other conferences. There are tons of others [just for Go](https://github.com/golang/go/wiki/Conferences) alone!
+
+Personally, I submit my rejected proposals (and there are a lot of them!) to other conferences, or use them as inspiration for new proposals.
 
 # Ok, How Can I Make My Proposal Better?
 
-There's lots written about that. [@carolynvs](https://twitter.com/carolynvs) - who's also on this year's program committee - gave some great tips tailored for this year's conference in [her post](https://carolynvanslyck.com/blog/2018/12/talk-at-gophercon/).
+There are a lot of articles with tips and tricks for writing a great proposal.
+
+[@carolynvs](https://twitter.com/carolynvs) - who is on this year's program committee with me - has some great tips tailored for this year's conference in [her post](https://carolynvanslyck.com/blog/2018/12/talk-at-gophercon/).
 
 There are also tons of other posts on how to [write](https://medium.com/@fox/how-to-write-a-successful-conference-proposal-4461509d3e32) [great](https://dave.cheney.net/2017/02/12/how-to-write-a-successful-conference-proposal) [proposals](http://russolsen.com/articles/2012/06/21/acing-the-technical-talk-getting-your-proposal-through-the-door.html).
 
-There's no single foolproof formula for writing the "perfect" proposal, but the selection criteria on the [CFP page](https://www.papercall.io/gophercon-2019) lay out generally what we're looking for.
-
-I'll add a little bit of detail for each item.
+There's no single foolproof formula for writing the "perfect" proposal, but the selection criteria on the [CFP page](https://www.papercall.io/gophercon-2019) lay out generally what we're looking for. I'll add a little bit of detail for each item.
 
 ## Relevance
 
@@ -81,6 +83,8 @@ Also, remember that you're not just telling us what the audience will get, you'r
 
 # That's It!
 
-If you feel like you have something to talk about, I really hope you [submit a proposal](https://www.papercall.io/gophercon-2019). If you're not sure about your proposal, I often ask folks in the [Gophers Slack](https://invite.slack.golangbridge.org/) for help, but you can ask anyone, though. A good proposal is about a good topic and conveying it clearly and in detail.
+If you feel like you have something to talk about, I really hope you [submit a proposal](https://www.papercall.io/gophercon-2019).
+
+I can't personally help folks with their proposals this year, but if you'd like help, please ask folks in the [Gophers Slack](https://invite.slack.golangbridge.org/) for help.
 
 **Good luck!!**
