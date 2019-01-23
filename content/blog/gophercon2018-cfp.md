@@ -61,7 +61,7 @@ As it says in [the CFP page](https://www.papercall.io/gophercon-2019), _no propo
 
 ## "Correctness"
 
-In order for us to accept your proposal, we have to know that _you_ know what you're talking about. So tell us why!
+In order for us to accept your proposal, we have to know that _you_ know what you're talking about. So tell us that you do!
 
 It's easy to talk yourself out of submitting because you don't feel like you're an expert. I do it all the time.
 
