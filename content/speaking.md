@@ -21,98 +21,164 @@ I currently speak about Go, DevOps, and Kubernetes. I've spoken at industry lead
 
 I've also spoken on Scala / Java, Javascript, C++ design patterns, and technology transformation in large organizations.
 
-## Previous and Upcoming Speaking Engagements
+# Previous and Upcoming Speaking Engagements
 
-### [Kubernetes is Still Hard for App Developers, Let's Fix That!](https://www.youtube.com/watch?v=YKNisFkO2Ww) 
+## The Elements of Kubernetes
+
+O'Reilly Software Architecture Conference
+
+New York, NY, USA
+
+[Abstract](https://conferences.oreilly.com/software-architecture/sa-ny/public/schedule/detail/71940) | [Slides](https://drive.google.com/open?id=14t7rPTeFrDFnyaGjl_UkYiaiuFb6spKQysZStIxvxaM)
+
+## Modernizing your application with containers and Serverless
+
+Microsoft Ignite | The Tour, Johannesburg
+
+Johannesburg, South Africa
+
+## Consolidating infrastructure with Azure Kubernetes Service
+
+Microsoft Ignite | The Tour, Johannesburg
+
+Johannesburg, South Africa
+
+## Kubernetes is Still Hard for App Developers, Let's Fix That!
 
 KubeCon North America, December 12, 2018
 
-[Slides](https://docs.google.com/presentation/d/1QVfVTg6EnVGZeg_6tvyMT1ZIemyzwPE8GlARUxyfUNw/edit?usp=sharing)
+Seattle, WA, USA
 
-### [Athens and Go Modules Workshop](https://www.meetup.com/Women-Who-Go/events/256070393/)
+[Recording](https://www.youtube.com/watch?v=YKNisFkO2Ww) | [Slides](https://docs.google.com/presentation/d/1QVfVTg6EnVGZeg_6tvyMT1ZIemyzwPE8GlARUxyfUNw/edit?usp=sharing)
+
+## Athens and Go Modules Workshop
 
 Women Who Go San Francisco
 
-[Slides](https://docs.google.com/presentation/d/1QVfVTg6EnVGZeg_6tvyMT1ZIemyzwPE8GlARUxyfUNw/edit?usp=sharing)
+San Francisco, CA, USA
 
-### [Bring Sanity to your Dependencies with Go Modules and Athens](https://www.youtube.com/watch?v=z_ki4_1gxgQ)
+[Abstract](https://www.meetup.com/Women-Who-Go/events/256070393/) | [Slides](https://docs.google.com/presentation/d/1QVfVTg6EnVGZeg_6tvyMT1ZIemyzwPE8GlARUxyfUNw/edit?usp=sharing)
+
+## Bring Sanity to your Dependencies with Go Modules and Athens
 
 GopherPalooza, October 12, 2018
 
-[Slides](https://docs.google.com/presentation/d/16ZCGnSwHcI_6PIjz7n-6xE5zySiDk0bnmkrOB33yRLs/edit?usp=sharing)
+San Francsico, CA, USA
 
-### [Kubernetes and Containers for Developers](https://vslive.com/Events/Chicago-2018/Sessions/Thursday/TH05-Kubernetes-and-Containers-for-Developers.aspx)
+[Recording](https://www.youtube.com/watch?v=z_ki4_1gxgQ) | [Slides](https://docs.google.com/presentation/d/16ZCGnSwHcI_6PIjz7n-6xE5zySiDk0bnmkrOB33yRLs/edit?usp=sharing)
+
+## Kubernetes and Containers for Developers
 
 VSLive Chicago, September 20, 2018
 
-[Slides](https://docs.google.com/presentation/d/1uiXbCHiw9c7YPSk0LkiIVREpXpKzsImGQJw3SiclG-o/edit?usp=sharing)
+Chicago, IL, USA
 
-### [Athens: The Module Proxy for Go](https://www.youtube.com/watch?v=u9TYC06abAc)
+[Abstract](https://vslive.com/Events/Chicago-2018/Sessions/Thursday/TH05-Kubernetes-and-Containers-for-Developers.aspx) | [Slides](https://docs.google.com/presentation/d/1uiXbCHiw9c7YPSk0LkiIVREpXpKzsImGQJw3SiclG-o/edit?usp=sharing)
+
+## Athens: The Module Proxy for Go
 
 A lightning talk at GopherCon North America, August 30, 2018
 
-### [I Can Haz Services?](https://www.youtube.com/watch?v=YJNcelV2v0Y)
+Denver, CO, USA
+
+[Recording](https://www.youtube.com/watch?v=u9TYC06abAc)
+
+## I Can Haz Services?
 
 Helm Summit, February 23, 2018
 
-[Slides](https://docs.google.com/presentation/d/1BVj_Noo0FMCNDEFlQtm6qdRlJnrSpqtKINScvwAipHk/edit?usp=sharing)
+Portland OR, USA
 
-### [The Elements of Kubernetes](https://www.youtube.com/watch?v=S9l2MWhIBhc)
+[Recording](https://www.youtube.com/watch?v=YJNcelV2v0Y) | [Slides](https://docs.google.com/presentation/d/1BVj_Noo0FMCNDEFlQtm6qdRlJnrSpqtKINScvwAipHk/edit?usp=sharing)
+
+## The Elements of Kubernetes
 
 KubeCon North America, December 7, 2017
 
-[Slides](https://docs.google.com/presentation/d/1P7TiWeSr9jwu7KI6wkDUi53JKSntmR6jjHdwWn3CucM/edit?usp=sharing)
+Austin, TX, USA
+
+[Recording](https://www.youtube.com/watch?v=S9l2MWhIBhc) | [Slides](https://docs.google.com/presentation/d/1P7TiWeSr9jwu7KI6wkDUi53JKSntmR6jjHdwWn3CucM/edit?usp=sharing)
 
 
-### [Connecting Brokers to Kubernetes Clusters with the Kubernetes Service Catalog and the Open Service Broker API](https://sched.co/BxJU)
+## Connecting Brokers to Kubernetes Clusters with the Kubernetes Service Catalog and the Open Service Broker API
 
 Open Source Summit EU, October 25, 2017 (no video recorded)
 
-[Slides](https://docs.google.com/presentation/d/19UObADuLZzYMdmgAWvvjzYJN1T6naNxEjXw23nNAFoM/edit?usp=sharing)
+Prague, Czech Republic
 
-### [Functional Programming in Go](https://www.youtube.com/watch?v=c8Fwb4KbVJM)
+[Abstract](https://sched.co/BxJU) | [Slides](https://docs.google.com/presentation/d/19UObADuLZzYMdmgAWvvjzYJN1T6naNxEjXw23nNAFoM/edit?usp=sharing)
+
+## Advanced application patterns with Azure Container Service
+
+Microsoft Ignite, September 24, 2017
+
+Orlando, FL, USA
+
+[Recording](https://channel9.msdn.com/Events/Ignite/Microsoft-Ignite-Orlando-2017/BRK4027)
+
+## The Azure open source app platform: OpenShift, Cloud Foundry, and more
+
+Microsoft Ignite, September 24, 2017
+
+Orlando, FL, USA
+
+[Recording](https://channel9.msdn.com/Events/Ignite/Microsoft-Ignite-Orlando-2017/BRK3256)
+
+## Functional Programming in Go
 
 GopherCon North America, July 14, 2017
 
-[Slides](https://docs.google.com/presentation/d/1iwDdqUEjBQr2cktm4KkMuScLe4IZ4_Y_IxprctlIwb8/edit?usp=sharing)
+Denver, CO, USA
 
-### [Programming Kubernetes with the Go SDK](https://www.youtube.com/watch?v=qiB4RxCDC8o)
+[Recording](https://www.youtube.com/watch?v=c8Fwb4KbVJM) | [Slides](https://docs.google.com/presentation/d/1iwDdqUEjBQr2cktm4KkMuScLe4IZ4_Y_IxprctlIwb8/edit?usp=sharing)
+
+## Programming Kubernetes with the Go SDK
 
 KubeCon EU, April 10, 2017
 
-[Slides](https://docs.google.com/presentation/d/1fTkymyOgpSqLb3oX25DecmkPML9Ny-1mbmcfx-9wD9E/edit?usp=sharing)
+Berlin, Germany
 
-### [Programming Pearls of Go](https://voicerepublic.com/talks/programming-pearls-of-go)
+[Recording](https://www.youtube.com/watch?v=qiB4RxCDC8o) | [Slides](https://docs.google.com/presentation/d/1fTkymyOgpSqLb3oX25DecmkPML9Ny-1mbmcfx-9wD9E/edit?usp=sharing)
+
+## Programming Pearls of Go
 
 CodeMotion Berlin, October 25, 2016
 
-The above link is audio only. There was no full-length video recorded, only this [teaser video](https://www.youtube.com/watch?v=egi36FEaSv4))
+Berlin, Germany
 
-[Slides](https://docs.google.com/presentation/d/1FXA1QpxuM0i1HVKyXBWNjT8vBQs2ogtOUYrtwNcJ2ak/edit?usp=sharing)
+[Recording](https://voicerepublic.com/talks/programming-pearls-of-go) | [Slides](https://docs.google.com/presentation/d/1FXA1QpxuM0i1HVKyXBWNjT8vBQs2ogtOUYrtwNcJ2ak/edit?usp=sharing) | [Teaser video](https://www.youtube.com/watch?v=egi36FEaSv4)
 
-### [Go in 5 Minutes and Design Patterns](https://changelog.com/gotime/18)
+## Go in 5 Minutes and Design Patterns
 
 GoTime FM podcast, September 22, 2016
 
-### [The Past, Present and Future of Go](https://www.youtube.com/watch?v=XGDXR6JpOnU)
+[Recording](https://changelog.com/gotime/18)
+
+## The Past, Present and Future of Go
 
 Hello Tech Pros podcast, July 7, 2016
 
-### [Concurrency Conventions in Go](https://www.youtube.com/watch?v=0xpv7SFQ0T4&t=568s)
+[Recording](https://www.youtube.com/watch?v=XGDXR6JpOnU)
+
+## Concurrency Conventions in Go
 
 GopherFest, June 3, 2015
 
-No slides available.
+San Francisco, CA, USA
 
-### The Epic Battle: Scala @ PayPal
+[Recording](https://www.youtube.com/watch?v=0xpv7SFQ0T4&t=568s)
+
+## The Epic Battle: Scala @ PayPal
 
 OSCON 2014
 
-No slides available.
+Portland, OR, USA
 
-### Newman - A Functional REST Client for Scala
+## Newman - A Functional REST Client for Scala
 
 Silicon Valley Code Camp 2013
+
+San Jose, CA, USA
 
 [Slides](https://docs.google.com/presentation/d/1r6OdLhgRcO4V5uyANlpcX0ML115_Xpf1cV-6g9AknZM/edit?usp=sharing)
 
