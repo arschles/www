@@ -72,7 +72,7 @@ decoder := First("address").Then("accessInstructions").Then("message").Into(Stri
 
 # Why?
 
-`dcode` obviously doesn't fit every use case. If you're expecing to decode a big JSON object with lots of keys, and the incoming JSON value is the same every time, you'll most likely be more successful writing a `struct` and using [`encoding/json`](https://godoc.org/encoding/json) to decode into it (although `dcode` does have functionality to decode into `struct`s).
+`dcode` obviously doesn't fit every use case. If you're expecting to decode a big JSON object with lots of keys, and the incoming JSON value is the same every time, you'll most likely be more successful writing a `struct` and using [`encoding/json`](https://godoc.org/encoding/json) to decode into it (although `dcode` does have functionality to decode into `struct`s).
 
 This library does well, however, in a few cases:
 
