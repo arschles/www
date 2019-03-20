@@ -1,7 +1,7 @@
 ---
 author: "Aaron Schlesinger"
 date: 2019-03-19T17:28:46-07:00
-title: 'Serverless? We've Seen This Before!'
+title: "Serverless? We've Seen This Before!"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
