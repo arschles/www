@@ -8,3 +8,11 @@ command = "hugo"
 
 [build.environment]
     HUGO_VERSION="0.49"
+
+[[redirects]]
+  from = "/kubecon2018"
+  to = "https://docs.google.com/presentation/d/1lueiUvMiMIguwvvRb3qDmuzBBeS1i8vWuIy2DA6lpk8/edit?usp=sharing"
+
+[[redirects]]
+    from = "/zoom"
+    to = "https://zoom.us/j/5123231998"
