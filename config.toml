@@ -1,4 +1,5 @@
 baseurl = "https://arschles.com/"
+relativeURLs = "true"
 theme = "cocoa-eh"
 builddrafts = false
 canonifyurls = false
