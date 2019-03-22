@@ -23,6 +23,14 @@ I've also spoken on Scala / Java, Javascript, C++ design patterns, and technolog
 
 # Previous and Upcoming Speaking Engagements
 
+## Go Modules and Athens
+
+CodeMotion Rome, 2019
+
+Rome, Italy
+
+[Abstract](https://events.codemotion.com/conferences/rome/2019/agenda/) | [Slides](https://cda.ms/P0)
+
 ## The Elements of Kubernetes
 
 O'Reilly Software Architecture Conference
