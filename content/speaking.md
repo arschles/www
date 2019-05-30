@@ -198,7 +198,7 @@ Below is my up-to-date bio and headshot. If you're a conference organizer, you m
 
 Aaron is a developer advocate at Microsoft Azure and a core maintainer of the [Athens](https://docs.gomods.io) Project. Before Athens, he was a core maintainer and chair of the Kubernetes [SIG-Service-Catalog](https://github.com/kubernetes-incubator/service-catalog) and a contributor to various other projects in the Kubernetes community.
 
-He has almost 15 years of software engineering experience ranging from frontend design to distributed data systems. He discovered Go around 2013 and hasn’t looked back. He lives in San Mateo, CA where he and his wife love to run up and down mountains together.
+He has 15+ years of software engineering experience ranging from frontend design to distributed data systems. He discovered Go around 2013 and Kubernetes in 2015 and hasn’t looked back. He lives in Portland, OR where he and his wife love to run up and down mountains together.
 
 ## Headshot
 
