@@ -35,7 +35,7 @@ The office hours will be held on a [Zoom](https://zoom.com) video chat at this l
 - We'll navigate the codebase as the questions lead us (not limited to the area I chose!)
 - I am not the “expert”. I happen to know a little bit about a lot of the codebase, but hopefully others will attend who have a lot more in-depth knowledge about individual pieces. There’s power in numbers!
 
-Of course, the format might change in future office hours sessions if needed, but the only thing that won't change is that **absolutely everybody is welcome**.
+I intend to make these office hours recurring. The format might change in future office hours sessions if needed, but the only thing that won't change is that **absolutely everybody is welcome**.
 
 # Time and Date
 
