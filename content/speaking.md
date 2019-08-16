@@ -29,7 +29,7 @@ An opening keynote at GopherCon USA 2019
 
 San Diego, CA
 
-[Abstract](https://www.gophercon.com/agenda/session/49027)
+[Abstract](https://www.gophercon.com/agenda/session/49027) | [Slides](/slides/2019-07-24-GopherCon-US)
 
 ## Leaping Communities Forward
 
