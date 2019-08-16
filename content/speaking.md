@@ -23,6 +23,54 @@ I've also spoken on Scala / Java, Javascript, C++ design patterns, and technolog
 
 # Previous and Upcoming Speaking Engagements
 
+## The Athens Project - A Proxy Server for Go Modules
+
+An opening keynote at GopherCon USA 2019
+
+San Diego, CA
+
+[Abstract](https://www.gophercon.com/agenda/session/49027)
+
+## Leaping Communities Forward
+
+A keynote panel at JFrog SwampUP 2019
+
+San Francisco, CA
+
+[Recording](https://www.youtube.com/watch?v=NKxLDQr0S-g)
+
+## Improving Dependencies for Everyone with Go Modules and Module Repositories
+
+JFrog SwampUP 2019
+
+San Francisco, CA
+
+[Slides](https://docs.google.com/presentation/d/1B8VZRyDo3Tvxw29BQXLT3ZdRBSckCN7i5XBXsit3Oyc/edit?usp=sharing) | [Recording](https://www.youtube.com/watch?v=J5TTdr4gSEg)
+
+## Kubernetes is still hard for app developers; let’s fix that
+
+O'Reilly Velocity 2019
+
+San Jose, CA
+
+[Abstract](https://conferences.oreilly.com/velocity/vl-ca-2019/public/schedule/detail/74930) | [Slides](https://docs.google.com/presentation/d/1-QJUdV4TrrE2nPMBSSnG3st5pcu00d76PQJ5d5HxO2Q/edit?usp=sharing)
+
+## The Athens Project - A Proxy Server for Go Modules
+
+GopherCon EU, 2019
+
+Tenerife, Canary Islands, Spain
+
+[Abstract](https://www.gophercon.es/#aaron-schlesinger-anchor) | [Slides](https://docs.google.com/presentation/d/1w6QnFGdlGNRut_2XCe0Pe379Fc_4N4wiNCEsQAnZiY8/edit?usp=sharing) | [Recording](https://www.youtube.com/watch?v=VUp89k5UHxs)
+
+## The Athens Project - A Proxy Server for Go Modules
+
+GothamGo, 2019
+
+New York, NY
+
+[Abstract](http://www.gothamgo.com/speakers/index#aaron_schlesinger) | [Slides](https://docs.google.com/presentation/d/1HB2kyOktUiBTXFym_i-u40PGLZyXc0yXFwR9aKd8RKU/edit?usp=sharing_) | [Recording](https://www.youtube.com/watch?v=177n7_5fYjY)
+
 ## Go Modules and Athens
 
 CodeMotion Rome, 2019
