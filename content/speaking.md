@@ -21,7 +21,23 @@ I currently speak about Go, DevOps, and Kubernetes. I've spoken at industry lead
 
 I've also spoken on Scala / Java, Javascript, C++ design patterns, and technology transformation in large organizations.
 
-# Previous and Upcoming Speaking Engagements
+# Previous Speaking Engagements
+
+## Kubernetes is Still Hard for App Developers, Let’s Fix That!
+
+A talk at Texas Scalability Summit
+
+Austin, TX
+
+[Abstract](http://texasscalabilitysummit.com/2019/sessions#schlesinger) | [Slides](/slides/2019-09-13-Texas-Scalability-Summit)
+
+##  Improving Dependencies for Everyone with Modules, Proxies and the Athens Project
+
+An opening keynote at GopherCon UK 2019
+
+London, UK
+
+[Slides](/slides/2019-08-23-GopherConUK)
 
 ## The Athens Project - A Proxy Server for Go Modules
 
@@ -29,7 +45,7 @@ An opening keynote at GopherCon USA 2019
 
 San Diego, CA
 
-[Abstract](https://www.gophercon.com/agenda/session/49027) | [Slides](/slides/2019-07-24-GopherCon-US)
+[Abstract](https://www.gophercon.com/agenda/session/49027) | [Slides](/slides/2019-07-24-GopherCon-US) | [Recording](https://www.youtube.com/watch?v=WDbbIS7m9bU)
 
 ## Leaping Communities Forward
 
