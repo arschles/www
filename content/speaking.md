@@ -37,7 +37,7 @@ An opening keynote at GopherCon UK 2019
 
 London, UK
 
-[Slides](/slides/2019-08-23-GopherConUK)
+[Slides](/slides/2019-08-23-GopherConUK) | [Recording](https://www.youtube.com/watch?v=_u015W1zR2A&list=PLDWZ5uzn69ezokLCB-nGgYInxL0uP1PeZ&index=15&t=0s)
 
 ## The Athens Project - A Proxy Server for Go Modules
 
