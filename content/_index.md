@@ -1,8 +1,8 @@
 +++
 title = "Aaron Schlesinger"
 subtitle = "Down the rabbit hole"
-# image = "/images/athens-banner.png"
-thumbnail = "/images/go-functional-gopher.png"
+image = "/images/athens-banner.png"
+thumbnail = "/images/athens-banner.png"
 +++
 
 [![Aaron Schlesinger](/images/go-functional-gopher.png)](https://arschles.com)
