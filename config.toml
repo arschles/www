@@ -1,6 +1,6 @@
 baseurl = "https://arschles.com/"
 relativeURLs = "true"
-theme = "cocoa-eh"
+theme = "story"
 builddrafts = false
 canonifyurls = false
 contentdir = "content"
@@ -8,14 +8,35 @@ languageCode = "en-US"
 layoutdir = "layouts"
 publishdir = "public"
 author = "Aaron Schlesinger"
-title = "arschles"
+title = "Down the rabbit hole"
 disqusshortname = "arschlescom"
 pluralizelisttitles = false
 
+[[menu.social]]
+  name = "GitHub"
+  title = "fab fa-github-square"
+  url = "https://github.com/arschles"
+
+[[menu.main]]
+  name = "About"
+  title = "About"
+  url = "/about/"
+
+[[menu.main]]
+    name = "Speaking"
+    title = "Speaking"
+    url = "/speaking"
+
+[[menu.main]]
+    name = "Slides & Talks"
+    title = "Slides & Talks"
+    url = "/talks"
+  
 [permalinks]
 blog = "blog/:slug/"
 
 [params]
+author = "Aaron Schlesinger"
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
 description = "Aaron's Blog"
@@ -31,7 +52,7 @@ share = true
 # example: share_on_googleplus = false
 latestpostcount = 3
 github = "arschles"
-email = "arschles+site@gmail.com"
+email = "aaron@ecomaz.net"
 linkedin = "aaronschlesinger"
 twitter = "arschles"
 # facebook = "facebook_id"
@@ -56,3 +77,10 @@ type = "#97d28b"
 special = "#ffcb8d"
 value = "#96c2d7"
 statement = "#ff8e91"
+
+[outputs]
+  home = ["HTML", "JSON", "RSS"]
+  page = ["HTML"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  taxonomyTerm = ["HTML", "RSS"]

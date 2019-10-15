@@ -1,3 +1,6 @@
 [submodule "themes/cocoa-eh"]
         path = themes/cocoa-eh
         url = https://github.com/mtn/cocoa-eh-hugo-theme.git
+[submodule "story"]
+	path = themes/story
+	url = https://github.com/xaprb/story.git
