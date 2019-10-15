@@ -5,6 +5,7 @@ title: 'Give Away Your OSS Power'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 meta_img: "/images/give-away-power/bus-factor.jpg"
+image: "/images/give-away-power/bus-factor.jpg"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 # hacker_news_id = ""

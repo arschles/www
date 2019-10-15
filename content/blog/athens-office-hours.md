@@ -5,6 +5,7 @@ title: 'Athens Office Hours!'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 meta_img: "/images/athens-gopher.png"
+image: "/images/athens-gopher.png"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 # hacker_news_id = ""

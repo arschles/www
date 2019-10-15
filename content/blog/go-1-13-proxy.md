@@ -2,6 +2,7 @@
 author: "Aaron Schlesinger"
 date: 2019-09-12T13:37:57-07:00
 title: 'Go 1.13 for Private Repositories'
+image: "/images/gopher-university.png"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
