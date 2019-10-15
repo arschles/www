@@ -1,7 +1,7 @@
 +++
 title = "Aaron Schlesinger"
 subtitle = "Down the rabbit hole"
-image = "/images/athens-banner.png"
+image = "/images/hello-world.png"
 thumbnail = "/images/athens-banner.png"
 +++
 
