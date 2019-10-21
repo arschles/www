@@ -23,6 +23,12 @@ I've also spoken on Scala / Java, Javascript, C++ design patterns, and technolog
 
 # Previous Speaking Engagements
 
+## The Athens Project
+
+A talk at GoLab 2019
+
+[Slides](/slides/2019-10-21-GoLab-Athens)
+
 ## Kubernetes is Still Hard for App Developers, Let’s Fix That!
 
 A talk at Texas Scalability Summit
