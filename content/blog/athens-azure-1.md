@@ -13,7 +13,7 @@ title: 'Athens on Azure Kubernetes Service'
 
 I've been working on Athens for well over a year now, and I've mentioned before that I have been running the `athens.azurefd.net` server on my own for almost all that time. The infrastructure that powered that server looked like this:
 
-```
+```console
 you ---> Azure Front Door
                 |
                 |
@@ -29,6 +29,43 @@ If you're not familiar with the acronyms, here are some short explanations for y
 
 - [ACI](https://azure.microsoft.com/en-us/services/container-instances/) stands for "Azure Container Instances". It's a handy way to run a group of Docker containers together in Azure, and get a public IP & hostname for them
 - [Front Door](https://azure.microsoft.com/en-us/services/frontdoor/) is Azure's reverse proxy. It does a bunch of stuff, but the things that I care about are TLS termination and global caching. I've written and spoken about front door a lot in the past, and I'm a big believer in it. I think it's one of Azure's most handy services
-- [Cosmos DB]
+- [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/) is Azure's global "NoSQL" database. It supports the MongoDB API and does replication across Azure cloud regions very nicely, with no intervention from the operator (AKA me!)
 
-Pretty simple, but it worked for all this time!
+# Original requirements
+
+When I set up this public proxy, I wanted to give anyone interested an opportunity to try Athens without installing anything. I think it did exactly that! It turns out it also got Gophers to start thinking about modules and get their local environment set up.
+
+This deployment was the first of its kind, too! But, I had no intention of making it "production ready." I had no plans to recruit a team to help out with the ongoing SRE and DevOps work, and I knew I wouldn't have time to do much of that myself. So I needed a deployment that would mostly take care of itself.
+
+Those above technologies let me build an architecture that took care of mostly that. Most of the work I had to put into this deployment was managing the transition from Go 1.11 to 1.12 and then to 1.13.
+
+There were folks using athens.azurefd.net in their production CI/CD pipelines, too. That's a testament to how well this architecture worked.
+
+# New requirements
+
+These days, there are [three](https://proxy.golang.org) [good](https://gocenter.io) [proxies](https://gonexus.dev) that I know of which are public and mostly production ready proxy, so in theory, my deployment isn't really necessary anymore. That being said, it's not going anywhere though!
+
+I'm going to use it as a test bed and educational tool instead. Instead of running Athens on ACI, I'll be moving it to Kubernetes. This move will open up a lot of flexibility in how I run, debug, and deploy the service. Here's a high level diagram for what I'm planning to do:
+
+```console
+you ---> Azure Front Door
+                |
+                |
+                |
+Kubernetes ingress controller in AKS ---> Athens deployment (pods) ---> CosmosDB
+```
+
+And here are some things you don't see:
+
+- This simple [script](https://github.com/arschles/athens-azure/blob/71932e2df1c226163c9c62c0024e0809aca27b1b/aci.sh) deploys to a (few) regions that Athens currently runs. I'll be using Terraform to deploy to one (and more in the future!) [AKS](https://docs.microsoft.com/en-us/azure/aks/) cluster
+- I'll likely use a service mesh system to control 
+- I'm planning to use Athens' built-in distributed tracing support to help with debugging
+- I'm planning to use [lathens](https://github.com/arschles/athens-azure/tree/master/lathens) to cache the `/list` and `/latest` API calls for each module
+- I'm planning to use [crathens](https://github.com/arschles/athens-azure/tree/master/crathens) to crawl upstream VCS repos and proxies to keep modules up to date
+- I'm planning to centralize logs somewhere. Not sure where yet!
+
+# What's coming
+
+I've already gotten started. In fact, you can see a running prototype of an AKS-backed Athens at [k8s.goreg.dev](https://k8s.goreg.dev). It's missing a lot of the features in that above list, but it's built approximately the same as the architecture in that diagram above. All the code to do all of this is [open source](https://github.com/arschles/athens-azure), and this is post #1 of a series that I'll use to chronicle my experience setting up and running Athens.
+
+See you soon!
