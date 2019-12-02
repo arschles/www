@@ -33,19 +33,19 @@ If you're not familiar with the acronyms, here are some short explanations for y
 
 # Original requirements
 
-When I set up this public proxy, I wanted to give anyone interested an opportunity to try Athens without installing anything. I think it did exactly that! It turns out it also got Gophers to start thinking about modules and get their local environment set up.
+When I set up this public proxy, I wanted to give anyone interested an opportunity to try Athens without installing anything. I think it did exactly that, and it turns out the proxy also got Gophers to start thinking about modules and get their local environment set up.
 
-This deployment was the first of its kind, too! But, I had no intention of making it "production ready." I had no plans to recruit a team to help out with the ongoing SRE and DevOps work, and I knew I wouldn't have time to do much of that myself. So I needed a deployment that would mostly take care of itself.
+This deployment was the first of its kind, too! I had no intention of making it "production ready" though. My goal was to encourage teams and companies to roll out their own hosted servers, so the Athens team could focus more on empowering teams to run their own _internal_ Athens servers. I needed a deployment that would mostly run itself.
 
 Those above technologies let me build an architecture that took care of mostly that. Most of the work I had to put into this deployment was managing the transition from Go 1.11 to 1.12 and then to 1.13.
 
-There were folks using athens.azurefd.net in their production CI/CD pipelines, too. That's a testament to how well this architecture worked.
+I generally spend no more than an hour a week taking care of this infrastructure, and I've talked to a nontrivial amount of folks using `athens.azurefd.net` in their production CI/CD pipelines. That's a testament to how well this architecture worked over time.
 
 # New requirements
 
-These days, there are [three](https://proxy.golang.org) [good](https://gocenter.io) [proxies](https://gonexus.dev) that I know of which are public and mostly production ready proxy, so in theory, my deployment isn't really necessary anymore. That being said, it's not going anywhere though!
+These days, there are [three](https://proxy.golang.org) [good](https://gocenter.io) [proxies](https://gonexus.dev) that I know of which are public and mostly production ready proxy. In theory, my deployment isn't really necessary anymore. That being said, I firmly believe that Athens needs to live on the public internet as a testbed for our software. It's not going anywhere.
 
-I'm going to use it as a test bed and educational tool instead. Instead of running Athens on ACI, I'll be moving it to Kubernetes. This move will open up a lot of flexibility in how I run, debug, and deploy the service. Here's a high level diagram for what I'm planning to do:
+Not only is it going to stick around for testing, I'm also going to use the infrastructure as an educational tool. Instead of running Athens on ACI, I'll be moving the hosting infrastructure to Kubernetes. This move will open up a lot of flexibility in how I run, debug and deploy the service. Here's a high level diagram for what I'm planning to do:
 
 ```console
 you ---> Azure Front Door
@@ -66,6 +66,8 @@ And here are some things you don't see:
 
 # What's coming
 
-I've already gotten started. In fact, you can see a running prototype of an AKS-backed Athens at [k8s.goreg.dev](https://k8s.goreg.dev). It's missing a lot of the features in that above list, but it's built approximately the same as the architecture in that diagram above. All the code to do all of this is [open source](https://github.com/arschles/athens-azure), and this is post #1 of a series that I'll use to chronicle my experience setting up and running Athens.
+I've already gotten started. In fact, you can see a running prototype of an AKS-backed Athens at [k8s.goreg.dev](https://k8s.goreg.dev). It's missing a lot of the features in that above list, but it's built approximately the same as the architecture in that diagram above.
+
+All the code to do all of this is [open source](https://github.com/arschles/athens-azure), and this is post #1 of a series that I'll use to chronicle my experience setting up and running Athens.
 
 See you soon!
