@@ -2,7 +2,7 @@
 author: "Aaron Schlesinger"
 date: 2019-11-27T17:09:38-08:00
 title: 'Athens on Azure Kubernetes Service'
-description: 'The hosted athens.azurefd.net, now with more Kubernetes!"
+description: 'The hosted athens.azurefd.net, now with more Kubernetes!'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 meta_img: "/images/athens-gopher.png"
