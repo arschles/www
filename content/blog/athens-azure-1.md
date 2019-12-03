@@ -31,6 +31,8 @@ If you're not familiar with the acronyms, here are some short explanations for y
 - [Front Door](https://azure.microsoft.com/en-us/services/frontdoor/) is Azure's reverse proxy. It does a bunch of stuff, but the things that I care about are TLS termination and global caching. I've written and spoken about front door a lot in the past, and I'm a big believer in it. I think it's one of Azure's most handy services
 - [Cosmos DB](https://azure.microsoft.com/en-us/services/cosmos-db/) is Azure's global "NoSQL" database. It supports the MongoDB API and does replication across Azure cloud regions very nicely, with no intervention from the operator (AKA me!)
 
+>It's important to note that Athens can run anywhere. I work for Microsoft so I chose to run it on Azure infrastructure and with CosmosDB as the database. I might consider moving to using Azure blob store later.
+
 # Original requirements
 
 When I set up this public proxy, I wanted to give anyone interested an opportunity to try Athens without installing anything. I think it did exactly that, and it turns out the proxy also got Gophers to start thinking about modules and get their local environment set up.
