@@ -46,7 +46,9 @@ I generally spend no more than an hour a week taking care of this infrastructure
 
 # New requirements
 
-These days, there are [three](https://proxy.golang.org) [good](https://gocenter.io) [proxies](https://gonexus.dev) that I know of which are public and mostly production ready proxy. In theory, my deployment isn't really necessary anymore. That being said, I firmly believe that Athens needs to live on the public internet as a testbed for our software. It's not going anywhere.
+These days, there are [three](https://proxy.golang.org) [good](https://gocenter.io) [proxies](https://gonexus.dev) that I know of which are public and mostly production ready proxy. In theory, my deployment isn't really necessary anymore. That being said, I firmly believe that Athens needs to live on the public internet as a testbed for our software.
+
+I still won't commit to it being production ready, so use it at your own risk (I'm sure some folks will!) But it's not going anywhere.
 
 Not only is it going to stick around for testing, I'm also going to use the infrastructure as an educational tool. Instead of running Athens on ACI, I'll be moving the hosting infrastructure to Kubernetes. This move will open up a lot of flexibility in how I run, debug and deploy the service. Here's a high level diagram for what I'm planning to do:
 
@@ -55,7 +57,10 @@ you ---> Azure Front Door
                 |
                 |
                 |
-Kubernetes ingress controller in AKS ---> Athens deployment (pods) ---> CosmosDB
+Kubernetes ingress controller in AKS ---> Athens deployment (pods)
+                                                |
+                                                |
+                                             CosmosDB
 ```
 
 And here are some things you don't see:
