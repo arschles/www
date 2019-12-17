@@ -45,9 +45,8 @@ githubRepo = "arschles/www/tree/master"
 small_banner_logo = false
 
 
-
 [params.utteranc]
-enable = false
+enable = true
 repo = "arschles/www"
 issueTerm = "title"
 
