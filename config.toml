@@ -9,8 +9,8 @@ layoutdir = "layouts"
 publishdir = "public"
 author = "Aaron Schlesinger"
 title = "arschles"
-disqusshortname = "arschlescom"
 pluralizelisttitles = false
+googleAnalyticsEnabled = false
 
 [permalinks]
 blog = "blog/:slug/"
