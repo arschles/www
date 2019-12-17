@@ -18,7 +18,7 @@ blog = "blog/:slug/"
 [params]
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "Aaron's Blog"
+description = "Aaron Schlesinger"
 copyright = "Copyright © 2019 Aaron Schlesinger"
 copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
 logofile = "images/gopher-university.png"
