@@ -11,6 +11,7 @@ author = "Aaron Schlesinger"
 title = "arschles"
 pluralizelisttitles = false
 googleAnalyticsEnabled = false
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [permalinks]
 blog = "blog/:slug/"
@@ -19,7 +20,7 @@ blog = "blog/:slug/"
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
 description = "Aaron Schlesinger"
-copyright = "Copyright © 2019 Aaron Schlesinger"
+copyright = "Copyright © 2017-{year} Aaron Schlesinger"
 copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
 logofile = "images/gopher-university.png"
 faviconfile = "images/gopher-university.png"
@@ -37,13 +38,12 @@ twitter = "arschles"
 # facebook = "facebook_id"
 # instagram = "instagram_id"
 # itch_io = "itch_io_id"
-social_banner = "img/banner.png"
+social_banner = "images/gopher-university.png"
 usesmallsummarycard = true
 posts_navigation = true
 # issoHost = "comments.domain.tld:1234"
 githubRepo = "arschles/www/tree/master"
 small_banner_logo = false
-
 
 [params.utteranc]
 enable = true
