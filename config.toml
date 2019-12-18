@@ -9,8 +9,9 @@ layoutdir = "layouts"
 publishdir = "public"
 author = "Aaron Schlesinger"
 title = "arschles"
-disqusshortname = "arschlescom"
 pluralizelisttitles = false
+googleAnalyticsEnabled = false
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [permalinks]
 blog = "blog/:slug/"
@@ -18,8 +19,8 @@ blog = "blog/:slug/"
 [params]
 dateform = "Jan 2, 2006"
 dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "Aaron's Blog"
-copyright = "Copyright © 2019 Aaron Schlesinger"
+description = "Aaron Schlesinger"
+copyright = "Copyright © 2017-{year} Aaron Schlesinger"
 copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
 logofile = "images/gopher-university.png"
 faviconfile = "images/gopher-university.png"
@@ -29,20 +30,25 @@ share = true
 # Share to googleplus, twitter, fb, linkedin by default
 # disable by setting share_on_<social network> = false
 # example: share_on_googleplus = false
-latestpostcount = 3
+latestpostcount = 10
 github = "arschles"
-email = "arschles+site@gmail.com"
+email = "aaron@ecomaz.net"
 linkedin = "aaronschlesinger"
 twitter = "arschles"
 # facebook = "facebook_id"
 # instagram = "instagram_id"
 # itch_io = "itch_io_id"
-social_banner = "img/banner.png"
+social_banner = "images/gopher-university.png"
 usesmallsummarycard = true
 posts_navigation = true
 # issoHost = "comments.domain.tld:1234"
-# githubRepo = "githubUsername/repositoryName/tree/master"
+githubRepo = "arschles/www/tree/master"
 small_banner_logo = false
+
+[params.utteranc]
+enable = true
+repo = "arschles/www"
+issueTerm = "title"
 
 [params.colors]
 identifier = "#527fc1f"
