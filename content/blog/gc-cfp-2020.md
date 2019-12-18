@@ -5,7 +5,7 @@ date: 2019-12-17T13:18:53-08:00
 title: 'Tips for submittiting to the GopherCon 2020 CFP'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-# meta_img = "/images/image.jpg"
+meta_img: "/images/gc-cfp-2020.webp"
 
 # For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
 # hacker_news_id = ""
