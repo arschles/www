@@ -32,9 +32,9 @@ If we select your proposal, we'll give you all the help and support you need so 
 
 Yes, absolutely!
 
-Please just make sure that all of your submissions are appropriate for GopherCon (see "Advice for Authors" on the [CFP page](https://www.papercall.io/gophercon-2020)).
+Please just make sure that all of your submissions are appropriate for GopherCon. See "Advice for Authors" on the [CFP page](https://www.papercall.io/gophercon-2020) for a guideline on what makes a proposal appropriate.
 
-Papercall has a feature that lets you re-submit a talk from another conference to GopherCon, but we rarely select those talks, so please don't do use that feature. 
+Papercall has a feature that lets you re-submit a talk from another conference to GopherCon, but we rarely select those talks. Instead of using that, please take a few extra minutes to tailor what you have to GopherCon, and then submit the new writing.
 
 ## What's the difference between a tutorial session and a keynote session?
 
