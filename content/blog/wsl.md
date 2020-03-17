@@ -13,7 +13,7 @@ title: 'Windows for (Unix) developers is real!'
 
 I've spent most of my life as a professional programmer using a potpurri of Apple laptops and desktops. The first machine I used to do paid development work with was a MacBook in 2004. I've cycled through a few Mac Minis and MacBooks since then, and I'm typing this on yet another Mac Mini.
 
-I don't love Mac OS or Apple hardware per so, but I'm just so _used_ to the Apple ecosystem. I'm talking about everything from knowing the ins and outs of an iPhone, all the way down to details like the many ways to use the `cmd` key on the terminal.
+I don't love Mac OS or Apple hardware per se, but I'm just so _used_ to the Apple ecosystem. I'm talking about everything from knowing the ins and outs of an iPhone, all the way down to details like the many ways to use the `cmd` key on the terminal.
 
 ## Making a leap to the Microsoft world
 
