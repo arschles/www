@@ -11,7 +11,7 @@ title: 'My Mac Dev Setup'
 # lobsters_id = ""
 ---
 
-Recently, I got into a really interesting [discussion on Twitter](https://twitter.com/jongalloway/status/1240165698506067970) with [@johngalloway](https://twitter.com/jongalloway), and it was just about 100% constructive and civil. On Twitter!
+Recently, I got into a really interesting [discussion on Twitter](https://twitter.com/jongalloway/status/1240165698506067970) with [@jongalloway](https://twitter.com/jongalloway), and it was just about 100% constructive and civil. On Twitter!
 
 It's all about whether or not to use [Homebrew](https://brew.sh/) to set up and maintain a Mac for software development.
 
