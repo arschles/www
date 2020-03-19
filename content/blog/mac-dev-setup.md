@@ -13,9 +13,9 @@ title: 'My Mac Dev Setup'
 
 Recently, I got into a really interesting [discussion on Twitter](https://twitter.com/jongalloway/status/1240165698506067970) with [@johngalloway](https://twitter.com/jongalloway), and it was just about 100% constructive and civil. On Twitter!
 
-It's all about whether or not to use [Homebrew](https://brew.sh/) to set up and maintain a Mac for software development. I started programming on a Mac in late 2002, on Mac OS Jaguar, version 10.2. Since then I've used at least 10 different Macs, which means I've set up at least 10 different Macs.
+It's all about whether or not to use [Homebrew](https://brew.sh/) to set up and maintain a Mac for software development.
 
-We developers are picky about our setups, so setting up a brand new vanilla computer takes time and energy.
+I started programming on a Mac in late 2002, on Mac OS Jaguar, version 10.2. Since then I've used at least 10 different Macs, which means I've set up at least 10 different Macs. We developers are picky about our setups, so setting up a brand new vanilla computer takes time and energy.
 
 That got me thinking: I've used a Mac for almost 20 years as my main development machine. What do I do to set up and maintain _my_ machines?
 
