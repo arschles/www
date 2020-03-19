@@ -19,8 +19,6 @@ I started programming on a Mac in late 2002, on Mac OS Jaguar, version 10.2. Sin
 
 That got me thinking: I've used a Mac for almost 20 years as my main development machine. What do I do to set up and maintain _my_ machines?
 
-Turns out I don't really know. I should figure that out, and that's what we're gonna do right here. Strap in for the ride!
-
 ## Command Line Tools
 
 Like any good developer, I've tried a bunch to automate myself out of work, so a while back I tapped [yadm](https://yadm.io/) to install many of my tools and store, version, apply, and upgrade various configurations for them. I store all that stuff in [github.com/arschles/dotfiles](https://github.com/arschles/dotfiles), so let's start there!
