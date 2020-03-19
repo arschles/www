@@ -38,7 +38,7 @@ I try to stay in the command line as much as I can when I'm programming and only
 
 Another good reason I pop out of the command line is for my editor. I never got into vim or emacs. I've always used IDEs. In recent-ish memory, I've used almost all of the [JetBrains](https://www.jetbrains.com/) IDEs, [Visual Studio](https://visualstudio.microsoft.com/) (I've written a good amount of C#!), [Sublime Text](https://www.sublimetext.com/), [Atom](https://atom.io/) and now I'm currently on [VS Code](https://code.visualstudio.com/).
 
-I plan to stick with VS Code for a while for my main editor. It's really flexible and seems to have the biggest ecosystem of all of the open source editors/IDEs. Plus there are some cool "add on" features like [VS Online](https://online.visualstudio.com/), which is pretty darn cool. Check it out if you haven't. It's Visual Studio on your machine but you run/debug/whatever the code on a cloud VM. That's a whole another blog post!
+I plan to stick with VS Code for a while for my main editor. It's really flexible and seems to have the biggest ecosystem of all of the open source editors/IDEs. Plus there are some cool "add on" features like [VS Online](https://online.visualstudio.com/). Actually, check that one out if you haven't. It's the VS Code GUI on your machine but you run/debug/whatever the code on a cloud VM
 
 And the last one! I use [GitHub desktop](https://desktop.github.com/) a ton. Technically I can do just about everything on the command line instead of using this app, but I have lots of good reasons why a lot of the time I go into this app instead:
 
@@ -55,5 +55,3 @@ But! I'm about to start challenging myself, and change the most fundamental of a
 I'm challenging myself to learn (and unlearn!) a lot to get comfortable with a brand new dev setup.
 
 Interesting times ahead - stay tuned :)
-
-- Aaron
