@@ -11,9 +11,9 @@ title: 'Streaming tomorrow March 20, 2020'
 # lobsters_id = ""
 ---
 
-Two days ago, I decided to [start streaming](https://twitter.com/arschles/status/1240036551687434240). I stumbled on some technical topics but I had a lot of fun just talking through my dev setup and showing how to make a small contribution to [Athens](https://github.com/gomods/athens).
+Two days ago, I decided to [start streaming](https://twitter.com/arschles/status/1240036551687434240). I had a lot of fun just talking through my dev setup and showing how to make a small contribution to [Athens](https://github.com/gomods/athens). It felt like doing a [Go in 5 Minutes](https://github.com/arschles/go-in-5-minutes) screencast, but I could be a lot looser and more informal. I felt ok making mistakes and saying "I don't know".
 
-It felt like doing a [Go in 5 Minutes](https://github.com/arschles/go-in-5-minutes) screencast, but I could be a lot looser and more informal. I felt ok making mistakes and saying "I don't know". This wasn't me _teaching_ a single topic, it felt like sharing.
+This wasn't me _teaching_ a single topic, it felt like sharing.
 
 **I'm going to stream again tomorrow**. I'm always behind on triaging issues in the Athens project, so I'll do a bit of that.
 
