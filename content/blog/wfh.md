@@ -39,7 +39,7 @@ That means when the alarm sounds, the laptop gets shut, no slack, no IDE, no “
 
 Also, make your workspace yours. Work in a clean and comfortable desk area. That means ... wait for it ... you should clean it up. Having stacks of papers or crumbs around is annoying.
 
-Then, get "hardware" for your office. This doesn't mean you have to buy. Yes, you can pull out the credit card and Amazon some stuff (I have no idea how long shipping takes these days) if you want. That would be monitors, speakers, laptop stands, mice, and keyboards. But there's a lot you can do without spending money. If you're working on the dining room table, put your laptop on top of a book, cutting board, or anything else like that and plug in your headphones. You'll be able to concentrate a little better -- even if you don't turn on any music! -- and the laptop is off the table, which is a bit easier on your neck. Any little improvement to make you more comfortable and you’re winning
+Then, get "hardware" for your office. This doesn't mean you have to buy stuff. Yes, you can pull out the credit card and Amazon some stuff (I have no idea how long shipping takes these days) if you want. That would be monitors, speakers, laptop stands, mice, and keyboards. But there's a lot you can do without spending money. If you're working on the dining room table, put your laptop on top of a book, cutting board, or anything else like that and plug in your headphones. You'll be able to concentrate a little better -- even if you don't turn on any music! -- and the laptop is off the table, which is a bit easier on your neck. Any little improvement to make you more comfortable and you’re winning
 
 ## Don't cut yourself off from people
 
