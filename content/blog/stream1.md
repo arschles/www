@@ -1,7 +1,7 @@
 ---
 author: "Aaron Schlesinger"
 date: 2020-03-19T16:20:19-07:00
-title: 'Streaming tomorrow March 19, 2020'
+title: 'Streaming tomorrow March 20, 2020'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
@@ -15,7 +15,7 @@ Two days ago, I decided to [start streaming](https://twitter.com/arschles/status
 
 It felt like doing a [Go in 5 Minutes](https://github.com/arschles/go-in-5-minutes) screencast, but I could be a lot looser and more informal. I felt ok making mistakes and saying "I don't know". This wasn't me _teaching_ a single topic, it felt like sharing.
 
-I'm going to stream again tomorrow. One thing I'm always behind on is triaging issues in the Athens project, so I'll do a bit of that.
+**I'm going to stream again tomorrow**. I'm always behind on triaging issues in the Athens project, so I'll do a bit of that.
 
 Details of the stream:
 
