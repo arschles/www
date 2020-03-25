@@ -11,8 +11,8 @@ title: 'Community'
 # lobsters_id = ""
 ---
 
-`people > tech` all the time, every time. All the great communities I've worked with prioritize making everyone feel comfortable. I've focused over the past five years on building communities in the same style. Here are some of the notable ones:
+`people > tech` all the time, every time. All the great communities I've worked with prioritize making everyone feel comfortable. I've focused over the past five years on building communities in the same style.
 
-- [The Athens Project](https://github.com/gomods/athens)
-- [The Go Study Groups](https://gophersource.com/study-group)
-- [Go in 5 Minutes](https://goin5minutes.com)
+I am a core maintainer of [the Athens Project](https://github.com/gomods/athens), and focus a lot of my time on maintaining a healthy, sustainable and welcoming community.
+
+I also am a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world.
