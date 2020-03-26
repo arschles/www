@@ -33,7 +33,7 @@ I haven't done anything on Windows since 2008, so I figured I would flail around
 
 First off, I built a new machine just to run Windows on. I'll let a picture do the talking. I love this thing.
 
-![windows tower](/static/images/wsl/windows-tower.jpg)
+![windows tower](/images/wsl/windows-tower.jpg)
 
 After I installed windows, the very first thing I noticed was muscle memory. I'm still catching myself reaching for the `cmd` key and I'm retraining myself to hit `ctrl` instead. C'est la vie!
 
@@ -41,7 +41,7 @@ After I installed windows, the very first thing I noticed was muscle memory. I'm
 
 I was never an Emacs or Vim person. I like a nice looking GUI that I can write code in and I'm used to VS Code, so I picked it up and it feels just as comfortable as it did on Mac. Sometimes I feel homesick and I just open VSCode to feel better =P
 
-![VSCode Screenshot](/static/img/wsl/VSCode-Screenshot.png)
+![VSCode Screenshot](/images/wsl/VSCode-Screenshot.png)
 
 >VS Code has an [extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) that bridges the Windows world with the WSL 2 world (I'll get to that next), so you can use the Windows app to write code that runs on Linux...
 
