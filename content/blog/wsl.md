@@ -69,4 +69,6 @@ I tend to tear down my WSL 2 VMs a lot, so it's nice to set up a new one, set up
 
 If you're new to WSL 2 (or even Debian, for that matter), I encourage you to go check out -- and steal! -- the code in that repository.
 
+>I've gone through about 5 WSL 2 VMs so far! I'll be posting details on how I set everything up next.
+
 Happy coding!
