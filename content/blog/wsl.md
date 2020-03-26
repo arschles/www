@@ -15,7 +15,9 @@ I've spent most of my life as a professional programmer using a potpurri of Appl
 
 I don't love Mac OS or Apple hardware per se, but I'm just so _used_ to the Apple ecosystem. I'm talking about everything from knowing the ins and outs of an iPhone, all the way down to details like the many ways to use the `cmd` key on the terminal.
 
-Basically, Apple products rule everything around me.
+Basically, Apple products rule everything around me
+
+>I recently even wrote about my [Mac Dev Setup](https://arschles.com/blog/my-mac-dev-setup). This is a story about why I'm using WSL 2 more and more for my daily work. I'm not going to be ditching the Mac any time soon though :)
 
 ## Windows...
 
