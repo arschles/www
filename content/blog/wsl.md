@@ -1,6 +1,6 @@
 ---
 author: "Aaron Schlesinger"
-date: 2020-03-26T12:21:41-07:00
+date: 2020-03-26T10:00:41-07:00
 title: 'Coming from a Mac to Windows & WSL 2'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
