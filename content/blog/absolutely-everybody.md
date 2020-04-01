@@ -1,12 +1,13 @@
 ---
-author: "Aaron Schlesinger"
-date: 2018-10-23T13:53:21-07:00
-title: 'Absolutely Everybody is Welcome'
-meta_img: "/images/avg-joes.png"
-
-# For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
-# hacker_news_id = ""
-# lobsters_id = ""
+author: Aaron Schlesinger
+title: Absolutely Everybody is Welcome
+date: 2018-10-23T20:53:21.000Z
+meta_img: /images/avg-joes.png
+description: >
+  I started the Go Study Group and Athens both about 6 months ago. I did each
+  for different reasons, but I wanted both to have strong communities. This post
+  is about why people > technology every time, and why I insist on strong
+  communities.
 ---
 
 I started the [Go Study Group](https://gophersource.com/study-group) and [Athens](https://docs.gomods.io) both about 6 months ago. I did each for super different reasons, but I wanted both to have strong communities. The people are what keeps these communities alive. Not me, not the technology, nothing else. It's the people. And that's why I'm so insistent on strong communities.
@@ -25,7 +26,7 @@ I went into detail on a lot of this in the Athens project with a ["philosophy do
 
 # Inclusion
 
-<img src="/images/avg-joes.png" alt="Average Joe's" style="width:350px;" />
+![Average joe's](/images/avg-joes.png)
 
 There's no way I can sum up all those things in that list above, but I want to be able to say something to newcomers to whatever thing to basically say: "you're welcome here, and we'll do everything we can to make it nice here."
 
