@@ -10,11 +10,18 @@ I also work at Microsoft as a [**C**loud **D**eveloper **A**dvocate](https://dev
 
 Here's what I'm up to these days:
 
-- I created and produce [Go in 5 Minutes](https://goin5minutes.com)
-- I'm a core maintainer of [The Athens Project](https://github.com/gomods/athens)
-- I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world
-- I'm an emeritus chair of the Kubernetes 
-[SIG-Service-Catalog](https://svc-cat.io/)
+I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
+
+I produce **Crystal Fridays**, a weekly live-coding session where I write apps in [Crystal](https://crystal-lang.org)
+
+>**Watch live every Friday at 10am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)**
+
+Recordings are [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GBxMQ78nmowkAxilgS_LrNB)
+
+I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world.
+
+I'm an emeritus chair of the Kubernetes 
+[SIG-Service-Catalog](https://svc-cat.io/).
 
 ### My History
 
