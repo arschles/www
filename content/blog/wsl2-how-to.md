@@ -27,8 +27,7 @@ At the moment, you have to jump through a hoop to get your Windows 10 setup to g
 
 ### Join Windows Insiders
 
->WSL 2 will be stable and generally available in the [upcoming Windows 2004 release](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004/). So you won't need to be on Insiders and you'll be able to ignore this whole section!
-
+>WSL 2 will be stable and generally available in the [upcoming Windows 2004 release](https://devblogs.microsoft.com/commandline/wsl2-will-be-generally-available-in-windows-10-version-2004/). When that new release comes out, you won't need to be on Insiders and you'll be able to ignore this whole section. I'm excited for that!
 
 Being an Insider sounds exclusive but anyone can join. It just means that you'll run less stable versions of Windows. I haven't had any problems with it yet, though.
 
