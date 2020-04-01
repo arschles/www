@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+
+{{ partial "head.html" . }}
+
+<div class="container header">
+    <div class="row">
+        <div class="offset-sm-2 col-sm-6">
+            <h1><a href="/">arschles.com</a></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-sm-2 col-sm-6">
+            <p class="intro">
+                🧰 Hi friend! I'm Aaron. I'm a 
+                <a href="https://developer.microsoft.com/en-us/advocates/aaron-schlesinger">
+                    cloud developer advocate at Microsoft
+                </a>. I'm also a core maintainer of the 
+                wonderful
+                <a href="https://github.com/gomods/athens">
+                    Athens project</a>.
+            </p>
+            <p class="intro">
+                Read <a
+                href="/about">more about me</a>, or read some
+                of my writing below.
+            </p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row content posts-list">
+        {{ $blogPosts := (where .Site.RegularPages "Section" "blog") }}
+        {{ range $blogPosts.GroupByDate "Jan, 2006" "desc" }}
+            {{ range sort .Pages "Date" "desc" }}
+                <div class="offset-sm-2 col-sm-10 mb-1">
+                    {{ if .Params.draft }}
+                    <a
+                        href="{{ .RelPermalink }}"
+                    >
+                        <span class="post-title">
+                            Draft::{{ .Title }}
+                        </span>
+                    </a>
+                    {{ else }}
+                    <a
+                        href="{{ .RelPermalink }}"
+                    >
+                        <span class="post-title">
+                            📘&nbsp;&nbsp; {{ .Title }}
+                        </span>
+                    </a>
+                    {{ end }}
+                    <span class="post-date">
+                        [{{ .Date.Format .Site.Params.dateform }}]
+                    </span>        
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
+
+{{ partial "footer.html" . }}

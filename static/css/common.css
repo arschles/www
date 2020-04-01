@@ -5,3 +5,34 @@
 .sm-margin-top {
     margin-top: 1em;
 }
+
+p.intro {
+    font-family: "Lucida Console", "Monaco", "monospace";
+    font-size: 1.2em;
+}
+
+.footer a {
+    color: #000000;
+}
+
+.footer img.github,
+.footer img.twitter,
+.footer img.gifm,
+.footer img.rss {
+    max-width: 20px;
+}
+
+li {
+    list-style-type: none;
+    padding: 1em;
+}
+
+div.posts-list span.post-date {
+    color: grey;
+    font-size: 0.8em;
+}
+
+div.posts-list span.post-title {
+    font-size: 1.2em;
+    color: black;
+}
