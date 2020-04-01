@@ -1,6 +1,6 @@
 baseurl = "https://arschles.com/"
 relativeURLs = "true"
-theme = "custom"
+theme = "cocoa-eh"
 builddrafts = false
 canonifyurls = false
 contentdir = "content"
