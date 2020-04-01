@@ -15,7 +15,9 @@ Welcome, Linux-on-Windows-er!
 
 I recently wrote about my [experience with WSL 2 and Windows](/blog/coming-from-a-mac-to-windows-wsl-2), coming from a [Mac perspective](./mac-dev-setup). This is an unboxing post for how I went from vanilla Windows 10 to a full working dev environment based on [VS Code](https://code.visualstudio.com/) and [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-index).
 
->If you're like me and were initially too lazy to read that link above, WSL 2 stands for "**W**indows **S**ubsystem for **Linux**". The first version, WSL 1, was a syscall emulator that gave Linux programs most of the POSIX APIs they need. WSL 2 is a lightweight hypervisor that actually runs a full Linux kernel.
+>If you're like me and were initially too lazy to read that link above, WSL 2 stands for "**W**indows **S**ubsystem for **Linux**". The first version, WSL 1, was a syscall emulator that gave Linux programs most of the POSIX APIs they need.
+>
+>WSL 2 is a lightweight hypervisor that actually runs a full Linux kernel.
 >
 >In other words, WSL 2 is better than WSL 1 in a lot of ways.
 
