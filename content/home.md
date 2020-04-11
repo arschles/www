@@ -2,6 +2,11 @@
 title = "Home"
 +++
 
+<a href="https://dev.to/arschles">
+  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Aaron Schlesinger's DEV Profile" height="30" width="30">
+</a>
+
+
 Thanks for stopping by. My username around the web is `arschles` and I blog here and a [bunch](https://medium.com/project-athens) [of](https://medium.com/go-in-5-minutes) [other](https://medium.com/gostudygroup) [places](https://medium.com/@arschles).
 
 I write mostly about [Go](https://golang.org), [Kubernetes](https://kubernetes.io) and emerging languages here.
