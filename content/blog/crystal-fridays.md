@@ -13,6 +13,8 @@ title: 'Crystal Fridays'
 
 If you've been following my [Twitch](https://twitch.com/arschles) you've probably seen that I'm doing "Crystal Fridays" live streams for the past few weeks.
 
+>Catch me every Friday at 10am US Pacific time [on Twitch](https://twitch.tv/arschles)
+
 ## What is Crystal Fridays?
 The premise is simple. I live code writing apps in [Crystal](https://crystal-lang.org). Currently I'm working on [cprox](https://github.com/arschles/cprox) - a simple URL shortener that's implemented with a [little persistent key-value store](https://github.com/CodeSteak/Nuummite).
 
