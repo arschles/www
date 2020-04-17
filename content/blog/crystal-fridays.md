@@ -29,6 +29,6 @@ If you're interested in participating in Crystal Fridays, come watch me live cod
 
 ## Recordings
 
-I record every Crystal Fridays stream and upload it to [YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GDxi5LfF2uWPXctznpdPsD5), so you can catch up if you miss one.
+I record every Crystal Fridays stream and upload it to [YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GBxMQ78nmowkAxilgS_LrNB), so you can catch up if you miss one.
 
 Videos should be up shortly after each stream.
