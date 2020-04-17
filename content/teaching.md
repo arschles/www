@@ -1,6 +1,5 @@
 ---
 author: "Aaron Schlesinger"
-date: 2018-12-03T15:54:58-08:00
 title: 'Teaching'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
@@ -10,8 +9,6 @@ title: 'Teaching'
 # hacker_news_id = ""
 # lobsters_id = ""
 ---
-
-# Teaching & Community
 
 I've spent the past 5 years teaching (primarily Go) and building open source communities. I currently run several programs to promote teaching Go to members of the community of all skill levels. The biggest of these programs is my [Go in 5 Minutes](https://goin5minutes.com) screencast.
 
