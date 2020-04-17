@@ -2,13 +2,8 @@
 title = "Home"
 +++
 
-<a href="https://dev.to/arschles">
-  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Aaron Schlesinger's DEV Profile" height="30" width="30">
-</a>
+Thanks for stopping by. My username around the web is `arschles` and I write here and on [dev.to](https://dev.to/arschles) and produce a few shows online:
 
+**[Go in 5 Minutes](https://gifm.dev)** is a series of short screencasts with tutorials on Go.
 
-Thanks for stopping by. My username around the web is `arschles` and I blog here and a [bunch](https://medium.com/project-athens) [of](https://medium.com/go-in-5-minutes) [other](https://medium.com/gostudygroup) [places](https://medium.com/@arschles).
-
-I write mostly about [Go](https://golang.org), [Kubernetes](https://kubernetes.io) and emerging languages here.
-
-Read more [about me](./about), check out [what I'm working on](./projects) and [communities I work with](./community), or find out about [what I speak on](./speaking).
+**[Crystal Fridays]()** is a weekly live-coding session where I write apps in [Crystal](https://crystal-lang.org). Watch live at [twitch.tv/arschles](https://twitch.tv/arschles). See recordings [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GBxMQ78nmowkAxilgS_LrNB)

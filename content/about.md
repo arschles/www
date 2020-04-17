@@ -1,9 +1,6 @@
 +++
 title = "About"
-date = "2018-10-05"
 +++
-
-# About Me
 
 Hi there! I'm a [Gopher](https://golang.org), [Kubernaut](https://kubernetes.io) and functional programming nerd.
 
@@ -14,12 +11,10 @@ I also work at Microsoft as a [**C**loud **D**eveloper **A**dvocate](https://dev
 Here's what I'm up to these days:
 
 - I created and produce [Go in 5 Minutes](https://goin5minutes.com)
-- I started and run the North America chapter of the [Go Study Groups](https://gophersource.com/study-group)
 - I'm a core maintainer of [The Athens Project](https://github.com/gomods/athens)
+- I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world
 - I'm an emeritus chair of the Kubernetes 
 [SIG-Service-Catalog](https://svc-cat.io/)
-
-In addition to my blog here, I also write at [my medium blog](https://medium.com/@arschles), [The Athens Project Blog](https://medium.com/project-athens), the [Go in 5 Minutes blog](https://medium.com/go-in-5-minutes), and the nascent [Go Study Groups Blog](https://medium.com/gostudygroup).
 
 ### My History
 
@@ -32,7 +27,6 @@ In my 15+ years in software engineering, I've worked in lots of different roles.
 
 # Around the Web
 
-I'm [@arschles](https://twitter.com/arschles) on Twitter and my username is [arschles](https://github.com/arschles) on GitHub.
+You can also find me at [@arschles](https://twitter.com/arschles) on Twitter and [arschles](https://github.com/arschles) on GitHub.
 
-I blog at here, [medium.com/@arschles](https://medium.com/@arschles), [medium.com/go-in-5-minutes](https://medium.com/go-in-5-minutes) and [medium.com/project-athens](https://medium.com/project-athens)
-
+I also blog at [dev.to](https://dev.to/arschles)

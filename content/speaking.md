@@ -1,7 +1,6 @@
 ---
 author: "Aaron Schlesinger"
-date: 2018-10-05T11:58:52-07:00
-title: 'Speaking'
+title: "Speaking"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
