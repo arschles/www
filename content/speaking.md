@@ -271,4 +271,6 @@ He has 15+ years of software engineering experience ranging from frontend design
 
 ## Headshot
 
-![headshot](/images/headshot.jpg)
+You have my permission to use my headshot if it's related to a conference, writing, or other content that I'm participating in.
+
+My headshot is [here](/images/headshot.jpg). 
