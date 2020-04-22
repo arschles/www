@@ -34,5 +34,27 @@ collections:
                     -   label: Date
                         name: date
                         widget: datetime
+            - 
+                file: "content/speaking.md"
+                label: "Speaking page"
+                name: "speaking"
+                fields:
+                    -   label: Title
+                        name: title
+                        widget: string
+                    -   label: Date
+                        name: date
+                        widget: datetime
+            - 
+                file: "content/teaching.md"
+                label: "Teaching page"
+                name: "teaching"
+                fields:
+                    -   label: Title
+                        name: title
+                        widget: string
+                    -   label: Date
+                        name: date
+                        widget: datetime
             
 
