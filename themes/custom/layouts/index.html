@@ -32,7 +32,7 @@
         {{ $blogPosts := (where .Site.RegularPages "Section" "blog") }}
         {{ range $blogPosts.GroupByDate "Jan, 2006" "desc" }}
             {{ range sort .Pages "Date" "desc" }}
-                <div class="offset-sm-2 col-sm-10 mb-1">
+                <div class="offset-sm-2 col-sm-10 mb-3">
                     {{ if .Params.draft }}
                     <a
                         href="{{ .RelPermalink }}"
@@ -46,7 +46,7 @@
                         href="{{ .RelPermalink }}"
                     >
                         <span class="post-title">
-                            📘&nbsp;&nbsp; {{ .Title }}
+                            {{ .Title }}
                         </span>
                     </a>
                     {{ end }}
