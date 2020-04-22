@@ -1,0 +1,12 @@
+<li class="list-group-item">
+    <a href="{{ .RelPermalink }}">
+        <span>{{ .Title }}</span>
+    </a>
+    <div class="text-success">
+        <small>
+            <span>
+                ({{ .Date.Format .Site.Params.dateform }})
+            </span>
+        </small>
+    </div>
+</li>

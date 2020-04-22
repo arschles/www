@@ -1,0 +1,27 @@
+{{ if .Site.Params.issoHost }}
+  <style type="text/css" media="screen">
+    .isso section {
+      margin: 0px;
+    }
+  </style>
+{{ end }}
+
+<div class="blog-title">
+  <h5>{{ .Title }}</h5>
+</div>
+<div class="blog-details front-matter">
+  <span
+    class="date mr-2"
+    title="{{ .Date.Format .Site.Params.dateformfull }}"
+  >
+    {{ .Date.Format .Site.Params.dateform }}
+  </span>
+  <span>📰</span>
+  <span class="reading-time moddot ml-2">
+    {{ .ReadingTime }} minute read
+  </span>
+</div>
+<div class="mt-2 mb-2"><hr /></div>
+<div class="markdown">
+  {{ partial "content" . }}
+</div>
