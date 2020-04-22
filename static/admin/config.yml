@@ -1,8 +1,8 @@
 # see this link for config options:
 # https://www.netlifycms.org/docs/add-to-your-site/#configuration
 backend:
-    name: git-gateway
-    branch: master # Branch to update (optional; defaults to master)
+    name: github
+    repo: arschles/www
 
 publish_mode: editorial_workflow
 media_folder: static/images
