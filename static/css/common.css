@@ -22,12 +22,6 @@ p.intro {
     max-width: 20px;
 }
 
-li {
-    list-style-type: none;
-    padding: 1em;
-    padding-left: 0;
-}
-
 div.posts-list span.post-date {
     color: grey;
     font-size: 0.8em;

@@ -37,10 +37,9 @@
                     src="/img/gifm.png"
                 />
             </a>◾
-            {{ with .OutputFormats.Get "RSS" }}
             <a
                 class="ml-2 mr-2"
-                href="{{ .RelPermalink }}"
+                href="/index.xml"
             >
                 RSS
                 <img
@@ -48,7 +47,6 @@
                     src="/img/rss.svg"
                 />
             </a>
-            {{ end }}
         </div>
     </div>
     <div class="copyright row">
