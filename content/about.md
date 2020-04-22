@@ -4,7 +4,7 @@ title = "About"
 
 Hi there! I'm a [Gopher](https://golang.org), [Kubernaut](https://kubernetes.io) and functional programming nerd.
 
-I also work at Microsoft as a [**C**loud **D**eveloper **A**dvocate](https://developer.microsoft.com/en-us/advocates/aaron-schlesinger) (CDA), where I focus there on Kubernetes / Containers, Go and emerging languages.
+I also work at Microsoft as a [**C**loud **D**eveloper **A**dvocate](https://developer.microsoft.com/en-us/advocates/aaron-schlesinger) (CDA), where I focus there on Kubernetes / Containers, Go and emerging languages. I also [speak](/speaking) and [teach](/teaching) a wide variety of topics.
 
 Here's what I'm up to these days:
 
