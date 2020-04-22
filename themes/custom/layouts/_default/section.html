@@ -1,11 +1,15 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
 {{ partial "head.html" . }}
+{{ partial "title_container.html" . }}
 <div class="container">
-  <div class="content">
-    <div class="posts">
-      <div class="page-heading">{{ .Title }}</div>
-
+  <div class="row">
+    <div class="offset-sm-2 col-sm-6">
+      <h5>{{ .Title }}</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-sm-2 col-sm-8">
       {{ range where .Data.Pages "Title" .Title }}
       <div class="markdown">
         <p>{{ .Content }}</p>
@@ -16,7 +20,6 @@
       <ul>
           {{ range .Data.Pages.GroupByDate "Jan, 2006" "desc"}}
             {{ if not (and (eq (len .Pages) 1) (eq (index .Pages 0).Title $sectionTitle)) }}
-              <li class="groupby">{{ .Key }}</li>
               {{ range sort .Pages "Date" "desc" }}
                 {{ if (not (eq $sectionTitle .Title)) }}
                   {{ partial "li.html" . }}
@@ -25,7 +28,7 @@
             {{ end }}
         {{ end }}
       </ul>
-    </div>
+  </div>
   </div>
 </div>
 {{ partial "footer.html" . }}

@@ -1,8 +1,12 @@
-<li class="post-item">
-    <span class="meta">{{ .Date.Format .Site.Params.dateform }}</span>
-    {{ if .Params.draft }}
-    <a href="{{ .RelPermalink }}"><span>Draft::{{ .Title }}</span></a>
-    {{ else }}
-    <a href="{{ .RelPermalink }}"><span>{{ .Title }}</span></a>
-    {{ end }}
+<li>
+    <a href="{{ .RelPermalink }}">
+        <span>{{ .Title }}</span>
+    </a>
+    <div class="text-success">
+        <small>
+            <span>
+                ({{ .Date.Format .Site.Params.dateform }})
+            </span>
+        </small>
+    </div>
 </li>
