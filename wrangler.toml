@@ -1,0 +1,6 @@
+name = "aaron-www"
+type = "webpack"
+account_id = "98c2bd2b7b4907175df69bc73ee8d960"
+workers_dev = true
+route = ""
+zone_id = ""
