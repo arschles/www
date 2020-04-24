@@ -1,4 +1,5 @@
 {
   "dependencies": {},
-  "license": "MIT"
+  "license": "MIT",
+  "main": "index.js"
 }

@@ -22,13 +22,7 @@ function handler(request) {
 
 async function handleRequest(request) {
     const r = new Router()
-    r.get('/webhook', request => {
-        challenge = request.headers.get("challenge")
-        resp = new Response()
-        resp.headers['Content-Type'] = 'text/plain'
-        resp.headers['X-Content-Type-Options'] = 'nosniff'
-        return resp
-    })
+    
     // Replace with the approriate paths and handlers
     // r.get('.*/bar', () => new Response('responding for /bar'))
     // r.get('.*/foo', request => handler(request))
@@ -39,7 +33,13 @@ async function handleRequest(request) {
         
     })
     r.get('/', () => new Response('Hello worker!')) // return a default message for the root route
-
+    r.get('/webhook', () => {
+        // challenge = request.headers.get("challenge")
+        let resp = new Response("Webhoook")
+        resp.headers['Content-Type'] = 'text/plain'
+        resp.headers['X-Content-Type-Options'] = 'nosniff'
+        return resp
+    })
     const resp = await r.route(request)
     return resp
 }
