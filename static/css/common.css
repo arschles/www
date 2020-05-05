@@ -7,6 +7,11 @@
     margin-top: 1em;
 }
 
+blockquote {
+    border-left: 5px solid grey;
+    padding-left: 1em;
+}
+
 p.intro {
     font-family: "Lucida Console", "Monaco", "monospace";
     font-size: 1.2em;
