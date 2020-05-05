@@ -2,6 +2,7 @@
 author: "Aaron Schlesinger"
 date: 2020-04-23T16:41:19-07:00
 title: 'What Happens to Your Career After 10 Years?'
+slug: what-happens-to-your-career-after-10-years
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
