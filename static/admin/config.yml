@@ -1,0 +1,60 @@
+# see this link for config options:
+# https://www.netlifycms.org/docs/add-to-your-site/#configuration
+backend:
+    name: github
+    repo: arschles/www
+
+publish_mode: editorial_workflow
+media_folder: static/images
+public_folder: /images
+
+collections:
+    -   name: "blog"
+        label: "Blog"
+        folder: "content/blog"
+        create: true
+        slug: "{{ slug }}"
+        fields: 
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Date", name: "date", widget: "datetime"}
+            - {label: "Intro Blurb", name: "description", widget: "text"}
+            - {label: "Social Image", name: "meta_image", widget: "image", required: false}
+            - {label: "Body", name: "body", widget: "markdown"}
+    -   name: "pages"
+        label: "Pages"
+        files:
+            -
+                file: "content/about.md"
+                label: "About page"
+                name: "about"
+                fields:
+                    -   label: Title
+                        name: title
+                        widget: string
+                    -   label: Date
+                        name: date
+                        widget: datetime
+            - 
+                file: "content/speaking.md"
+                label: "Speaking page"
+                name: "speaking"
+                fields:
+                    -   label: Title
+                        name: title
+                        widget: string
+                    -   label: Date
+                        name: date
+                        widget: datetime
+            - 
+                file: "content/teaching.md"
+                label: "Teaching page"
+                name: "teaching"
+                fields:
+                    -   label: Title
+                        name: title
+                        widget: string
+                    -   label: Date
+                        name: date
+                        widget: datetime
+            
+
