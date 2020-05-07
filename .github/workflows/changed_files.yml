@@ -10,4 +10,6 @@ jobs:
       - id: get_file_changes
         run: |
           echo "Running diff for sha ${GITHUB_SHA}"
-          git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}"
+          FILES_CHANGED=$(git diff-tree --no-commit-id --name-only -r "${GITHUB_SHA}")
+          NUM_FILES_CHANGED=$($FILES_CHANGED | wc -l)
+          echo "$NUM_FILES_CHANGED file(s) changed"
