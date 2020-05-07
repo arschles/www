@@ -1,0 +1,17 @@
+name: Tweet new changes
+on:
+  push:
+    branches:
+      - master
+jobs:
+  tweet-changes:
+    runs-on: ubuntu-latest
+    steps:
+      - id: file_changes
+        uses: trilom/file-changes-action@v1.2.3
+        with:
+          # optional target repo
+          githubRepo: arschles/www
+          # optional output format
+          output: 'json'
+          
