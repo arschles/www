@@ -8,15 +8,5 @@ jobs:
         name: Checkout the code
         uses: actions/checkout@v2
       - id: get_file_changes
-        uses: trilom/file-changes-action@v1.2.3
-        with:
-          # optional target repo
-          githubRepo: arschles/www
-          # optional output format
-          output: 'json'
-      - id: print_file_additions
         run: |
-          ./scripts/file_changes.sh
-        env:
-          FILE_CHANGES_DIR: "$HOME"
-          
+          git diff-tree --no-commit-id --name-only -r ${GITHUB_SHA}
