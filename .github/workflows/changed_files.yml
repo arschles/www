@@ -4,6 +4,9 @@ jobs:
   print_changes:
     runs-on: ubuntu-latest
     steps:
+      - id: checkout-code
+        name: Checkout the code
+        uses: actions/checkout@v2
       - id: get_file_changes
         uses: trilom/file-changes-action@v1.2.3
         with:
