@@ -3,4 +3,4 @@
 set -e
 
 echo "all file additions:"
-cat $FILE_CHANGES_DIR/files_added.json
+cat $HOME/files_added.json

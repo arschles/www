@@ -18,5 +18,5 @@ jobs:
         run: |
           ./scripts/file_changes.sh
         env:
-          FILE_CHANGES_DIR: $HOME
+          FILE_CHANGES_DIR: "$HOME"
           
