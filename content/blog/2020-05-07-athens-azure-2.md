@@ -48,25 +48,25 @@ Kubernetes ingress controller in AKS ---> Athens deployment (pods)
                                              CosmosDB
 ```
 
-That's it. That's this section.
-
-Moving right along ➡
+That's pretty much this section. Moving right along ➡
 
 ## Why Kubernetes? 🤔
 
-I asked myself that question. Kubernetes is complicated. That's the first thing. The current thing I'm using is pretty reliable, but I want to play with new toys. 😉
+I asked myself that question. Kubernetes is complicated. That's the first thing. The current setup I'm using is pretty reliable, until it's not. Also, I want to play with new toys. 😉
 
-Oh wait, no. There is _actually_ a good reason I'm doing this. I need more flexibility!
+Oh wait, no. There's _actually_ a good reason I'm doing this. I need more flexibility!
 
-I'm running the Athens containers inside of [ACI](https://azure.microsoft.com/en-us/services/container-instances/) right now. it's a reliable service but with that comes limitations. I'm pretty much stuck with running only the Athens servers in a container. With that limitation, I'm stuck doing some things that don't jive with running a reliable server:
+I'm running the Athens containers inside of [ACI](https://azure.microsoft.com/en-us/services/container-instances/) right now. It's a reliable service but comes with some limitations. I'm pretty much stuck with running only the Athens servers in a container. With that limitation, Athens is stuck doing some things that don't jive well with running a public, global server:
 
 - Using `git` to ask GitHub for a list of tags all the time
 - Relying on a `git` operation for potentially thousands of requests at one time
 - Trying to `git clone` a repo while someone is waiting for their dependency to come back
 
-See a pattern? Pro-tip: don't use `git` for the backbone of your global service
+See a pattern? (Pro-tip: don't use `git` as the backbone of your public server)
 
-Most of those things above "don't happen that often" because a lot of the stuff that people need is behind a caching proxy. But when they do, the containers either run out of memory and crash, or just crash because they feel like it. And then I have to hope the cloud restarts them quickly. 🤞
+Most of those things above "don't happen that often" because a lot of the stuff that people need is behind a caching proxy, so Athens doesn't get the requests that trigger the `git` operations.
+
+But when they do, the containers either run out of memory and crash, or just crash because they feel like it. And then I have to hope the cloud restarts them quickly. 🤞
 
 ## So, What Are You Gonna Do About It?
 
