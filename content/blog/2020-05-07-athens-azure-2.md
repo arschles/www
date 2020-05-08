@@ -56,23 +56,31 @@ Moving right along ➡
 
 I asked myself that question. Kubernetes is complicated. That's the first thing. The current thing I'm using is pretty reliable, but I want to play with new toys. 😉
 
-Oh wait, no. There is _actually_ a good reason I'm doing this. I need more flexibility! Right now, the [ACI](https://azure.microsoft.com/en-us/services/container-instances/) container groups just never crash. That's great, but with that reliability comes limitations. I'm pretty much stuck with just Athens servers running in containers, but it's turning out I need a few more things to run a reliable global service:
+Oh wait, no. There is _actually_ a good reason I'm doing this. I need more flexibility!
 
-- Not asking GitHub for a list of tags all the time
-- Not relying on a `git` operation for potentially thousands of requests at one time
-- Not trying to `git clone` a repo while someone is waiting for their dependency to come back
+I'm running the Athens containers inside of [ACI](https://azure.microsoft.com/en-us/services/container-instances/) right now. it's a reliable service but with that comes limitations. I'm pretty much stuck with running only the Athens servers in a container. With that limitation, I'm stuck doing some things that don't jive with running a reliable server:
 
-See a pattern?
+- Using `git` to ask GitHub for a list of tags all the time
+- Relying on a `git` operation for potentially thousands of requests at one time
+- Trying to `git clone` a repo while someone is waiting for their dependency to come back
 
-Most of those things "don't happen that often" because a lot of the stuff that people need is behind a caching proxy. But when they do, the containers either run out of memory and crash, or just crash because they feel like it. And then I have to hope the cloud restarts them quickly. 🤞
+See a pattern? Pro-tip: don't use `git` for the backbone of your global service
+
+Most of those things above "don't happen that often" because a lot of the stuff that people need is behind a caching proxy. But when they do, the containers either run out of memory and crash, or just crash because they feel like it. And then I have to hope the cloud restarts them quickly. 🤞
 
 ## So, What Are You Gonna Do About It?
 
 Fair question! In short, we're gonna use Kubernetes to take the current stuff from 😭 to 👍🎂🎉🥳. Ok, it's not that bad right now but you get the point.
 
-I need to run more services to add some reliability to the deployment. Hint: Kubernetes is really good at running, maintaining, and connecting services together.
+I need to run more services to add some reliability to the deployment.
 
-The most important service I need is an [external storage server](https://github.com/gomods/athens/tree/master/pkg/storage/external) for Athens. You don't need to know what that really is, just that it's an unreleased feature and that I'm super cool for knowing about it 😛.
+>Hint: Kubernetes is really good at running, maintaining, and connecting services together.
+
+The most important service I need is an [external storage server](https://github.com/gomods/athens/tree/master/pkg/storage/external) for Athens. You don't need to know specifically what that is, just that it's an unreleased feature and that I'm a cutting edge genius for knowing about it.
+
+![i am so smrt](/images/homer-i-am-so-smrt.jpg)
+
+Or, one of the other Athens maintainers told me about it. It's hard to say which one 😛.
 
 ## Progress!
 
