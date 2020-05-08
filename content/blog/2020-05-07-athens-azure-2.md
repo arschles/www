@@ -45,6 +45,8 @@ The whole system is a semi-reliable service but comes with some limitations, and
 
 >[ACI](https://azure.microsoft.com/en-us/services/container-instances/) is generally good for quickly launching one-off containers, specialized workloads, or using as "burst" computing capacity from a Kubernetes cluster (you can do that with [Virtual Kubelet](https://github.com/virtual-kubelet/virtual-kubelet)). They're less good for long-running servers that need to scale
 
+## The Sins of Athens
+
 Here are some of the worst things that Athens _has to do_ right now:
 
 - Use `git` to ask GitHub for a list of tags all the time
@@ -52,6 +54,14 @@ Here are some of the worst things that Athens _has to do_ right now:
 - Try to `git clone` a repo while someone is waiting for their dependency to come back
 
 See a pattern? (Pro-tip: don't use `git` as the backbone of your public server. It wasn't made for that)
+
+## Gopher Break!
+
+This is a long section, so let's just take a pause and look at the [Athens](https://docs.gomods.io) gopher:
+
+![Athens Gopher](/images/athens-gopher.png)
+
+## Back to Your Regularly Scheduled Programming
 
 Most of those things above "don't happen that often" because a lot of the stuff that people need is behind a caching proxy, so Athens doesn't get the requests that trigger the `git` operations. But when you run a service long enough, the "don't happen that often" things eventually happen, often.
 
