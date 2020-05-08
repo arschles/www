@@ -107,7 +107,7 @@ Here's how they work:
 - They have a bunch of variables in them so that I can control where I deploy to from [GitHub Actions](https://github.com/features/actions)
 - [GitHub Actions](https://github.com/features/actions) runs on every push I do to that repo. That would be the way I deploy a new version of Athens, for example
 - The GitHub actions YAML file figures out if it's a pull request or the master branch. If it's a PR, it deploys to a staging AKS cluster. Otherwise, it deploys to a production one
-    - This part is in progress. Check out [my Terraform file](https://github.com/arschles/athens-azure/blob/tf-azure/.github/workflows/terraform-pr.yml), and shield your eyes from my sheer Terrafomrm brilliance 😂
+    - This part is in progress. Check out [my Terraform file](https://github.com/arschles/athens-azure/blob/tf-azure/.github/workflows/terraform-pr.yml), and shield your eyes from my sheer Terraform brilliance 😂
 - ???
 - **Profit**
 
