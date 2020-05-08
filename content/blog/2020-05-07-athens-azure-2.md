@@ -13,7 +13,7 @@ title: 'Athens on Azure Kubernetes Service... Part 2'
 
 Howdy all! It's been quite a while since I wrote about [Athens on Azure Kubernetes Service](https://arschles.com/blog/athens-on-azure-kubernetes-service/).
 
-If you don't remember much about it, don't worry. I didn't either... it's been over 6 months! I jumped back into the project, so let's recap and look to the future, and this time with plenty of emojis.
+If you don't remember much about it, don't worry. I didn't either... it's been over 6 months! I jumped back into the project, so let's recap and look to the future, and this time with plenty of emojis 👍🚀🎉🐿
 
 ## The Deployment Right Now
 
