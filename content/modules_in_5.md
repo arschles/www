@@ -2,7 +2,7 @@
 date = "2020-05-13T16:58:32-08:00"
 title = "Go Modules in 5 Minutes"
 description = "A no-nonsense rundown on Go modules, in 5 minutes"
-#twitter_image = 
+meta_img = "/images/modules_in_5_minutes.png"
 +++
 
 Welcome, Gopher! You might be here because you have questions about [Go modules](https://github.com/golang/go/wiki/Modules), or maybe you're just looking to find out more.
