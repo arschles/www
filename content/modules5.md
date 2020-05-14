@@ -35,7 +35,7 @@ You can also run this command inside an existing project to convert from older d
 
 ## How Do I Add A New Module? 🥳
 
-You can use `go get`! Here's how to add a [popular testing package](https://github.com/stretchr/testify):
+You can use `go get`! Here's how to add a [popular testing package](https://github.com/stretchr/testify), at version `v1.5.1`:
 
 ```console
 go get github.com/stretchr/testify@v1.5.1
@@ -47,7 +47,7 @@ go get github.com/stretchr/testify@v1.5.1
 
 _You don't have to explicitly delete a module from your project because modules aren't stored in your repository_
 
-Instead of deleting, you run a `go get` with `@none` at the end, instead of the version number:
+Instead of deleting, you run a `go get` with `@none` at the end, instead of the version number that we saw above:
 
 ```console
 go get github.com/stretchr/testify@none
