@@ -7,7 +7,7 @@ type = "modules5"
 
 Welcome, Gopher! You might be here because you have questions about [Go modules](https://github.com/golang/go/wiki/Modules), or maybe you're just looking to find out more.
 
-Either way, welcome! I hope that this page helps you learn about the new (depending on when you read this!), standard dependency manager for Go.
+Either way, welcome! I hope that this page helps you learn about the standard dependency manager for Go.
 
 >I'm Aaron, by the way. I won't introduce myself here to keep this short! You can read more about me on my [about page](/about) if you'd like.
 
@@ -17,7 +17,7 @@ Either way, welcome! I hope that this page helps you learn about the new (depend
 
 That's pretty much it! There have been other dependency managers out there prior to modules, but I'm gonna leave out the history here unless it's relevant to the present technology.
 
->If you're unfamiliar, `ELI5` stands for "explain like I'm 5" - I borrowed this acronym from the [subreddit](https://www.reddit.com/r/explainlikeimfive/)
+>If you're unfamiliar, `ELI5` stands for "explain like I'm 5"
 
 ## How Do Get Started? 🚀
 
@@ -77,7 +77,7 @@ Ok, so you have a lay of the land. You've probably got a feel for how things are
 
 ### The Global Cache 💵
 
-Some programming languages store all your dependencies locally (Go used to do this too with vendoring!), so you had to manually delete them when you're done with them. Not the case with Go!
+Some programming languages store all your dependencies locally so you had to manually delete them when you’re done with them. Not the case with modern Go!
 
 Go stores all the module code in a read-only central directory on your disk, so one version of a module isn't tied to just your project. If you have lots and lots of projects on your machine, that cache might get big. Delete it with this 🔥:
 
@@ -112,13 +112,13 @@ go mod graph
 
 ⬆ shows you a list of modules that you can reconstruct into your dependency graph. The list looks like this:
 
-```
+```console
 YourModule module1
 YourModule module2
 YourModule module3
-module1 module4
-module1 module5
-module3 module6
+YourModule module4
+YourModule module5
+YourModule module6
 ```
 
 It's a little more complicated than that, but you get the idea.
