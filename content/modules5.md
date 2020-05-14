@@ -89,7 +89,18 @@ go clean --modcache
 
 ### Tidying Up 🧹
 
-You saw `go mod tidy` above. It does what it says - it tidies up for you! In other words, it makes sure that your `go.mod`/`go.sum` files are in sync with your app. It's useful to run this every once in a while.
+What if you forget to run that `go get ...@none` command from above in the "Deleting" section? You'll end up with modules in your `go.mod`/`go.sum` files that your code doesn't need.
+
+Go has your back on that. You can always run this:
+
+```console
+go mod tidy
+```
+
+...to make sure that your mod files are in sync with the `import`s in your code.
+
+>🦾Pro tip! Just as in the deleting section, make sure you have a clean working directory before you tidy up. That way, if you don't like the post-tidy world, you can always revert back to the way it was 🚢✌
+
 
 ### Seeing Your Dependencies 👀
 
