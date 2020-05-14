@@ -37,7 +37,7 @@ You can also run this command inside an existing project to convert from older d
 
 You can use `go get`! Here's how to add a [popular testing package](https://github.com/stretchr/testify), at version `v1.5.1`:
 
-```shell
+```console
 $ go get github.com/stretchr/testify@v1.5.1
 ```
 
