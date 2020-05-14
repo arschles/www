@@ -59,7 +59,7 @@ go get github.com/stretchr/testify@none
 
 ## What's Up With These New Files? 🗃
 
-Good eye! With modules you have a `go.mod` and `go.sum` file. 
+Good eye! You caught the two new modules-specific files, `go.mod` and `go.sum`.
 
 The `go.mod` has:
 
