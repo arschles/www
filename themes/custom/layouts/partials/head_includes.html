@@ -1,7 +1,6 @@
 <!-- CSS -->
 
 <link rel="stylesheet" href="/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/colors.css" />
 <link rel="stylesheet" href="/css/common.css" />
 
 {{/*
@@ -21,11 +20,9 @@
   rel="stylesheet"
 >
 
-{{ if .Site.Params.highlightjs }}
-  <style type="text/css" media="screen">
-    {{ partial "css/highlight.min.css" . | safeCSS }}
-  </style>
-{{ end }}
+<style type="text/css" media="screen">
+  {{ partial "css/highlight.min.css" . | safeCSS }}
+</style>
 
 {{ if .Site.Params.progressively }}
   <style type="text/css" media="screen">
@@ -36,12 +33,6 @@
 {{ if .Site.Params.share }}
   <style type="text/css" media="screen">
     {{ partial "css/social-share-kit.css" . | safeCSS }}
-  </style>
-{{ end }}
-
-{{ if .Site.Params.colors }}
-  <style type="text/css" media="screen">
-    {{ partial "css/colors.css" . | safeCSS }}
   </style>
 {{ end }}
 
