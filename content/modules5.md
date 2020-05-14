@@ -19,7 +19,7 @@ That's pretty much it! There have been other dependency managers out there prior
 
 >If you're unfamiliar, `ELI5` stands for "explain like I'm 5"
 
-## How Do Get Started? 🚀
+## How Do I Get Started? 🚀
 
 For lots of folks, use it by going into the root of your project and typing:
 
@@ -45,12 +45,11 @@ go get github.com/stretchr/testify@v1.5.1
 
 _You don't have to explicitly delete a module from your project because modules aren't stored in your repository_
 
-Instead of deleting, run this when you don't need a module anymore:
+Instead of deleting, you run a `go get` with `@none` at the end, instead of the version number:
 
 ```console
 go get github.com/stretchr/testify@none
 ```
-
 
 ⚠ That `go get` command will remove the stretchr module from your project, and all of the modules in your project that depend on it!
 

@@ -1,0 +1,14 @@
+<div class="copyright row">
+    <div class="offset-sm-2 col-sm-10">
+    
+        {{ if .Site.Params.copyright }}
+            {{ if .Site.Params.copyrightUrl }}
+                <a href="{{ .Site.Params.copyrightUrl }}">
+                    {{ replace .Site.Params.copyright "{year}" now.Year }}
+                </a>
+            {{ else }}
+                <a href="{{ .Site.BaseURL }}license">{{ replace .Site.Params.copyright "{year}" now.Year }}</a>
+            {{ end }}
+        {{ end }}
+    </div>
+</div>
