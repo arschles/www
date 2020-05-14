@@ -7,7 +7,7 @@ type = "modules5"
 
 Welcome, Gopher! You might be here because you have questions about [Go modules](https://github.com/golang/go/wiki/Modules), or maybe you're just looking to find out more.
 
-Either way, welcome! I hope that this page helps you learn about this brand-spankin-new dependency manager for Go.
+Either way, welcome! I hope that this page helps you learn about the new (depending on when you read this!), standard dependency manager for Go.
 
 >I'm Aaron, by the way. I won't introduce myself here to keep this short! You can read more about me on my [about page](/about) if you'd like.
 
@@ -29,11 +29,11 @@ go mod init
 
 That should get you all set up! You can also do this inside an empty folder to start up a brand new project.
 
->If it doesn't, you might have to change a few things before you can get your project on modules. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/)
+>If it doesn't, you might have to change a few things before you can get your project on modules. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/).
 
 ## How Do I Add A New Module? 🥳
 
-You can use `go get`! Here's how to add my a [popular testing package](https://github.com/stretchr/testify):
+You can use `go get`! Here's how to add a [popular testing package](https://github.com/stretchr/testify):
 
 ```console
 go get github.com/stretchr/testify@v1.5.1
@@ -43,14 +43,18 @@ go get github.com/stretchr/testify@v1.5.1
 
 ## Ok, What About Deleting? 🧛‍♀️
 
-Well, you kinda don't actually! It sounds a bit weird, but here's a one-sentence explanation why:
+_You don't have to explicitly delete a module from your project because modules aren't stored in your repository_
 
-_You don't have to explicitly delete a module because they aren't stored in your repository_
+Instead of deleting, run this when you don't need a module anymore:
 
-Instead of deleting, follow these steps when you don't need a module anymore:
+```console
+go get github.com/stretchr/testify@none
+```
 
-- Remove the module from your `go.mod` file
-- Run `go mod tidy`
+
+⚠ That `go get` command will remove the stretchr module from your project, and all of the modules in your project that depend on it!
+
+>🦾Pro tip! Make sure you have a clean working directory before you remove a module. That way, if you don't like the post-removal world, you can always revert back to the way it was 🚢✌
 
 ## What's Up With These New Files? 🗃
 
@@ -108,7 +112,7 @@ module3 module6
 
 It's a little more complicated than that, but you get the idea.
 
->Pro tip! Each row is an [edge](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) (arrow) on the dependency graph
+>🦾 Pro tip! Each row is an [edge](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) (arrow) on the dependency graph
 
 ```
 go mod why
@@ -121,4 +125,4 @@ This is kind of like the opposite of `go mod graph`. Graph shows you _everything
 
 I hope this document is enough to get you started and keep you going until you hit something really gnarly.
 
-If/when you get there, check out the [wiki on modules](https://github.com/golang/go/wiki/Modules) to dive in to details. Things change from time to time with the underlying technology, and this wiki will be kept up to date as time goes on.
+If/when you get to that point, check out the [wiki on modules](https://github.com/golang/go/wiki/Modules) to dive in to details. Things change from time to time with the underlying technology, and this wiki will be kept up to date as time goes on.
