@@ -21,15 +21,17 @@ That's pretty much it! There have been other dependency managers out there prior
 
 ## How Do I Get Started? 🚀
 
-For lots of folks, use it by going into the root of your project and typing:
+For lots of folks, use it by going into the root of your project and typing the below `go mod init` name, substituting `YourModuleName` with ... your module's name! (most people use a VCS name like `github.com/arschles/assert`)
 
 ```console
-go mod init
+go mod init YourModuleName
 ```
 
-That should get you all set up! You can also do this inside an empty folder to start up a brand new project.
+That should create a new `go.mod` file. This is where you'll keep track of all the modules that you `import` in your app.
 
->If it doesn't, you might have to change a few things before you can get your project on modules. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/).
+You can also run this command inside an existing project to convert from older dependency management systems
+
+>If that `go mod init` comand doesn't work and you're doing it with an existing project, you might have to change a few things first. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/).
 
 ## How Do I Add A New Module? 🥳
 
