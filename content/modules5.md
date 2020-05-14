@@ -1,0 +1,124 @@
++++
+title = "Go Modules in 5 Minutes"
+description = "A no-nonsense rundown on Go modules, in 5 minutes"
+meta_img = "/images/modules_in_5_minutes.png"
+type = "modules5"
++++
+
+Welcome, Gopher! You might be here because you have questions about [Go modules](https://github.com/golang/go/wiki/Modules), or maybe you're just looking to find out more.
+
+Either way, welcome! I hope that this page helps you learn about this brand-spankin-new dependency manager for Go.
+
+>I'm Aaron, by the way. I won't introduce myself here to keep this short! You can read more about me on my [about page](/about) if you'd like.
+
+## ELI5: What Are Modules? 🤨
+
+**Modules are the dependency management system for Go apps.**
+
+That's pretty much it! There have been other dependency managers out there prior to modules, but I'm gonna leave out the history here unless it's relevant to the present technology.
+
+>If you're unfamiliar, `ELI5` stands for "explain like I'm 5" - I borrowed this acronym from the [subreddit](https://www.reddit.com/r/explainlikeimfive/)
+
+## How Do Get Started? 🚀
+
+For lots of folks, use it by going into the root of your project and typing:
+
+```console
+go mod init
+```
+
+That should get you all set up! You can also do this inside an empty folder to start up a brand new project.
+
+>If it doesn't, you might have to change a few things before you can get your project on modules. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/)
+
+## How Do I Add A New Module? 🥳
+
+You can use `go get`! Here's how to add my a [popular testing package](https://github.com/stretchr/testify):
+
+```console
+go get github.com/stretchr/testify@v1.5.1
+```
+
+>`go get` has been around forever, but now it supports versions and it knows how to update your dependency tracking files (see below)
+
+## Ok, What About Deleting? 🧛‍♀️
+
+Well, you kinda don't actually! It sounds a bit weird, but here's a one-sentence explanation why:
+
+_You don't have to explicitly delete a module because they aren't stored in your repository_
+
+Instead of deleting, follow these steps when you don't need a module anymore:
+
+- Remove the module from your `go.mod` file
+- Run `go mod tidy`
+
+## What's Up With These New Files? 🗃
+
+Good eye! With modules you have a `go.mod` and `go.sum` file. 
+
+The `go.mod` has:
+
+- Your app name (called `module` in the file)
+- The version of Go you're using
+- The list of modules that you import (the Go tool might put other `// indirect` ones in there too)
+
+The `go.sum` has:
+
+- A list of all the modules your app uses, including the [transitive](https://en.wikipedia.org/wiki/Transitive_dependency) ones (AKA: your dependency's dependency, their dependency, etc...)
+- Every module's checksum
+
+## Beyond 5 Minutes 🚀
+
+Ok, so you have a lay of the land. You've probably got a feel for how things are going. Here are some other tips and tricks...
+
+### The Global Cache 💵
+
+Some programming languages store all your dependencies locally (Go used to do this too with vendoring!), so you had to manually delete them when you're done with them. Not the case with Go!
+
+Go stores all the module code in a read-only central directory on your disk, so one version of a module isn't tied to just your project. If you have lots and lots of projects on your machine, that cache might get big. Delete it with this 🔥:
+
+```console
+go clean --modcache
+```
+
+>⚠ If you do this, you'll have to re-download app of your app's modules next time you build it
+
+### Tidying Up 🧹
+
+You saw `go mod tidy` above. It does what it says - it tidies up for you! In other words, it makes sure that your `go.mod`/`go.sum` files are in sync with your app. It's useful to run this every once in a while.
+
+### Seeing Your Dependencies 👀
+
+All this talk about transitive dependencies, amirite??? You have two commands to help figure out why you're seeing modules in your `go.mod`/`go.sum` (most of the time, you'll have a question about why something is in the `go.sum`)
+
+```console
+go mod graph
+```
+
+⬆ shows you a list of modules that you can reconstruct into your dependency graph. The list looks like this:
+
+```
+YourModule module1
+YourModule module2
+YourModule module3
+module1 module4
+module1 module5
+module3 module6
+```
+
+It's a little more complicated than that, but you get the idea.
+
+>Pro tip! Each row is an [edge](https://en.wikipedia.org/wiki/Graph_(abstract_data_type)) (arrow) on the dependency graph
+
+```
+go mod why
+```
+
+This is kind of like the opposite of `go mod graph`. Graph shows you _everything_, but this one shows you why a module (that you give it) is in your app. 
+
+
+## Beyond 5 Minutes: Where to Read More
+
+I hope this document is enough to get you started and keep you going until you hit something really gnarly.
+
+If/when you get there, check out the [wiki on modules](https://github.com/golang/go/wiki/Modules) to dive in to details. Things change from time to time with the underlying technology, and this wiki will be kept up to date as time goes on.
