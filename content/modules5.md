@@ -85,7 +85,7 @@ Go stores all the module code in a read-only central directory on your disk, so 
 go clean --modcache
 ```
 
->⚠ If you do this, you'll have to re-download app of your app's modules next time you build it
+>⚠ If you do this, you'll have to re-download all of your app's modules next time you build it
 
 ### Tidying Up 🧹
 
