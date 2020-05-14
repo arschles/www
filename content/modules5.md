@@ -21,13 +21,13 @@ That's pretty much it! You might have heard about prior dependency managers out 
 
 ## How Do I Get Started? 🚀
 
-For lots of folks, use it by going into the root of your project and typing the below `go mod init` name, substituting `YourModuleName` with ... your module's name! (most people use a VCS name like `github.com/arschles/assert`)
+You most likely need to go into the root of your project and type the below command, substituting `YourModuleName` with ... your module's name! (most people use a VCS name like `github.com/arschles/assert`)
 
 ```console
 $ go mod init YourModuleName
 ```
 
-That should create a new `go.mod` file. This is where you'll keep track of all the modules that you `import` in your app.
+That should create a new `go.mod` file, which is where you'll keep track of all the modules that you `import` in your app.
 
 You can also run this command inside an existing project to convert from older dependency management systems
 
@@ -37,7 +37,7 @@ You can also run this command inside an existing project to convert from older d
 
 You can use `go get`! Here's how to add a [popular testing package](https://github.com/stretchr/testify), at version `v1.5.1`:
 
-```console
+```shell
 $ go get github.com/stretchr/testify@v1.5.1
 ```
 
