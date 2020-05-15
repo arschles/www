@@ -32,7 +32,7 @@ That should create a new `go.mod` file, which is where you'll keep track of all 
 
 You can also run this command inside an existing project to convert from older dependency management systems
 
->If that `go mod init` comand doesn't work and you're doing it with an existing project, you might have to change a few things first. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/).
+>If that `go mod init` command doesn't work and you're doing it with an existing project, you might have to change a few things first. Your best option for now is to go ask in the `#modules` channel of the [Gophers Slack group](https://invite.slack.golangbridge.org/).
 
 ## How Do I Add A New Module? 🥳
 
