@@ -3,6 +3,7 @@ title = "Go Modules in 5 Minutes"
 description = "A no-nonsense rundown on Go modules, in 5 minutes"
 meta_img = "/images/modules_5_minutes.png"
 type = "modules5"
+twitter_card_type = "summary_large_image"
 +++
 
 Welcome, Gopher! You might be here because you have questions about [Go modules](https://github.com/golang/go/wiki/Modules), or maybe you're just looking to find out more.
