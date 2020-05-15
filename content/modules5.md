@@ -54,7 +54,7 @@ Instead of deleting, you run a `go get` with `@none` at the end, instead of the 
 $ go get github.com/stretchr/testify@none
 ```
 
-⚠ That `go get` command will remove the stretchr module from your project, and all of the modules in your project that depend on it!
+⚠ That `go get` command will remove that `testify` module from your project, and all of the modules in your project that depend on it!
 
 >🦾Pro tip! Make sure you have a clean working directory before you remove a module. That way, if you don't like the post-removal world, you can always revert back to the way it was 🚢✌
 
@@ -131,7 +131,7 @@ It's a little more complicated than that, but you get the idea.
 $ go mod why
 ```
 
-This is kind of like the opposite of `go mod graph`. Graph shows you _everything_, but this one shows you why a module (that you give it) is in your app. 
+This is kind of like the opposite of `go mod graph`. The command takes a module name & version, and shows you why it's in your app by tracing it all the way up the dependency graph (hence the name!) to your top-level import.
 
 
 ## Beyond 5 Minutes: Where to Read More
