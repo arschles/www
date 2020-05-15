@@ -16,7 +16,7 @@ Either way, welcome! I hope that this page helps you learn about the standard de
 
 **Modules are the dependency management system for Go apps.**
 
-That's pretty much it! You might have heard about prior dependency managers out there, but we're gonna focus just on modules here.
+That's pretty much it! You might have heard about prior dependency managers out there, but we'll focus just on modules here.
 
 >If you're unfamiliar, `ELI5` stands for "explain like I'm 5"
 
