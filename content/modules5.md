@@ -1,7 +1,7 @@
 +++
 title = "Go Modules in 5 Minutes"
 description = "A no-nonsense rundown on Go modules, in 5 minutes"
-meta_img = "/images/modules_in_5_minutes.png"
+meta_img = "/images/modules_5_minutes.png"
 type = "modules5"
 +++
 
