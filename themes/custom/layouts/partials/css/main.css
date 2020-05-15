@@ -765,3 +765,15 @@ kbd {
       font-family: 'Ubuntu Mono';
 }
 {{ end  }}
+
+.marker-highlight {
+  background-color: yellow;
+  padding-left: 4px;
+  padding-right:4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.lucky {
+  font-family: 'Luckiest Guy', cursive;
+}

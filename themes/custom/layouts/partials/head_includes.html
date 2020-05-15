@@ -1,7 +1,6 @@
 <!-- CSS -->
 
 <link rel="stylesheet" href="/css/bootstrap.min.css" />
-<link rel="stylesheet" href="/css/colors.css" />
 <link rel="stylesheet" href="/css/common.css" />
 
 {{/*
@@ -16,19 +15,14 @@
 </style>
 */}}
 
-{{/*
-<noscript>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-</noscript>
-*/}}
+<link
+  href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&family=Merriweather+Sans:ital@0;1&family=Raleway:ital,wght@0,300;0,400;1,300&family=Ubuntu+Mono:ital@1&display=swap"
+  rel="stylesheet"
+>
 
-{{ if .Site.Params.highlightjs }}
-  <style type="text/css" media="screen">
-    {{ partial "css/highlight.min.css" . | safeCSS }}
-  </style>
-{{ end }}
+<style type="text/css" media="screen">
+  {{ partial "css/highlight.min.css" . | safeCSS }}
+</style>
 
 {{ if .Site.Params.progressively }}
   <style type="text/css" media="screen">
@@ -39,12 +33,6 @@
 {{ if .Site.Params.share }}
   <style type="text/css" media="screen">
     {{ partial "css/social-share-kit.css" . | safeCSS }}
-  </style>
-{{ end }}
-
-{{ if .Site.Params.colors }}
-  <style type="text/css" media="screen">
-    {{ partial "css/colors.css" . | safeCSS }}
   </style>
 {{ end }}
 
