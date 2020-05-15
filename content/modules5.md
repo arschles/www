@@ -21,7 +21,7 @@ That's pretty much it! You might have heard about prior dependency managers out 
 
 ## How Do I Get Started? 🚀
 
-You most likely need to go into the root of your project and type the below command, substituting `YourModuleName` with ... your module's name! (most people use a VCS name like `github.com/arschles/assert`)
+You most likely need to go into the root of your project and type the below command, substituting `YourModuleName` with ... your module's name! (use a VCS name like `github.com/arschles/assert`)
 
 ```console
 $ go mod init YourModuleName
