@@ -28,7 +28,7 @@ The [official GitHub repository](https://github.com/microsoft/powertoys) says th
 
 Well, I love productivity (if you've seen any of my screencasts, I hit the keyboard shortcuts **hard**), so I'm gonna go with that!
 
->😎 By the way, PowerTools is 100% open source at [github.com/microsoft.com/PowerToys](https://github.com/microsoft.com/PowerToys)
+>😎 By the way, PowerToys is 100% open source at [github.com/microsoft.com/PowerToys](https://github.com/microsoft.com/PowerToys)
 
 I just installed this thing a few hours ago and started messing around with it. It's at version v0.18.0, but the install was not as bad as I thought. Let's go over it!
 
@@ -67,3 +67,10 @@ Check out that left bar. 7 new features plus a "General" thing at the top. I'm g
 - PowerToys run - basically Alfred or Spotlight for Mac, but for Windows
 - Shortcut guide - a full-screen pop-up that reminds you of the keyboard shortcuts you have set up
 
+## Keep Calm and PowerToy On! 🚢
+
+Of course, I'm not doing any of these items justice in a single sentence. You can learn a bit more about each one [here](https://github.com/microsoft/powertoys#current-powertoy-utilities), and follow the links in each section to go deeper.
+
+Look out for my next post on using PowerToys to make your Mac keyboard work smoother Windows. See you soon!
+
+👋
