@@ -40,7 +40,7 @@ My colleague has [detailed instructions](https://www.thomasmaurer.ch/2020/05/how
 
 >WinGet is also open source [here](https://github.com/microsoft/winget-cli)
 
-## Use WinGet to Install It
+## 🥨 Use WinGet to Install It
 
 When you have it installed, getting PowerToys is a command:
 
@@ -50,24 +50,56 @@ $ WinGet install powertoys
 
 >Run this in PowerShell, not WSL2
 
-## Get Used to the Features
+## 🍕 Get Used to the Features 
 
-The very first thing to do is bask in the awesomeness of "PowerToys Run". Seriously. Just hit left-alt+space and a search bar pops up. You can type anything in there and quickly get to "things" on your computer (hint lots of stuff you don't actually need to get to, or even knew you had) or more importantly, YOUR APPS 🎉🤘🏄‍♀️. 
+The very first thing to do is bask in the awesomeness of "PowerToys Run". Seriously.
 
-Anyway, hit left-alt+space, type in "PowerToys", and hit enter. You're in the PowerToys settings! It looks like the standard Windows settings app, but it's actually the _added_ features that PowerToys gives.
+**Just hit left-alt+space and a search bar pops up.**
+
+You can type anything in there and quickly get to "things" on your computer. That generally means a metric ton of things that you didn't even know you had. But it also means ... YOU CAN GET TO YOUR APPS WITH NO CLICKS!!!!🎉🤘🏄‍♀️. 
+
+I really missed that from my Mac days.
+
+Anyway, hit left-alt+space, type in "PowerToys", and hit enter. That will take you to something that looks like the standard Windows settings app, but it's actually the _added_ features that PowerToys gives.
 
 Check out that left bar. 7 new features plus a "General" thing at the top. I'm gonna boil each complex feature down into a single sentence, Aaron style™. Here goes:
 
-- General - go here to do general stuff (😂), most importantly getting updates to PowerToys itself.
-- FancyZones - Automatically resize each window in different patterns on the screen, like side by side or in rows
-- File Explorer preview - See rendered previews of SVGs and rendered Markdown in the file explorer. Optional second sentence 💰: I imagine there will be more formats in the future
-- Image resizer - resize any image with a right click from the file explorer
-- Keyboard Manager - re-map any key or keyboard shortcut with a nice UI
-- PowerRename - rename tons and tons of files by highlighting them all and right clicking
-- PowerToys run - basically Alfred or Spotlight for Mac, but for Windows
-- Shortcut guide - a full-screen pop-up that reminds you of the keyboard shortcuts you have set up
+#### 🍚 General
 
-## Keep Calm and PowerToy On! 🚢
+Go here to do general stuff (😂), most importantly getting updates to PowerToys itself.
+
+#### 🥧 FancyZones
+
+Automatically resize each window in different patterns on the screen, like side by side or in rows.
+
+>Yes, the name is amazing. The zones are indeed fancy 🍰! But the feature overall is pretty slick and powerful once you get the hang of it. You'll want to try out a few different setups to figure out the best one for you.
+
+#### 🍣 File Explorer preview 
+
+See rendered previews of SVGs and rendered Markdown in the file explorer. Optional second sentence 💰: I imagine there will be more formats in the future.
+
+#### 🍤 Image resizer 
+
+Resize any image with a right click from the file explorer.
+
+#### 🍎Keyboard Manager
+
+Remap any key or keyboard shortcut from a nice UI.
+
+#### 🍉 PowerRename
+
+Rename tons and tons of files by highlighting them all and right clicking.
+
+#### 🍍 PowerToys run
+
+The belle of the ball for me - basically Alfred or Spotlight for Mac, but for Windows.
+
+#### 🥦 Shortcut guide
+
+A full-screen pop-up that reminds you any time of the keyboard shortcuts you have set up.
+
+
+## 🚢 Keep Calm and PowerToy On!
 
 Of course, I'm not doing any of these items justice in a single sentence. You can learn a bit more about each one [here](https://github.com/microsoft/powertoys#current-powertoy-utilities), and follow the links in each section to go deeper.
 
