@@ -1,7 +1,7 @@
 ---
 author: "Aaron Schlesinger"
 date: 2020-05-20T11:39:16-07:00
-title: 'Windows PowerToys Part 1'
+title: 'Windows, Now With More Toys'
 slug: '2020-05-20-powertoys'
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
@@ -12,9 +12,11 @@ slug: '2020-05-20-powertoys'
 # lobsters_id = ""
 ---
 
-If you were around for Windows 95, you might remember [the PowerToys from then](https://socket3.wordpress.com/2016/10/22/using-windows-95-powertoys/). Well, it's baaaack!
+If you were around way back in the Windows 95 days, you might remember [the PowerToys from then](https://socket3.wordpress.com/2016/10/22/using-windows-95-powertoys/). Years and years later, it's back in a similar form, but for Windows 10.
 
-Let's talk about what it's all about today.
+I just got started with it and it's another tool in my belt to help me feel comfortable using Windows every day after [many](https://deploy-preview-70--arschles-www.netlify.app/blog/coming-from-a-mac-to-windows-wsl-2/) [years](https://deploy-preview-70--arschles-www.netlify.app/blog/how-to-wsl-2/) of using Macs.
+
+Let me take you through it.
 
 >You might have read that I recently [came from a Mac](https://arschles.com/blog/coming-from-a-mac-to-windows-wsl-2/). I have a follow-up post to this on how to use PowerToys Keyboard Shortcuts to make your keyboard more mac-like
 
