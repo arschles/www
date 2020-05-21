@@ -3,6 +3,7 @@ author: "Aaron Schlesinger"
 date: 2020-05-04T16:40:09-07:00
 title: 'What is Dapr? (Dapr Series #2)'
 tags: ["dapr"]
+slug: "what-is-dapr"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
