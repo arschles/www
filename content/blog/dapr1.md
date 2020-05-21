@@ -1,7 +1,9 @@
 ---
 author: "Aaron Schlesinger"
 date: 2020-04-21T11:13:56-07:00
-title: 'How to make your app harder to build'
+title: 'How to make your app harder to build (Dapr Series #1)'
+tags: ["dapr"]
+slug: "how-to-make-your-app-harder-to-build"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
