@@ -52,7 +52,14 @@
                     {{ end }}
                     <span class="post-date">
                         [{{ .Date.Format .Site.Params.dateform }}]
-                    </span>        
+                    </span>
+                    <div class="post-tags">
+                        {{ range $tag := .Params.Tags }}
+                        <span class="label label-default">
+                            {{ $tag }}
+                        </span>
+                        {{ end }}
+                    </div>     
                 </div>
             {{ end }}
         {{ end }}
