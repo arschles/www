@@ -1,9 +1,8 @@
 ---
 author: "Aaron Schlesinger"
 date: 2020-06-22T15:56:33-07:00
-title: 'async/await, in 4 Minutes'
+title: 'From nothing to async/await'
 slug: "async-await"
-draft: false
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
@@ -23,15 +22,17 @@ Let's look at why, using Javascript to illustrate the concepts.
 
 `async`/`await` is all about writing concurrent code easily. More importantly, writing the code so it's easy to **read**.
 
-## Solving the Problem Three Ways 🕒
+## Solving Concurrency Three Ways 🕒
 
-We're gonna build up from callbacks to Promises (reminder: Futures in other languages, because naming) to `async`/`await`.
+This pattern relies on a feature called Promises in Javascript, so we're gonna build up from basics to Promises in JS, and cap it off with integrating `async`/`await` into Promises.
+
+>Promises are called Futures in many other languages/frameworks. Some use both terms! It can be confusing, but the concept is the same. We'll go into details later in this post.
 
 ### Callbacks 😭
 
 You've probably heard about callbacks in Javascript. If you haven't, they're a programming pattern that lets you schedule work to be done in the future, after something else finishes. Callbacks are also the foundation of what we're talking about here.
 
->The core problem we're solving in this entire article is how to _automatically_ run code after some other work is done
+>The core problem we're solving in this entire article is how to run code after some concurrent work is being done.
 
 The syntax of callbacks is basically passing a function into a function:
 
@@ -50,20 +51,19 @@ doStuff(function(result) {
     //
     // That means that the rest of our ENTIRE PROGRAM needs to go in here
     // (most of the time)
-    // 
+    //
     // Barf, amirite?
     console.log("done with doStuff");
 });
 
-// Wait, though... if you put something here ... it'll run right
-// away. It won't wait for doStuff to finish. Confusing much?
+// Wait, though... if you put something here ... it'll run right away. It won't wait for doStuff to finish
 ```
 
-... but yea, it's confusing and [exhausting to write](http://callbackhell.com/) and read 😞.
+That last comment in the code is the confusing part. In practice, most apps don't want to continue execution. They want to wait. Callbacks make that difficult to achieve, confusing, and [exhausting to write](http://callbackhell.com/) and read 😞.
 
 ### Promises 🙌
 
-I'll see your callbacks and raise you a `Promise`! No really, Promises are dressed up callbacks that make things easier to deal with. But you still pass functions to functions and it's still harder than it has to be.
+I'll see your callbacks and raise you a `Promise`! No really, Promises are dressed up callbacks that make things easier to deal with. But you still pass functions to functions and it's still a bit harder than it has to be.
 
 ```javascript
 function returnAPromiseYall() {
@@ -80,7 +80,7 @@ myProm.then(function(result) {
     // just like in callback world
     return anotherPromise;
 }).then(function(newResult) {
-    // We can chain these "then" calls together to build a pipeline of 
+    // We can chain these "then" calls together to build a pipeline of
     // code. So it's a little easier to read, but still. 
     // Passing functions to functions and remembering to write your code inside
     // these "then" calls is sorta tiring
@@ -90,8 +90,8 @@ myProm.then(function(result) {
 
 We got a few small wins:
 
-- No more crazy nested callbacks
-- This `then` function kind of implies a _pipeline_ of code. That can be easier to read and understand
+- No more crazy _nested_ callbacks
+- This `then` function implies a _pipeline_ of code. Syntactically and conceptually, that's easier to deal with
 
 But we still have a few sticky problems:
 
@@ -100,7 +100,7 @@ But we still have a few sticky problems:
 
 ### async/await 🥇
 
-Alrighty, we're here folks! The promised land 🎉🥳🍤. We can get rid of passing functions to functions, `then`, and all that forgetting to put the rest of your program into the `then`.
+Alrighty, we're here folks! The `Promise`d land 🎉🥳🍤. We can get rid of passing functions to functions, `then`, and all that forgetting to put the rest of your program into the `then`.
 
 All with this 🔥 pattern. Check it:
 
@@ -126,17 +126,15 @@ So, now we can read the code from top to bottom! All thanks to the `await` keywo
 - No passing functions into functions means less `})` syntax to ~~forget~~ write
 - The `await` keyword is a clear symbol that `doStuff` returns a promise, which might mean it's doing something "expensive" like doing a REST API call or something
 
-#### What about the `async` keyword???
+#### What about the `async` keyword⁉
 
-In many languages including JS, you also have to mark a function `async` if it uses `await` inside of it. There are language-specific reasons to do that, but here are some that you should care about:
+In many languages including JS, you have to mark a function `async` if it uses `await` inside of it. There are language-specific reasons to do that, but here are some that you should care about:
 
-- To tell the caller that there's an `await` inside of it (which implicitly means there are `Promise`s going on behind the scenes in JS) and the caller should probably do an `await` on the result
+- To tell the caller that there's an `await` inside of it (which implicitly means there are `Promise`s going on behind the scenes in JS) and the caller should do an `await` on the result
 - To tell the runtime (or compiler in other languages) to do its magic behind the scenes to "make it work"™
 
 ## 🏁
 
-And that's it. I left a lot of implementation details out, but it's really important to remember that this pattern exists more for human reasons rather than technical. You can do everything with promises that you can do with `async`/`await`, but in most cases, `async`/`await` is going to make your life easier. Take it from me, someone who's broken many a build and written many a bug because he forgot how promises/futures work.
+And that's it. I left a lot of implementation details out, but it's really important to remember that this pattern exists more for human reasons rather than technical.
 
-Enjoy your day!
-
--- Aaron
+You can do all of this stuff with callbacks, but in almost all cases, `async`/`await` is going to make your life easier. Enjoy! 👋
