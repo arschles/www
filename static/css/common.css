@@ -66,3 +66,7 @@ div.posts-list span.post-title {
     font-family: 'Raleway', sans-serif;
     font-size: 1.3em;
   }
+
+  pre {
+      padding:1em;
+  }

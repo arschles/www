@@ -4,6 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"image/color"
+	"log"
 	"os"
 	"path/filepath"
 
@@ -79,7 +80,7 @@ func run() error {
 	}
 
 	// save the file out
-	// outputFilename := "newthing.png"
+	log.Printf("Saving %s", *outFile)
 	if err := dc.SavePNG(*outFile); err != nil {
 		return errors.Wrap(err, "save png")
 	}
