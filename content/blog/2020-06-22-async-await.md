@@ -2,7 +2,7 @@
 author: "Aaron Schlesinger"
 date: 2020-06-22T15:56:33-07:00
 title: 'async/await, in 4 Minutes'
-slug: async-await
+slug: "async-await"
 draft: false
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
