@@ -15,9 +15,9 @@ draft: false
 
 Heard of the `async`/`await` pattern? Javascript, C# and Rust (now! 🥳) have it. I'm probably missing some languages too. More are probably gonna adopt it because it solves a very specific and common pain point.
 
-Let's look at why... using examples ... in Javascript.
+Let's look at why, using Javascript to illustrate the concepts.
 
->I'm a Javascript dabbler at best. I can write code that works, but it's never pretty! I like to think that I do know a lot about concurrency patterns, though, so don't go too hard on my JS code below 😅
+>I'm a Javascript dabbler at best, but it's a great language to illustrate these concepts with. Don't go too hard on my JS code below 😅
 
 # What It's About 🤔
 
