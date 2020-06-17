@@ -1,8 +1,9 @@
 ---
 author: "Aaron Schlesinger"
-date: 2020-05-18T15:56:33-07:00
+date: 2020-06-22T15:56:33-07:00
 title: 'async/await, in 4 Minutes'
 slug: async-await
+draft: false
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
