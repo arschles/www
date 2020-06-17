@@ -117,7 +117,7 @@ let theResult = await doStuff();
 // ONLY GUARANTEES
 //
 // In other words, the value is ready right here!
-console.log("the result is ready!")
+console.log(`the result is ready: ${theResult}`);
 ```
 
 So, now we can read the code from top to bottom! All thanks to the `await` keyword. There's magic going on under the hood. The magic differs from language to language (in JS, it's `Promises` most of the time), but the results are the same:
