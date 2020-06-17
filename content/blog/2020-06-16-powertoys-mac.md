@@ -42,7 +42,7 @@ This is basically making the Windows key to the left of the spacebar into the Ct
 
 To do these mapping, you click "Remap a Key', then the Plus icon at the bottom. Click on each box and type the keys you want to map. The "before" key goes on the left, and the "after" key on the right.
 
->‼ Do the mapping from `Win` -> `Ctrl` _last_
+>❗ Do the mapping from `Win` -> `Ctrl` _last_
 
 ## Remap Shortcuts 🍕
 
