@@ -12,7 +12,7 @@ Here's what I'm up to these days:
 
 I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
 
-#### Let's Go Live Coding
+##### Let's Go Live Coding
 
 I do a weekly live-coding session with [Jennifer](https://jennifer.dev). We're going from nothing to mastering Go together.
 
