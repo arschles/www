@@ -1,7 +1,7 @@
 ---
 author: "Aaron Schlesinger"
-date: 2020-06-22T15:56:33-07:00
-title: 'From nothing to async/await'
+date: 2020-06-30T15:00:33-07:00
+title: 'async/await: under the hood'
 slug: "async-await"
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
@@ -12,15 +12,15 @@ slug: "async-await"
 # lobsters_id = ""
 ---
 
-Heard of the `async`/`await` pattern? Javascript, C# and Rust (now! 🥳) have it. I'm probably missing some languages too. More are probably gonna adopt it because it solves a very specific and common pain point.
+I'm really interested in concurrency strategies in programming languages, and because there's a lot of written research out there on the topic, you can find lots of strategies out there. When you look at some of the more modern stuff, you'll find a [lot](https://www.microsoft.com/en-us/research/wp-content/uploads/2007/01/The-Joins-Concurrency-Library.pdf) [of](https://concurnas.com/) [literature](https://rust-lang.github.io/async-book/03_async_await/01_chapter.html) on just about the same pattern: `async`/`await`.
 
-Let's look at why, using Javascript to illustrate the concepts.
+`async`/`await` is picking up steam in languages because it makes concurrency _really_ easy to see and deal with. Let's look at how it works and why it helps, using Javascript to illustrate the concepts.
 
 >I'm a Javascript dabbler at best, but it's a great language to illustrate these concepts with. Don't go too hard on my JS code below 😅
 
 # What It's About 🤔
 
-`async`/`await` is all about writing concurrent code easily. More importantly, writing the code so it's easy to **read**.
+`async`/`await` is about writing concurrent code easily, but more importantly, it's about writing the code so it's easy to **read**.
 
 ## Solving Concurrency Three Ways 🕒
 
@@ -96,7 +96,7 @@ We got a few small wins:
 But we still have a few sticky problems:
 
 - You have to remember to put the rest of your program into a `then`
-- You're still passing functions to functions. It still gets tiring to write and needlessly tiring to read
+- You're still passing functions to functions. It still gets tiring to read and write that
 
 ### async/await 🥇
 
@@ -105,7 +105,7 @@ Alrighty, we're here folks! The `Promise`d land 🎉🥳🍤. We can get rid of 
 All with this 🔥 pattern. Check it:
 
 ```javascript
-function doStuff() {
+async function doStuff() {
     // just like the last two examples, return a promise
     return myPromise;
 }
@@ -120,17 +120,17 @@ let theResult = await doStuff();
 console.log(`the result is ready: ${theResult}`);
 ```
 
-So, now we can read the code from top to bottom! All thanks to the `await` keyword. There's magic going on under the hood. The magic differs from language to language (in JS, it's `Promises` most of the time), but the results are the same:
+Thanks to the `await` keyword, we can read the code from top to bottom. This gets translated to something or other under the hood, and what exactly it is depends on the language. In JS land, it's essentially `Promise`s most of the time. The results to us _programmers_ is always the same, though:
 
-- Programmers can read/write code from top to bottom, the way we're used to
+- Programmers can read/write code from top to bottom, the way we're used to doing it
 - No passing functions into functions means less `})` syntax to ~~forget~~ write
-- The `await` keyword is a clear symbol that `doStuff` returns a promise, which might mean it's doing something "expensive" like doing a REST API call or something
+- The `await` keyword can be an indicator that `doStuff` does something "expensive" (like call a REST API)
 
 #### What about the `async` keyword⁉
 
 In many languages including JS, you have to mark a function `async` if it uses `await` inside of it. There are language-specific reasons to do that, but here are some that you should care about:
 
-- To tell the caller that there's an `await` inside of it (which implicitly means there are `Promise`s going on behind the scenes in JS) and the caller should do an `await` on the result
+- To tell the caller that there are `Promise`s or `await`s happening inside of it
 - To tell the runtime (or compiler in other languages) to do its magic behind the scenes to "make it work"™
 
 ## 🏁
