@@ -8,24 +8,21 @@ I also work at Microsoft as a [**C**loud **D**eveloper **A**dvocate](https://dev
 
 Here's what I'm up to these days:
 
-##### The Ultimate Guide to Web Apps
-
-I produce a subscription series called [The Ultimate Guide to Web Apps](https://gumroad.com/l/hgHhj). It dives deep into the world of building full-stack web apps with Go, and keeps you up to date in this fast-moving world.
-
-I've also produced some other Go-related screencasts:
-
-- [All about the Go html/template package](https://gum.co/gifm-x-14)
-- [Dive deep into Go concurrency](https://gum.co/gifm-x-15)
-
 ##### Go in 5 Minutes
 
 I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
+
+##### Let's Go Live Coding
+
+I do a weekly live-coding session with [Jennifer](https://jennifer.dev). We're going from nothing to mastering Go together.
+
+Watch it live every Monday at 11am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)
 
 ##### Crystal Fridays
 
 I produce **Crystal Fridays**, a weekly live-coding session where I write apps in [Crystal](https://crystal-lang.org)
 
->**Watch live every Friday at 10am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)**
+>Watch it live every Friday at 10am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)
 
 Recordings are [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GBxMQ78nmowkAxilgS_LrNB)
 
