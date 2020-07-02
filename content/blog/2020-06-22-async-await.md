@@ -90,7 +90,7 @@ myProm.then(function(result) {
 
 We got a few small wins:
 
-- No more crazy _nested_ callbacks
+- No more confusing _nested_ callbacks
 - This `then` function implies a _pipeline_ of code. Syntactically and conceptually, that's easier to deal with
 
 But we still have a few sticky problems:
