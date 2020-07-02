@@ -6,34 +6,42 @@ Hi there! I'm a [Gopher](https://golang.org), [Kubernaut](https://kubernetes.io)
 
 I also work at Microsoft as a [**C**loud **D**eveloper **A**dvocate](https://developer.microsoft.com/en-us/advocates/aaron-schlesinger) (CDA), where I focus there on Kubernetes / Containers, Go and emerging languages. I also [speak](/speaking) and [teach](/teaching) a wide variety of topics.
 
-Here's what I'm up to these days:
+I do several live coding sessions each week:
 
-##### Go in 5 Minutes
-
-I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
-
-##### Let's Go Live Coding
+### Let's Go Live Coding
 
 I do a weekly live-coding session with [Jennifer](https://jennifer.dev). We're going from nothing to mastering Go together.
 
-Watch it live every Monday at 11am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)
+- **Watch it live every Monday at 11am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)**
+- You can check out all of the recordings [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GCdvijjkLObfahEZzsJCAxO)
+- See notes from old streams and plans for new streams [on GitHub](https://github.com/osscda/lets-go-stream)
 
-##### Crystal Fridays
+### Cloud Native Wednesdays
 
-I produce **Crystal Fridays**, a weekly live-coding session where I write apps in [Crystal](https://crystal-lang.org)
+I do a weekly live-coding session with [Jennifer](https://jennifer.dev). We go in depth into [Cloud Native](https://cncf.io) technologies each week.
 
->Watch it live every Friday at 10am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)
+- **Watch it live every Wednesday at 1:30pm US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)**
+- You can check out all of the recordings [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GDaRQOXIk_ZhFnAfGe-UUZU)
+- See notes from old streams and plans for new streams [on GitHub](https://github.com/osscda/cloud-native-stream)
 
-Recordings are [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GBxMQ78nmowkAxilgS_LrNB)
 
-##### GopherCon
+### Crystal Fridays
 
-I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world.
+I produce **Crystal Fridays**, a weekly live-coding session where I write apps in [Crystal](https://crystal-lang.org).
 
-I'm an emeritus chair of the Kubernetes 
-[SIG-Service-Catalog](https://svc-cat.io/).
+- **Watch it live every Friday at 10am US Pacific Time at [twitch.tv/arschles](https://twitch.tv/arschles)**
+- Recordings are [on YouTube](https://www.youtube.com/playlist?list=PLd5PS0DQ17GBxMQ78nmowkAxilgS_LrNB)
 
-### My History
+
+And I am/was involved with some projects as well:
+
+- **Athens** - I'm a co-creator and core maintainer of the [Athens](http://docs.gomods.io) project. Athens is a server for Go dependency management that you can host and run yourself.
+- **Go in 5 Minutes** - I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
+- **Modules in 5 Minutes** - I wrote a quick reference for how [modules](https://blog.golang.org/using-go-modules) work in Go: [Modules in 5 Minutes](/modules5)
+- **GopherCon** - I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world.
+- **Kubernetes SIG-Service-Catalog** - I am an emeritus chair of the Kubernetes [SIG-Service-Catalog](https://svc-cat.io/) group.
+
+## My History
 
 In my 15+ years in software engineering, I've worked in lots of different roles. Here are some of them:
 
