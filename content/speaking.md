@@ -22,6 +22,12 @@ I've also spoken on Scala / Java, Javascript, C++ design patterns, and technolog
 
 # Previous Speaking Engagements
 
+### Cloud Native Go
+
+The Go Time Podcast
+
+https://changelog.com/gotime/150
+
 ### The Athens Project
 
 A talk at GoLab 2019
