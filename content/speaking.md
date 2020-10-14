@@ -28,6 +28,12 @@ The Go Time Podcast
 
 https://changelog.com/gotime/150
 
+### We Have Regrets
+
+The Go Time Podcast
+
+https://changelog.com/gotime/135
+
 ### The Athens Project
 
 A talk at GoLab 2019
