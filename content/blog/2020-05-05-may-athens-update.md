@@ -2,6 +2,7 @@
 author: "Aaron Schlesinger"
 date: 2020-05-05T16:29:07-07:00
 title: 'May 2020 Athens Update'
+slug: may-2020-athens-update
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 meta_img: "/images/athens-banner.jpg"
