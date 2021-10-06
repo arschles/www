@@ -31,7 +31,7 @@ type  = "CompiledWasm"
 
 
 [env.production]
-workers_dev = true
+workers_dev = false
 zone_id = "a6213fe1b0e53b8c8eb30794b73ab8d5"
 route = "*r.arschles.com/*"
 
