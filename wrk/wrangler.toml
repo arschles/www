@@ -1,0 +1,19 @@
+name = "arschles-com"
+type = "javascript"
+zone_id = "a6213fe1b0e53b8c8eb30794b73ab8d5"
+account_id = "98c2bd2b7b4907175df69bc73ee8d960"
+workers_dev = true
+compatibility_date = "2021-10-06"
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "service-worker"
+
+[env.production]
+workers_dev = true
+zone_id = "a6213fe1b0e53b8c8eb30794b73ab8d5"
+route = "*r.arschles.com/*"
+
+[env.staging]
+name = "arschles-com-staging"
