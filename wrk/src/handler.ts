@@ -1,5 +1,4 @@
-import {Router, Request, Obj} from 'itty-router'
-// import * as redirects from '.'
+import {Router, Request} from 'itty-router'
 
 declare const redirects: KVNamespace;
 
