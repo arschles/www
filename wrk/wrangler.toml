@@ -17,3 +17,8 @@ route = "*r.arschles.com/*"
 
 [env.staging]
 name = "arschles-com-staging"
+
+[[kv_namespaces]]
+binding = "redirects"
+preview_id = "03979ebec85d463584b1fde2a2f0cc88" # arschles-com-redirects_dev
+id = "e15234d95fc14165920514e14b03348f" # redirects
