@@ -1,0 +1,8 @@
+name = "arschles-com"
+account_id = "98c2bd2b7b4907175df69bc73ee8d960"
+type = "javascript"
+compatibility_date = "2021-10-11"
+
+[site]
+bucket = "./public"
+entry-point = "./wrk"
