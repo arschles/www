@@ -84,6 +84,8 @@ So, now we know when all the work is done, we need to get the results. There are
 
 Let's focus on the success values first. We're going to use one group of channels, one "final" channel, and a clever way of shuttling data between the former and the latter:
 
+_Read this code on the [Go Playground](https://play.golang.org/p/CM34_zkrmrg), if you prefer_
+
 ```go
 // this is the channel that will hold the results of the work
 resultCh := make(chan string)
@@ -152,8 +154,6 @@ for result := range resultCh {
 }
 ```
 
->To make sure this code actually works, I put it on the [Go Playground](https://play.golang.org) and actually ran it. See it at [play.golang.org/p/CM34_zkrmrg](https://play.golang.org/p/CM34_zkrmrg). I highly recommend you go run it there or on your local machine. Doing so may help you understand it better.
-
 The code is extensively commented, but notice a few more "meta" things about it:
 
 - We're enlisting _another_ goroutine for each loop iteration, so now we're using `2N` goroutines rather than `N` (where `N` is the number of work items to do).
@@ -164,6 +164,8 @@ The code is extensively commented, but notice a few more "meta" things about it:
 ## A final wrinkle: error handling
 
 Now that you (hopefully) have a decent grasp over the code in the previous section, consider that, for most workloads, you'll also have to deal with error handling. It doesn't take a lot of _additional_ code to do it, but it does add a bit more complexity. Let's see how it works:
+
+_Read this code on the [Go Playground](https://play.golang.org/p/Bcv_XQwoAi6), if you prefer_
 
 >Note that you can reduce complexity by using the [`errgroup`](https://pkg.go.dev/golang.org/x/sync/errgroup) package. The code herein implements functionality similar to that of `errgroup`.
 
@@ -280,8 +282,6 @@ for {
     }
 }
 ```
-
->See this code on the [Go Playground](https://play.golang.org/p/Bcv_XQwoAi6). Like in the last section, I highly recommend that you go run it there or on your local machine. Doing so may help you understand it better.
 
 A few more things to note here:
 
