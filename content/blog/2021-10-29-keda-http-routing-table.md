@@ -1,8 +1,9 @@
 ---
 author: "Aaron Schlesinger"
 date: 2021-10-29T21:58:32Z
-title: '2021 10 29 Ts E2e'
-slug: "The KEDA HTTP Addon Request Routing Table"
+title: 'Synchronizing the KEDA HTTP Addon Request Routing Table Across Hundreds of Interceptor Pods'
+slug: "keda-http-addon-routing-table"
+
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
 # meta_img = "/images/image.jpg"
