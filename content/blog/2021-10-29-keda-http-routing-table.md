@@ -14,7 +14,7 @@ tags: ['distributed-systems', 'event-loops', 'concurrency']
 # lobsters_id = ""
 ---
 
-The KEDA HTTP Addon project contains three major components: the [operator](https://github.com/kedacore/http-add-on/tree/main/operator), [scaler](https://github.com/kedacore/http-add-on/tree/main/scaler) and [interceptor](https://github.com/kedacore/http-add-on/tree/main/interceptor).
+The [KEDA HTTP Addon project](https://github.com/kedacore/http-add-on) contains three major components: the [operator](https://github.com/kedacore/http-add-on/tree/main/operator), [scaler](https://github.com/kedacore/http-add-on/tree/main/scaler) and [interceptor](https://github.com/kedacore/http-add-on/tree/main/interceptor).
 
 Of these, the interceptor is the only component that sits in the critical path of all incoming HTTP requests. We also run them in a _fleet_ that is horizontally scaled by software.
 
