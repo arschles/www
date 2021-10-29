@@ -3,6 +3,7 @@ author: "Aaron Schlesinger"
 date: 2021-10-29T21:58:32Z
 title: 'Synchronizing the KEDA HTTP Addon Request Routing Table Across Hundreds of Interceptor Pods'
 slug: "keda-http-addon-routing-table"
+tags: ['distributed-systems', 'event-loops', 'concurrency']
 
 
 # For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
@@ -15,9 +16,9 @@ slug: "keda-http-addon-routing-table"
 
 The KEDA HTTP Addon project contains three major components: the [operator](https://github.com/kedacore/http-add-on/tree/main/operator), [scaler](https://github.com/kedacore/http-add-on/tree/main/scaler) and [interceptor](https://github.com/kedacore/http-add-on/tree/main/interceptor).
 
-Of these, the interceptor has a unique role in the system because it's the only component that sits in the critical path of all incoming HTTP requests. We also run them in a _fleet_ that is horizontally scaled by software.
+Of these, the interceptor is the only component that sits in the critical path of all incoming HTTP requests. We also run them in a _fleet_ that is horizontally scaled by software.
 
-We're going to focus on how we ensure that any interceptor replica can route an incoming request to the correct backing application.
+We're going to focus on how we ensure that any interceptor replica can route an incoming request to the correct backing application at any time.
 
 ## Implications of Multi-Tenancy
 
@@ -32,9 +33,9 @@ The interceptor component is designed to run in a `Deployment` that KEDA automat
 
 Since the interceptor needs to do a lookup to the routing table before forwarding any request (or returning an error code), lookups need to be as fast as possible. That means storing the routing table in memory and keeping each interceptor's in-memory copy up to date with the central copy.
 
-We do this wth a relatively simple event loop, outlined in the below pseudocode:
+We do this wth a relatively simple event loop, outlined in the below ([Go](https://golang.org)-like) pseudocode:
 
-```
+```go
 table = fetch_table_from_kubernetes()
 report_alive()
 ticker = start_ticker(every_1_second)

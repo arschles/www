@@ -3,6 +3,7 @@ author: "Aaron Schlesinger"
 date: 2021-10-11T19:46:49Z
 title: 'Fan-in and fan-out with Go'
 slug: "fanin-fanout"
+tags: ['go', 'concurrency', 'design-patterns']
 ---
 
 Hacking on the [KEDA HTTP Addon](https://github.com/kedacore/http-add-on), I found myself having to do something familiar:
