@@ -12,56 +12,50 @@
     <div class="row">
         <div class="offset-sm-2 col-sm-10">
             <p class="intro">
-                🧰 Hi friend! I'm Aaron. I'm a 
-                <a
-                    href="https://developer.microsoft.com/en-us/advocates/aaron-schlesinger"
-                >cloud developer advocate</a>, and I 
-                <a href="/about">do a lot of other things too</a>.
-            </p>
-            <p class="intro">
-                Here's some of my writing.
+                🧰 Hi friend! I'm Aaron. I'm a software engineer
+                at Microsoft. Below is some of my writing, and
+                I have a
+                <a href="/about">page that has more of my background</a>.
             </p>
         </div>
     </div>
     <div class="row mb-2 mt-2">
-        <div class="col"><hr /></div>
+        <div class="col">
+            <hr />
+        </div>
     </div>
 </div>
 <div class="container">
     <div class="row content posts-list">
         {{ $blogPosts := (where .Site.RegularPages "Section" "blog") }}
         {{ range $blogPosts.GroupByDate "Jan, 2006" "desc" }}
-            {{ range sort .Pages "Date" "desc" }}
-                <div class="offset-sm-2 col-sm-10 mb-3">
-                    {{ if .Params.draft }}
-                    <a
-                        href="{{ .RelPermalink }}"
-                    >
-                        <span class="post-title">
-                            Draft::{{ .Title }}
-                        </span>
-                    </a>
-                    {{ else }}
-                    <a
-                        href="{{ .RelPermalink }}"
-                    >
-                        <span class="post-title">
-                            {{ .Title }}
-                        </span>
-                    </a>
-                    {{ end }}
-                    <span class="post-date">
-                        [{{ .Date.Format .Site.Params.dateform }}]
-                    </span>
-                    <div class="post-tags">
-                        {{ range $tag := .Params.Tags }}
-                        <span class="label label-default">
-                            {{ $tag }}
-                        </span>
-                        {{ end }}
-                    </div>     
-                </div>
+        {{ range sort .Pages "Date" "desc" }}
+        <div class="offset-sm-2 col-sm-10 mb-3">
+            {{ if .Params.draft }}
+            <a href="{{ .RelPermalink }}">
+                <span class="post-title">
+                    Draft::{{ .Title }}
+                </span>
+            </a>
+            {{ else }}
+            <a href="{{ .RelPermalink }}">
+                <span class="post-title">
+                    {{ .Title }}
+                </span>
+            </a>
             {{ end }}
+            <span class="post-date">
+                [{{ .Date.Format .Site.Params.dateform }}]
+            </span>
+            <div class="post-tags">
+                {{ range $tag := .Params.Tags }}
+                <span class="label label-default">
+                    {{ $tag }}
+                </span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
         {{ end }}
     </div>
 </div>
