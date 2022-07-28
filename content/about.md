@@ -2,7 +2,7 @@
 title = "About"
 +++
 
-Hi there! I'm a software engineer at Microsoft interested in (cloud) technologies, distributed computing and programming languages. I'm currently working on making [WebAssembly](https://webassembly.org/) (commonly referred to as "WASM") run very well in the cloud. Beyond WASM, some of the technologies I currently use most are [Rust](https://rust-lang.org), [Go](https://golang.org), and [Kubernetes](https://kubernetes.io).
+Hi there! I'm a software engineer at Microsoft interested in cloud technologies, distributed computing and programming languages. I'm currently working on making [WebAssembly](https://webassembly.org/) (commonly referred to as "WASM") run very well in the cloud. Beyond WASM, some of the technologies I currently use most are [Rust](https://rust-lang.org), [Go](https://golang.org), and [Kubernetes](https://kubernetes.io).
 
 I have [spoken at conferences](/speaking) extensively and have [taught](/teaching) a wide variety of topics to various audiences.
 
