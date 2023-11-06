@@ -1,0 +1,20 @@
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %} {{ config.title }}{% endblock %}</title>
+<link rel="canonical" href="{{ get_url( path=current_path )}}">
+<link href="{{ get_url(path='rss.xml' ) }}" rel="feed" type="application/rss+xml" title="{{ config.title }}" />
+
+
+{% block css %}
+<link rel=" stylesheet" href="{{ get_url(path='common.css', cachebust=true) }}" />
+<link rel="stylesheet" href="{{ get_url(path='bootstrap.min.css', cachebust=true) }}" />
+
+<link
+    href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Luckiest+Guy&family=Merriweather+Sans:ital@0;1&family=Raleway:ital,wght@0,300;0,400;1,300&family=Ubuntu+Mono:ital@1&display=swap"
+    rel="stylesheet">
+
+{% endblock %}
+
+</head>

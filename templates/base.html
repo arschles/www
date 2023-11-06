@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include "partials/head.html" %}
+
+<body>
+    {% block header %}
+    <header>
+        <div class="container">
+            <div class="row mb-3">
+                <div class="offset-sm-3 col-sm-6">
+                    <h1><a href="/">ecomaz.net</a></h1>
+                    <h4>
+                        {% block visible_title %}
+                        {% endblock %}
+                    </h4>
+                    <nav>
+                        <a href="/blog">Writing</a> |
+                        <a href="/about">About me</a> |
+                        <a href="/speaking">Speaking</a> {# | #}
+                        {# <a href="/resume">Resume</a> #}
+                    </nav>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endblock %}
+
+    <section>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </section>
+
+    {% block footer %}
+    {% include "partials/footer.html" %}
+    {% endblock %}
+
+</body>
+
+</html>
