@@ -1,4 +1,4 @@
-base_url = "https://ecomaz.net"
+base_url = "/"
 title = "Aaron Schlesinger's Personal Site"
 compile_sass = true
 build_search_index = true
