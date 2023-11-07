@@ -37,7 +37,7 @@
     {% block footer %}
     <footer>
         <div class="container">
-            <div class="row mt-4 mb-4">
+            <div class="row mt-4">
                 <div class="mt-4 offset-sm-3 col-sm-6 links">
                     <hr />
                     <a class="mr-2" href="https://github.com/arschles">
@@ -52,6 +52,11 @@
                         RSS
                         <img class="rss" src="{{ get_url(path='images/rss.svg') }}" />
                     </a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="offset-sm-3 col-sm-6 copyright">
+                    Copyright (c) {{ now() | date(format="%Y") }} Aaron Schlesinger
                 </div>
             </div>
         </div>
