@@ -3,6 +3,8 @@ title = "About"
 template = "page.html"
 +++
 
+## About Me
+
 I'm a software engineer at Microsoft interested in cloud technologies, distributed computing and programming languages. I'm currently working on making [WebAssembly](https://webassembly.org/) (commonly referred to as "WASM") run very well in the cloud. Beyond WASM, some of the technologies I currently use most are [Rust](https://rust-lang.org), [Go](https://golang.org), and [Kubernetes](https://kubernetes.io).
 
 I have [spoken at conferences](/speaking) extensively and have [taught](/teaching) a wide variety of topics to various audiences.
@@ -11,6 +13,7 @@ I have [spoken at conferences](/speaking) extensively and have [taught](/teachin
 
 I am, or have been, involved with several major projects as well, including the following:
 
+- **Hyperlight** - I co-lead development on a Microsoft-internal project called Hyperlight. This project implements Micro-VMs -- a new type of virtual machine that provides much lower startup latency and smaller memory footprint than traditional VMs. Learn more about this project in Mark Russinovich's [Keynote at Microsoft Build 2023](https://www.youtube.com/watch?v=Tz2SOjKZwVA).
 - **The KEDA HTTP Addon** - I conceived and built this project to bring the ability to autoscale HTTP services on Kubernetes using KEDA. You can find out more about it at [github.com/kedacore/http-add-on](https://github.com/kedacore/http-add-on). I have stepped away from everyday work on this project to focus more on WASM technologies.
 - **Athens** - I'm a co-creator and core maintainer of the [Athens](http://docs.gomods.io) project. Athens is a server for Go dependency management that you can host and run yourself.
 - **Go in 5 Minutes** - I produced **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
