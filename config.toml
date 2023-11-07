@@ -1,78 +1,12 @@
-baseurl = "https://arschles.com/"
-relativeURLs = "true"
-theme = "custom"
-builddrafts = false
-canonifyurls = false
-contentdir = "content"
-languageCode = "en-US"
-layoutdir = "layouts"
-publishdir = "public"
-author = "Aaron Schlesinger"
-title = "arschles"
-pluralizelisttitles = false
-googleAnalyticsEnabled = false
-disableKinds = ["taxonomy", "taxonomyTerm"]
+base_url = "/"
+title = "Aaron Schlesinger's Personal Site"
+compile_sass = true
+build_search_index = true
+highlight = true
 
-[permalinks]
-blog = "blog/:slug/"
+generate_feed = true
+feed_filename = "rss.xml"
 
-[params]
-dateform = "Jan 2, 2006"
-dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "Aaron on the Web"
-copyright = "Copyright © 2017-{year} Aaron Schlesinger"
-copyrightUrl = "https://creativecommons.org/licenses/by-sa/4.0/"
-logofile = "images/gopher-university.png"
-faviconfile = "images/gopher-university.png"
-highlightjs = true
-progressively = true
-share = true
-# Share to googleplus, twitter, fb, linkedin by default
-# disable by setting share_on_<social network> = false
-# example: share_on_googleplus = false
-latestpostcount = 10
-github = "arschles"
-email = "aaron@ecomaz.net"
-linkedin = "aaronschlesinger"
-twitter = "arschles"
-# facebook = "facebook_id"
-# instagram = "instagram_id"
-# itch_io = "itch_io_id"
-social_banner = "images/gopher-university.png"
-usesmallsummarycard = true
-posts_navigation = true
-# issoHost = "comments.domain.tld:1234"
-githubRepo = "arschles/www/tree/master"
-small_banner_logo = false
-
-[params.utteranc]
-enable = true
-repo = "arschles/www"
-issueTerm = "title"
-
-[params.colors]
-identifier = "#527fc1f"
-identifier_dark = "#1a3152"
-trivial = "#6a7a8b"
-foreground = "#181d2a"
-background = "#f9f9f9"
-background_dark = "#282a36"
-code = "#87a5d2"
-type = "#97d28b"
-special = "#ffcb8d"
-value = "#96c2d7"
-statement = "#ff8e91"
-
-[markup]
-    [markup.highlight]
-        anchorLineNos = false
-        codeFences = true
-        guessSyntax = false
-        hl_Lines = ''
-        lineAnchors = ''
-        lineNoStart = 1
-        lineNos = false
-        lineNumbersInTable = true
-        noClasses = true
-        style = 'monokai'
-        tabWidth = 4
+[markdown]
+highlight_code = true
+highlight_theme = "cheerfully-light"

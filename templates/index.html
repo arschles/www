@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row">
+    <div class="offset-sm-3 col-sm-6">
+        <h1>Aaron Schlesinger</h1>
+    </div>
+
+</div>
+<div class="row">
+    <div class="offset-sm-3 col-sm-6">
+        <p class="intro">
+            I'm a Principal Software Engineer at Microsoft.
+            On this site, you'll find more information on
+            <a href="/about">my background</a>,
+            some of <a href="/blog">my writing</a>,
+            {#<a href="/resume">my resume</a>, #}and links to most of the
+            <a href="/speaking">talks I've given</a>.
+        </p>
+        <p class="intro">You can also visit me elsewhere on the web at
+            <a href="https://github.com/arschles">GitHub</a> and
+            <a href="https://www.linkedin.com/in/aaronschlesinger/">
+                LinkedIn
+            </a>.
+        </p>
+        <p class="intro">Below are a few of my most recent articles.</p>
+    </div>
+</div>
+<div class="row mb-2 mt-2">
+    <div class="offset-sm-3 col-sm-6">
+        <hr />
+    </div>
+</div>
+<div class="row mb-2 mt-2 content posts-list">
+    <div class="offset-sm-3 col-sm-6">
+        {% for section in section.subsections %}
+        {% set sub = get_section(path=section) %}
+        {% for post in sub.pages | sort(attribute="date") | reverse %}
+        {% if loop.index0 > 2 %} {% break %} {% endif %}
+        <h4>
+            {{ post.title }}
+        </h4>
+        <p>
+            <small>{{ post.date | date(format="%B %d, %Y") }}</small>
+        </p>
+        {% if post.summary %}
+        {{ post.summary }}
+        {% else %}
+        {{ post.content | safe | striptags | truncate(length=50) }}
+        {% endif %}
+        <a href="{{ post.permalink }}">Read more</a>
+        {% endfor %}
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}

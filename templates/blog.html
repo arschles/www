@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row mt-3">
+    <div class="offset-sm-3 col-sm-6">
+        <a href="/modules5">Special post: About Go Modules</a>
+        <hr />
+    </div>
+</div>
+{% for post in section.pages %}
+<div class="row mt-3">
+    <div class="offset-sm-3 col-sm-6">
+        <h4>
+            {{ post.title }}
+        </h4>
+        <p>
+            <small>{{ post.date | date(format="%B %d, %Y") }}</small>
+        </p>
+        {% if post.summary %}
+        {{ post.summary }}
+        {% else %}
+        {{ post.content | safe | striptags | truncate(length=200) }}
+        {% endif %}
+        <a href="{{ post.permalink }}">Read more</a>
+    </div>
+    <hr>
+</div>
+{% endfor %}
+{% endblock %}

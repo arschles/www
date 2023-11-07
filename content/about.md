@@ -1,25 +1,22 @@
 +++
 title = "About"
+template = "page.html"
 +++
 
-Hi there! I'm a software engineer at Microsoft interested in cloud technologies, distributed computing and programming languages. I'm currently working on making [WebAssembly](https://webassembly.org/) (commonly referred to as "WASM") run very well in the cloud. Beyond WASM, some of the technologies I currently use most are [Rust](https://rust-lang.org), [Go](https://golang.org), and [Kubernetes](https://kubernetes.io).
+I'm a software engineer at Microsoft interested in cloud technologies, distributed computing and programming languages. I'm currently working on making [WebAssembly](https://webassembly.org/) (commonly referred to as "WASM") run very well in the cloud. Beyond WASM, some of the technologies I currently use most are [Rust](https://rust-lang.org), [Go](https://golang.org), and [Kubernetes](https://kubernetes.io).
 
 I have [spoken at conferences](/speaking) extensively and have [taught](/teaching) a wide variety of topics to various audiences.
 
----
----
+## Projects
 
-And I am/was involved with some projects as well:
+I am, or have been, involved with several major projects as well, including the following:
 
 - **The KEDA HTTP Addon** - I conceived and built this project to bring the ability to autoscale HTTP services on Kubernetes using KEDA. You can find out more about it at [github.com/kedacore/http-add-on](https://github.com/kedacore/http-add-on). I have stepped away from everyday work on this project to focus more on WASM technologies.
 - **Athens** - I'm a co-creator and core maintainer of the [Athens](http://docs.gomods.io) project. Athens is a server for Go dependency management that you can host and run yourself.
-- **Go in 5 Minutes** - I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
+- **Go in 5 Minutes** - I produced **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
 - **Modules in 5 Minutes** - I wrote a quick reference for how [modules](https://blog.golang.org/using-go-modules) work in Go: [Modules in 5 Minutes](/modules5)
 - **GopherCon** - I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world.
 - **Kubernetes SIG-Service-Catalog** - I am an emeritus chair of the Kubernetes [SIG-Service-Catalog](https://svc-cat.io/) group.
-
----
----
 
 ## My History
 
@@ -33,11 +30,6 @@ In my 15+ years in software engineering, I've worked in lots of different roles.
 - I wrote one of the first Java APIs in the Scala language
 - I designed an HTTP-based streaming RPC protocol and write a functional (as in functional programming) server implementation using the Twitter [Finagle](https://github.com/twitter/finagle) core primitives.
 
----
----
-
 ## Around the Web
 
-You can also find me at [@arschles](https://twitter.com/arschles) on Twitter and [arschles](https://github.com/arschles) on GitHub.
-
-I also blog at [dev.to](https://dev.to/arschles)
+You can also find me on [LinkedIn](https://www.linkedin.com/in/aaronschlesinger) and [GitHub](https://github.com/arschles).

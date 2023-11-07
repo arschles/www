@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+{% include "partials/head.html" %}
+
+<body>
+    {% block header %}
+    <header>
+        <div class="container">
+            <div class="row mb-3">
+                <div class="offset-sm-3 col-sm-6">
+                    <h1><a href="/">ecomaz.net</a></h1>
+                    <h4>
+                        {% block visible_title %}
+                        {% endblock %}
+                    </h4>
+                    <nav>
+                        <a href="/blog">Writing</a> |
+                        <a href="/about">About me</a> |
+                        <a href="/speaking">Speaking</a> {# | #}
+                        {# <a href="/resume">Resume</a> #}
+                    </nav>
+                    <hr />
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endblock %}
+
+    <section>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+    </section>
+
+    {% block footer %}
+    <footer>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="mt-4 offset-sm-3 col-sm-6 links">
+                    <hr />
+                    <a class="mr-2" href="https://github.com/arschles">
+                        github.com/arschles
+                        <img class="github" src="{{ get_url(path='images/github.svg') }}" />
+                    </a>
+                    <a class="ml-2 mr-2" href="https://gifm.dev">
+                        Go in 5 Minutes
+                        <img class="gifm" src="{{ get_url(path='images/gifm.png') }}" />
+                    </a>
+                    <a class="ml-2 mr-2" href="/rss.xml">
+                        RSS
+                        <img class="rss" src="{{ get_url(path='images/rss.svg') }}" />
+                    </a>
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="offset-sm-3 col-sm-6 copyright">
+                    Copyright (c) {{ now() | date(format="%Y") }} Aaron Schlesinger
+                </div>
+            </div>
+        </div>
+    </footer>
+    {% endblock %}
+
+</body>
+
+</html>

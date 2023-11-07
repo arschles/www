@@ -16,3 +16,4 @@ node_modules
 .DS_Store
 socialgen/socialgen
 socialgen/newthing.png
+/.hugo_build.lock

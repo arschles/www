@@ -1,26 +1,21 @@
 ---
 author: "Aaron Schlesinger"
 title: "Speaking"
-
-# For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-# meta_img = "/images/image.jpg"
-
-# For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
-# hacker_news_id = ""
-# lobsters_id = ""
+template: "page.html"
 ---
 
-I currently speak about Go, DevOps, and Kubernetes. I've spoken at industry leading conferences like 
+I've spoken at industry leading conferences including the following:
 
 - OSCON
 - KubeCon
 - Open Source Summit
 - GopherCon
-- CodeMotion.
+- CodeMotion
 
-I've also spoken on Scala / Java, Javascript, C++ design patterns, and technology transformation in large organizations.
+Generally, in the past, I've spoken about (distributed) systems and programming languages. I've also spoken specifically about design patterns and technology transformation in large organizations.
 
-# Previous Speaking Engagements
+# Speaking Engagements
+Below is a partial list of conferences at which I've spoken.
 
 ### Cloud Native Go
 

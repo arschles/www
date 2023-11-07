@@ -1,9 +1,9 @@
 # arschles.com
 
-This repository has the source for http://arschles.com. It is a [hugo](https://gohugo.io) site.
+This repository has the source for http://arschles.com. It is a [Zola](https://getzola.org) site.
 
-To run it, make sure you have Hugo installed and run this command:
+To run it, make sure you have Zola [installed](https://www.getzola.org/documentation/getting-started/installation/) and run this command:
 
 ```console
-$ hugo server
+$ zola serve
 ```
