@@ -35,7 +35,27 @@
     </section>
 
     {% block footer %}
-    {% include "partials/footer.html" %}
+    <footer>
+        <div class="container">
+            <div class="row mt-4 mb-4">
+                <div class="mt-4 offset-sm-3 col-sm-6 links">
+                    <hr />
+                    <a class="mr-2" href="https://github.com/arschles">
+                        github.com/arschles
+                        <img class="github" src="{{ get_url(path='images/github.svg') }}" />
+                    </a>
+                    <a class="ml-2 mr-2" href="https://gifm.dev">
+                        Go in 5 Minutes
+                        <img class="gifm" src="{{ get_url(path='images/gifm.png') }}" />
+                    </a>
+                    <a class="ml-2 mr-2" href="/index.xml">
+                        RSS
+                        <img class="rss" src="{{ get_url(path='images/rss.svg') }}" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
     {% endblock %}
 
 </body>
