@@ -16,7 +16,6 @@ I've spoken at industry leading conferences including the following:
 
 Generally, in the past, I've spoken about (distributed) systems and programming languages. I've also spoken specifically about design patterns and technology transformation in large organizations.
 
-# Speaking Engagements
 Below is a partial list of conferences at which I've spoken.
 
 ### Cloud Native Go
