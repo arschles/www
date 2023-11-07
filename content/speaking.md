@@ -4,6 +4,8 @@ title: "Speaking"
 template: "page.html"
 ---
 
+## Public speaking
+
 I've spoken at industry leading conferences including the following:
 
 - OSCON
