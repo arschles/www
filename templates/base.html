@@ -8,7 +8,7 @@
     <header>
         <div class="container">
             <div class="row mb-3">
-                <div class="offset-sm-3 col-sm-6">
+                <div class="col">
                     <h1><a href="/">ecomaz.net</a></h1>
                     <h4>
                         {% block visible_title %}
@@ -38,7 +38,7 @@
     <footer>
         <div class="container">
             <div class="row mt-4">
-                <div class="mt-4 offset-sm-3 col-sm-6 links">
+                <div class="mt-4 links">
                     <hr />
                     <a class="mr-2" href="https://github.com/arschles">
                         github.com/arschles
@@ -55,7 +55,7 @@
                 </div>
             </div>
             <div class="row mb-4">
-                <div class="offset-sm-3 col-sm-6 copyright">
+                <div class="copyright">
                     Copyright (c) {{ now() | date(format="%Y") }} Aaron Schlesinger
                 </div>
             </div>

@@ -2,13 +2,13 @@
 
 {% block content %}
 <div class="row">
-    <div class="offset-sm-3 col-sm-6">
+    <div class="col">
         <h1>Aaron Schlesinger</h1>
     </div>
 
 </div>
 <div class="row">
-    <div class="offset-sm-3 col-sm-6">
+    <div class="col">
         <p class="intro">
             I'm a Principal Software Engineer at Microsoft.
             On this site, you'll find more information on
@@ -20,19 +20,18 @@
         <p class="intro">You can also visit me elsewhere on the web at
             <a href="https://github.com/arschles">GitHub</a> and
             <a href="https://www.linkedin.com/in/aaronschlesinger/">
-                LinkedIn
-            </a>.
+                LinkedIn</a>.
         </p>
         <p class="intro">Below are a few of my most recent articles.</p>
     </div>
 </div>
 <div class="row mb-2 mt-2">
-    <div class="offset-sm-3 col-sm-6">
+    <div class="col">
         <hr />
     </div>
 </div>
 <div class="row mb-2 mt-2 content posts-list">
-    <div class="offset-sm-3 col-sm-6">
+    <div class="col">
         {% for section in section.subsections %}
         {% set sub = get_section(path=section) %}
         {% for post in sub.pages | sort(attribute="date") | reverse %}
