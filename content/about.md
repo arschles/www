@@ -13,7 +13,7 @@ I am, or have been, involved with several major projects as well, including the 
 
 - **The KEDA HTTP Addon** - I conceived and built this project to bring the ability to autoscale HTTP services on Kubernetes using KEDA. You can find out more about it at [github.com/kedacore/http-add-on](https://github.com/kedacore/http-add-on). I have stepped away from everyday work on this project to focus more on WASM technologies.
 - **Athens** - I'm a co-creator and core maintainer of the [Athens](http://docs.gomods.io) project. Athens is a server for Go dependency management that you can host and run yourself.
-- **Go in 5 Minutes** - I produce **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
+- **Go in 5 Minutes** - I produced **[Go in 5 Minutes](https://gifm.dev)**, a series of short screencasts with tutorials on Go.
 - **Modules in 5 Minutes** - I wrote a quick reference for how [modules](https://blog.golang.org/using-go-modules) work in Go: [Modules in 5 Minutes](/modules5)
 - **GopherCon** - I'm a chair of [Gophercon](https://gophercon.com), which is the largest [Go](https://golang.org) conference in the world.
 - **Kubernetes SIG-Service-Catalog** - I am an emeritus chair of the Kubernetes [SIG-Service-Catalog](https://svc-cat.io/) group.
