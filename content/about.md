@@ -11,7 +11,7 @@ I have also [spoken at conferences](/speaking) extensively on a wide variety of 
 
 ## Projects
 
-I am, or have been, involved with several major projects as well, including the following:
+I am, or have been, involved with several major projects as well, including the following recent ones:
 
 **Hyperlight**: I co-lead development on a Microsoft-internal project called Hyperlight. This project implements Micro-VMs -- a new type of virtual machine that provides much lower startup latency and smaller memory footprint than traditional VMs. Learn more about this project in Mark Russinovich's [Keynote at Microsoft Build 2023](https://www.youtube.com/watch?v=Tz2SOjKZwVA).
 
