@@ -33,13 +33,23 @@
 </div>
 <div class="row mb-2 mt-2 content posts-list">
     <div class="offset-sm-3 col-sm-6">
-        POSTS HERE
-        {% for year, posts in section.pages | group_by(attribute="year") %}
-        <ul>
-            {% for post in posts%}
-            <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
-            {% endfor %}
-        </ul>
+        {% for section in section.subsections %}
+        {% set sub = get_section(path=section) %}
+        {% for post in sub.pages | sort(attribute="date") | reverse %}
+        {% if loop.index0 > 2 %} {% break %} {% endif %}
+        <h4>
+            {{ post.title }}
+        </h4>
+        <p>
+            <small>{{ post.date | date(format="%B %d, %Y") }}</small>
+        </p>
+        {% if post.summary %}
+        {{ post.summary }}
+        {% else %}
+        {{ post.content | safe | striptags | truncate(length=50) }}
+        {% endif %}
+        <a href="{{ post.permalink }}">Read more</a>
+        {% endfor %}
         {% endfor %}
     </div>
 </div>
