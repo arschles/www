@@ -17,9 +17,11 @@ The project was prototyped initially with C#, but it turns out C# isn't the best
 
 ## Background: Rewriting C# in Rust
 
-In response to these challenges (and more), we decided to move the project to [Rust](https://rust-lang.org) because it's a much better fit for the needs of the project. Rust is a fast, safe, and modern systems programming language, and a great fit for this project. We chose to move the C# codebase incrementally to Rust, and wanted to end up with both a C# and Rust SDK, with the former being a thin wrapper around the latter. This work ironically forced us to have to write lots of C# code that dealt with native code and unmanaged memory.
+In response to these challenges (and more), we decided to move the project to [Rust](https://rust-lang.org) because it's a much better fit for the needs of the project. Rust is a fast, safe, and modern systems programming language, and a great fit for this project.
 
-Lots of that code was temporary and we were able to start removing it as the rewrite progressed, but two things became clear as we began to understand the mechanics of the joint C#/Rust codebase:
+We chose to move the C# codebase incrementally to Rust, and wanted to end up with both a C# and Rust SDK, with the former being a thin wrapper around the latter. This work ironically forced us to have to write lots of C# code that dealt with native code and unmanaged memory.
+
+Lots of that code was temporary and we were able to start removing it as the rewrite progressed, but two things became clear as we began to understand the mechanics of the final joint C#/Rust codebase:
 
 1. We indeed would always need to call "system calls" (sometimes called [P-Invoke](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) in C#) from C#, since that's how the Rust APIs are exposed
 2. In some cases, we'd need to go the other way and _call C# functions from Rust_
@@ -68,7 +70,7 @@ crate-type = ["cdylib"]
 
 The other side of this is calling C APIs from C#, which as I mentioned above is a well-known feature of C#. There are a lot of resources out there (reminder: search for "P-Invoke"), but I'll just give a quick example here:
 
-```csharp
+```cs
 [DllImport("my_c_lib", SetLastError = false, ExactSpelling = true)]
 // You may need this, depending on how your code searches for shared libraries
 // (i.e. DLLs on Windows or shared objects on Linux).
@@ -81,8 +83,9 @@ static extern long callable_from_c(long input);
 
 ## Calling C# from Rust
 
-I've written a lot here, but believe it or not, we only covered the first half of this process. Going the other way -- calling C# from Rust -- involves more details, and I think is more interesting. I will cover that process in detail in my next post.
+I've written a lot here, but believe it or not, we only covered the first half of this process. Going the other way -- calling C# from Rust -- involves more details, including some .Net runtime internals. I will cover those details in my next post. See you then!
 
 ---
-[1] Technically, the C# compiler knows how to call C APIs, and the runtime knows how to call C [ABI](https://en.wikipedia.org/wiki/Application_binary_interface)s
-[2] Similar to what the C# compiler does for calling C API/ABIs, the Rust compiler knows how to expose ABI-compatible C APIs
+_[1] Technically, the C# compiler knows how to call C APIs, and the runtime knows how to call C [ABI](https://en.wikipedia.org/wiki/Application_binary_interface)s_
+
+_[2] Similar to what the C# compiler does for calling C API/ABIs, the Rust compiler knows how to expose ABI-compatible C APIs_
