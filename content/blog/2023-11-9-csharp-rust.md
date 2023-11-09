@@ -6,7 +6,7 @@ slug: "csharp-rust"
 tags: ['systems', 'languages', 'rust', 'csharp']
 ---
 
-I'm working on a project at Microsoft now, called Hyperlight. At a very high level, we're using modern virtualization technology and some concepts from Unikernels to make tiny, fast, and secure virtual machines.
+I'm working on a project at Microsoft called Hyperlight. The project is all about making very small-footprint virtual machines that start up specific kinds of applications very quickly. At a very high level, we're using modern virtualization technology and some concepts from Unikernels to make these things happen.
 
 Mark Russinovich highlighted the project at [his keynote at Microsoft Build 2023](https://www.youtube.com/watch?v=Tz2SOjKZwVA), so if you want more background on the project, go [watch that keynote](https://www.youtube.com/watch?v=Tz2SOjKZwVA).
 
@@ -19,14 +19,14 @@ The project was prototyped initially with C#, but it turns out C# isn't the best
 
 In response to these challenges (and more), we decided to move the project to [Rust](https://rust-lang.org) because it's a much better fit for the needs of the project. Rust is a fast, safe, and modern systems programming language, and a great fit for this project.
 
-We chose to move the C# codebase incrementally to Rust, and wanted to end up with both a C# and Rust SDK, with the former being a thin wrapper around the latter. This work ironically forced us to have to write lots of C# code that dealt with native code and unmanaged memory.
+We chose to move the C# codebase incrementally to Rust, and wanted to end up with both a C# and Rust SDK, with the former being a thin wrapper around the latter. Ironically, this work forced us to write a lot of temporary C# code that did precisely the kinds of things we were trying to avoid, like calling into native code and dealing with unmanaged memory.
 
-Lots of that code was temporary and we were able to start removing it as the rewrite progressed, but two things became clear as we began to understand the mechanics of the final joint C#/Rust codebase:
+As the rewrite progressed, we were able to remove some of that code, but two things became clear as we began to understand the mechanics of the final joint C#/Rust codebase:
 
 1. We indeed would always need to call "system calls" (sometimes called [P-Invoke](https://learn.microsoft.com/en-us/dotnet/standard/native-interop/pinvoke) in C#) from C#, since that's how the Rust APIs are exposed
 2. In some cases, we'd need to go the other way and _call C# functions from Rust_
 
-In our experience doing both of these things, (1) is relatively well defined, but (2) is not. We figured out how to do both reliably. In this post, I'll describe the first one -- calling Rust functions from C. I'll describe how to call C# (or really, any .Net function) from Rust in a follow-up post.
+In our experience so far, (1) is relatively well defined, but (2) is not. We figured out how to do both in a somewhat robust and reliable way. In this post, In this post, I'll describe (1), and save (2) for a follow-up.
 
 ## Calling Rust from C#
 
