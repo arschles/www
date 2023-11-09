@@ -4,14 +4,6 @@ date: 2021-10-29T21:58:32Z
 title: 'Synchronizing the KEDA HTTP Addon Request Routing Table Across Hundreds of Interceptor Pods'
 slug: "keda-http-addon-routing-table"
 tags: ['distributed-systems', 'event-loops', 'concurrency']
-
-
-# For twitter cards, see https://github.com/mtn/cocoa-eh-hugo-theme/wiki/Twitter-cards
-# meta_img = "/images/image.jpg"
-
-# For hacker news and lobsters builtin links, see github.com/mtn/cocoa-eh-hugo-theme/wiki/Social-Links
-# hacker_news_id = ""
-# lobsters_id = ""
 ---
 
 The [KEDA HTTP Addon project](https://github.com/kedacore/http-add-on) contains three major components: the [operator](https://github.com/kedacore/http-add-on/tree/main/operator), [scaler](https://github.com/kedacore/http-add-on/tree/main/scaler) and [interceptor](https://github.com/kedacore/http-add-on/tree/main/interceptor).
