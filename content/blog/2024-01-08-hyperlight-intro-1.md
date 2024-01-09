@@ -6,7 +6,7 @@ slug: "hyperlight-overview-1"
 tags: ['systems', 'languages', 'rust', 'csharp']
 ---
 
-After I wrote those posts about C#-to-Rust and Rust-to-C# communication ([part 1](/blog/2023-11-9-csharp-rust.md) and [part 2](/blog/2023-11-16-csharp-rust-2.md)), a lot of people reached out with questions about what Hyperlight is in the first place. There's not a lot of information out there about the project besides what I've written, what's been presented at Microsoft Build (more on that in a second), and word-of-mouth, so I'm going to fill in the gaps here.
+After I wrote those posts about C#-to-Rust and Rust-to-C# communication ([part 1](/blog/csharp-rust) and [part 2](/blog/csharp-rust-2)), a lot of people reached out with questions about what Hyperlight is in the first place. There's not a lot of information out there about the project besides what I've written, what's been presented at Microsoft Build (more on that in a second), and word-of-mouth, so I'm going to fill in the gaps here.
 
 I'm going to take a break from the C# <-> Rust series (which I'll resume soon!) to talk about Hyperlight in more detail. I'll cover what it is, why we're building it, and how it works.
 
