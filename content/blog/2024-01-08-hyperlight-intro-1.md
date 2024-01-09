@@ -1,3 +1,11 @@
+---
+author: "Aaron Schlesinger"
+date: 2024-01-08T21:58:32Z
+title: 'What is Hyperlight?'
+slug: "hyperlight-overview-1"
+tags: ['systems', 'languages', 'rust', 'csharp']
+---
+
 # What is Hyperlight?
 
 After I wrote those posts about C#-to-Rust and Rust-to-C# communication ([part 1](./2023-11-9-csharp-rust.md) and [part 2](./2023-11-16-csharp-rust-2.md)), a lot of people reached out with questions about what Hyperlight is in the first place. There's not a lot of information out there about the project besides what I've written, what's been presented at Microsoft Build (more on that in a second), and word-of-mouth, so I'm going to fill in the gaps here.
