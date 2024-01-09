@@ -8,7 +8,7 @@ tags: ['systems', 'languages', 'rust', 'csharp']
 
 # What is Hyperlight?
 
-After I wrote those posts about C#-to-Rust and Rust-to-C# communication ([part 1](./2023-11-9-csharp-rust.md) and [part 2](./2023-11-16-csharp-rust-2.md)), a lot of people reached out with questions about what Hyperlight is in the first place. There's not a lot of information out there about the project besides what I've written, what's been presented at Microsoft Build (more on that in a second), and word-of-mouth, so I'm going to fill in the gaps here.
+After I wrote those posts about C#-to-Rust and Rust-to-C# communication ([part 1](/blog/2023-11-9-csharp-rust.md) and [part 2](/blog/2023-11-16-csharp-rust-2.md)), a lot of people reached out with questions about what Hyperlight is in the first place. There's not a lot of information out there about the project besides what I've written, what's been presented at Microsoft Build (more on that in a second), and word-of-mouth, so I'm going to fill in the gaps here.
 
 I'm going to take a break from the C# <-> Rust series (which I'll resume soon!) to talk about Hyperlight in more detail. I'll cover what it is, why we're building it, and how it works.
 
@@ -54,13 +54,13 @@ In other words, Wasm VMs don’t provide hardware virtualization, while hypervis
 
 These differences also imply important differences in how these platforms execute code. Many (but not all) programs can be compiled to Wasm, and any system with a Wasm VM can then execute it, regardless of the underlying hardware architecture. If you’re familiar with .Net or the Java Virtual Machine (or JVM), you can think of Wasm similarly to how you think of CLR or JVM bytecode. Alternatively, I can compile any program directly to native code and run it directly on the hardware (or virtualized hardware!)  
 
-## A VM inside a VM? 
+# A VM inside a VM? 
 
 I just spent a whole section describing the difference between the Wasm VM and a Hypervisor-based VM, and you may be surprised to learn that Hyperlight runs a Wasm VM inside a hypervisor-based VM. Let’s discuss here why we use both. 
 
 If you recall Mark’s key comment in his Azure Innovations keynote, he said that while, Wasm provides an isolation scheme, it lacks the isolation we need to run a secure public cloud. This statement has several important points in it, and I want to elaborate on them. 
 
-## The “kind of isolation” Wasm does have 
+## The kind of isolation Wasm does have 
 
 We already discussed how Wasm and hypervisor-level isolation differ, so let’s discuss how those differences apply to the needs of a public cloud like Azure. You may not know that Microsoft’s online infrastructure is one of the most attacked in the world. This kind of malicious activity isn’t new to us, so we’ve been investing heavily in the security of our software for a long time. One of our most powerful tools to keep our systems secure, and maintain our customers’ trust, is [defense-in-depth](https://azure.microsoft.com/en-us/blog/microsoft-azures-defense-in-depth-approach-to-cloud-vulnerabilities/).
 
@@ -86,4 +86,4 @@ Our challenge is twofold, as follows:
 
 As you’ll see in part 2, the first task is much simpler than the second from the above list, and we’ve spent a lot of time ensuring both low latencies and high “density”. One strategy we use to achieve both things, and reduce the attack surface even further, is to eliminate the operating system kernel entirely from the native code running inside the VM. If you’re familiar with [Unikernels](http://unikernel.org), you’ll notice some similarities. 
 
-I’m looking forward to continuing this discussion. I hope to see in part 2! 
+I’m looking forward to continuing this discussion. More to come!
