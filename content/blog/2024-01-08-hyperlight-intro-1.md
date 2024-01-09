@@ -6,13 +6,11 @@ slug: "hyperlight-overview-1"
 tags: ['systems', 'languages', 'rust', 'csharp']
 ---
 
-# What is Hyperlight?
-
 After I wrote those posts about C#-to-Rust and Rust-to-C# communication ([part 1](/blog/2023-11-9-csharp-rust.md) and [part 2](/blog/2023-11-16-csharp-rust-2.md)), a lot of people reached out with questions about what Hyperlight is in the first place. There's not a lot of information out there about the project besides what I've written, what's been presented at Microsoft Build (more on that in a second), and word-of-mouth, so I'm going to fill in the gaps here.
 
 I'm going to take a break from the C# <-> Rust series (which I'll resume soon!) to talk about Hyperlight in more detail. I'll cover what it is, why we're building it, and how it works.
 
-# Background
+## Background
 
 At the 2023 Microsoft Build conference, [Mark Russinovich](https://www.linkedin.com/in/markrussinovich/) showed a [demo of Hyperlight](https://www.youtube.com/watch?v=Tz2SOjKZwVA) in his Azure Innovations keynote. In that same keynote, he described Hyperlight as a solution for improving the management and security of [Web Assembly (Wasm)](https://webassembly.org) workloads on Azure, and explained the motivation of the project as follows: 
 
@@ -20,11 +18,11 @@ At the 2023 Microsoft Build conference, [Mark Russinovich](https://www.linkedin.
 
 In this post, I’m going to detail what he means by that and describe Hyperlight in greater detail. This is the first of two posts, and in the second, I’ll dive into much greater detail on how it works. 
 
-# Built on the shoulders of giants 
+## Built on the shoulders of giants 
 
 Hyperlight borrows from, and builds on, substantial prior art, and it’s important to not only credit the technologies on top of which we’ve built this project, but also to establish a common foundation before we delve deeper into the project itself.
 
-## Hypervisors
+### Hypervisors
 
 One of the most important of these technologies is the hypervisor. Simply put, a hypervisor is a system, often built right into your operating system and hardware stack (but not always! Read more about the various kinds of hypervisors [here](https://www.geeksforgeeks.org/hypervisor/)), that can create virtual “machines” (Hypervisors are also often called Virtual Machines or VMs), or computing devices, on top of which you run some other piece of software. 
 
@@ -34,7 +32,7 @@ Importantly for our purposes, hypervisors provide virtualized hardware devices -
 
 VMs often ship with a lot of associated technologies, many of which we don’t use directly, but are important to understand for context. We’ll talk more about them when we dive deeper in part 2. 
 
-## Rust
+### Rust
 
 Another important technology we use is the [Rust programming language](https://rust-lang.org), or just “Rust”. I’ll talk less about Rust in this initial post in the series than in post 2, but I do want to cover one of Rust’s most important features for our use case: memory safety. 
 
@@ -44,7 +42,7 @@ Problems like these have become so well-known and serious that our very own (and
 
 There’s much more to say about Rust and Hypervisors. We’ll discuss both at length in part 2 and beyond, but we have enough to set a foundation for part 1. Onward! 
 
-## WebAssembly is executed by a virtual machine 
+### WebAssembly is executed by a virtual machine 
 
 When we describe Hyperlight, we often need to differentiate between two different kinds of virtual machines (VMs). While we’ve described hypervisors above, we also need to consider the virtual machines that execute Wasm (called “Wasm VMs” hereafter)! Fortunately, there’s a very clear line between the two, and it’s all about how hardware is represented and utilized. 
 
@@ -54,13 +52,13 @@ In other words, Wasm VMs don’t provide hardware virtualization, while hypervis
 
 These differences also imply important differences in how these platforms execute code. Many (but not all) programs can be compiled to Wasm, and any system with a Wasm VM can then execute it, regardless of the underlying hardware architecture. If you’re familiar with .Net or the Java Virtual Machine (or JVM), you can think of Wasm similarly to how you think of CLR or JVM bytecode. Alternatively, I can compile any program directly to native code and run it directly on the hardware (or virtualized hardware!)  
 
-# A VM inside a VM? 
+## A VM inside a VM? 
 
 I just spent a whole section describing the difference between the Wasm VM and a Hypervisor-based VM, and you may be surprised to learn that Hyperlight runs a Wasm VM inside a hypervisor-based VM. Let’s discuss here why we use both. 
 
 If you recall Mark’s key comment in his Azure Innovations keynote, he said that while, Wasm provides an isolation scheme, it lacks the isolation we need to run a secure public cloud. This statement has several important points in it, and I want to elaborate on them. 
 
-## The kind of isolation Wasm does have 
+### The kind of isolation Wasm does have 
 
 We already discussed how Wasm and hypervisor-level isolation differ, so let’s discuss how those differences apply to the needs of a public cloud like Azure. You may not know that Microsoft’s online infrastructure is one of the most attacked in the world. This kind of malicious activity isn’t new to us, so we’ve been investing heavily in the security of our software for a long time. One of our most powerful tools to keep our systems secure, and maintain our customers’ trust, is [defense-in-depth](https://azure.microsoft.com/en-us/blog/microsoft-azures-defense-in-depth-approach-to-cloud-vulnerabilities/).
 
@@ -73,7 +71,7 @@ While Wasm does provide a [provably safe virtualization technology](https://www.
 
 Now, we have two VMs, each possibly with bugs in them, with one running inside of the other. This arrangement ensures that security bugs in one VM have a lower impact because of the additional security boundary provided by the other VM layer. In other words, the impact of a security bug in one VM is reduced because of the additional security boundary provided by the other VM layer. 
 
-## How do we do all this? 
+### How do we do all this? 
 
 Well, as I mentioned at the beginning of this post, I’m going to save most of the “how” for part 2, but I want to wrap this post up with a preview. 
 
