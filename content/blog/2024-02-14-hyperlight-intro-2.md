@@ -76,7 +76,7 @@ Rust is a relatively new language, especially in the group of systems languages 
 
 To build Hyperlight, we need almost exactly those features. Recall from part 1 that memory safety is an area of focus for the software technology industry at-large, and Rust is being adopted and supported in large part because it does a good job of providing memory safety guarantees. In some cases, it even can provide formal mathematical guarantees, and we've in fact been able to reap some of those benefits in our codebase.
 
-Bugs are still possible, but we believe Rust gives us the best chance to build safe, reliable and generally high-quality software (see: clippy, other strict code requirements like disallowing unused functions etc...) 
+Bugs are still possible, but we believe Rust gives us the best chance to build safe, reliable and generally high-quality software [^4].
 
 ## Conclusion 
 
@@ -89,8 +89,10 @@ Overall, I think Hyperlight represents a new way to run specific kinds of softwa
 
 ---
 
-[^1] Note this metaphor is not perfect because the physical machine is not always divided equally or even logically, and in many cases may be oversubscribed on vCPUs or memory
+[^1] Note this metaphor is not perfect because the physical machine is not always divided equally or even logically, and in many cases may be oversubscribed on vCPUs or memory.
 
-[^2] These days, GPUs and other specialized computing devices are becoming more and more common, especially in modern AI/ML and computer graphics applications
+[^2] These days, GPUs and other specialized computing devices are becoming more and more common, especially in modern AI/ML and computer graphics applications.
 
-[^3] And not just this system as specified. We also need to write robust testing and monitoring/alerting code as well as everything you’d need to run software like this in an enormous distributed system in the cloud
+[^3] And not just this system as specified. We also need to write robust testing and monitoring/alerting code as well as everything you’d need to run software like this in an enormous distributed system in the cloud.
+
+ [^4] The benefits of Rust in this domain go beyond memory safety. A good representative example is [Clippy](https://doc.rust-lang.org/stable/clippy/index.html), which is a static analysis tool included by default with the toolchain that can either directly catch _before compile time_ or prevent code that is likely to lead to future bugs.
