@@ -1,0 +1,41 @@
+# read more about configuring your Worker via wrangler.toml at:
+# https://developers.cloudflare.com/workers/cli-wrangler/configuration
+
+name = "wrkrust"
+type = "javascript"
+workers_dev = true
+zone_id = "a6213fe1b0e53b8c8eb30794b73ab8d5"
+account_id = "98c2bd2b7b4907175df69bc73ee8d960"
+compatibility_date = "2021-10-06"
+compatibility_flags = [ "formdata_parser_supports_files" ] # required
+
+[vars]
+WORKERS_RS_VERSION = "0.0.6"
+
+[[kv_namespaces]]
+binding = "redirects"
+preview_id = "03979ebec85d463584b1fde2a2f0cc88" # arschles-com-redirects_dev
+id = "e15234d95fc14165920514e14b03348f" # redirects
+
+[build]
+command = "cargo install -q worker-build && worker-build --release" # required
+
+[build.upload]
+dir    = "build/worker"
+format = "modules"
+main   = "./shim.mjs"
+
+[[build.upload.rules]]
+globs = ["**/*.wasm"]
+type  = "CompiledWasm"
+
+
+[env.production]
+workers_dev = false
+zone_id = "a6213fe1b0e53b8c8eb30794b73ab8d5"
+route = "*r.arschles.com/*"
+
+[[env.production.kv_namespaces]]
+binding = "redirects"
+preview_id = "03979ebec85d463584b1fde2a2f0cc88" # arschles-com-redirects_dev
+id = "e15234d95fc14165920514e14b03348f" # redirects
